@@ -1,0 +1,73 @@
+/* This file is for styling the html page content. */
+
+
+/* This is for generalizing default font sizes on the page. Will most likely 
+be overrided. */
+html {
+    font-size: 20px;
+}
+
+/* header styles */
+header {
+    background-color: blue;
+    border: 2px solid black;
+    padding: 2%;
+    margin-top: 0%;
+}
+
+header h1 {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* body and content styles */
+body {
+    background-color: grey;
+}
+
+main {
+    float: right;
+    width: 65%;
+    background-color: lightblue;
+    margin-top: 30px;
+}
+
+main h2 {
+    text-align: center;
+    border: 2px solid black;
+    background-color: blue;
+    margin-top: 0px;   
+}
+
+h2 {
+    color: white;
+}
+
+aside {
+    float: left;
+    width: 30%;
+    background-color: lightblue;
+    margin-top: 30px;
+}
+
+aside h2 {
+    text-align: center;
+    border: 2px solid black;
+    background-color: blue;
+    margin-top: 0px;
+}
+
+article {
+    clear: both;
+    overflow: auto;
+    background-color: lightblue;
+    position: relative;
+    margin-top: 30em;
+}
+
+article h2 {
+    text-align: center;
+    border: 2px solid black;
+    background-color: blue;
+}
