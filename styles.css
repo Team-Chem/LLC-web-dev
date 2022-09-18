@@ -21,6 +21,17 @@ header h1 {
     text-align: center;
 }
 
+/* site navigation styles */
+nav.sitenavigation {
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+nav.sitenavigation li {
+    display: inline-block;
+    line-height: 1.2em;
+    margin-left: 2.0em;
+}
 /* body and content styles */
 body {
     background-color: grey;
