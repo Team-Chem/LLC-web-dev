@@ -21,6 +21,67 @@ header h1 {
     text-align: center;
 }
 
+/* site navigation styles */
+nav.sitenavigation {
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+nav.sitenavigation li {
+    display: inline-block;
+    line-height: 1.2em;
+    margin-left: 2.0em;
+}
+nav.form-options {
+    background-color: grey;
+    text-align: left;
+    color: black;
+    float: left;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+    width: 25%;
+}
+nav.form-options li{
+    display: block;
+    line-height: 1.2em;
+    margin-top: 2.0em;
+    margin-right: 1.2em;
+    padding: 3px 6px;
+}
+
+nav li a {
+    text-decoration: none;
+}
+
+/* link styles */
+nav.form-options a:link {
+    color: blue;
+}
+nav.form-options a:visited {
+    color: black;
+}
+nav.form-options a:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+nav.form-options a:hover, nav.form-options a:focus {
+    background-color: lightblue;
+    border: 2px solid black;
+    padding: 0.2em;
+    border-radius: 0.8em;
+}
+/* form styles */
+form.polymer-data-form {
+    float: right;
+    width: 65%;
+    display: block;
+    background-color: white;
+}
+form.polymer-data-form p.form-instrucion {
+    text-align: center;
+}
+
 /* body and content styles */
 body {
     background-color: grey;
@@ -30,7 +91,6 @@ main {
     float: right;
     width: 65%;
     background-color: lightblue;
-    margin-top: 30px;
 }
 
 main h2 {
@@ -41,14 +101,13 @@ main h2 {
 }
 
 h2 {
-    color: white;
+    color: black;
 }
 
 aside {
     float: left;
     width: 30%;
     background-color: lightblue;
-    margin-top: 30px;
 }
 
 aside h2 {
@@ -63,11 +122,14 @@ article {
     overflow: auto;
     background-color: lightblue;
     position: relative;
-    margin-top: 30em;
+    border: 2px solid black;
 }
 
 article h2 {
     text-align: center;
-    border: 2px solid black;
-    background-color: blue;
+    border-bottom: 2px solid black;
+}
+
+footer {
+    text-align: center;
 }
