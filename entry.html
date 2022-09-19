@@ -29,6 +29,7 @@
         <article id="start">
             <h2>Polymer Entry</h2>
             <nav class="form-options">
+                <p>Select a Field</p>
                 <ul>
                     <li><a href="poly">Enter Polymer</a></li>
                     <li><a href="mobile">Enter Mobile Phase</a></li>
@@ -39,12 +40,28 @@
                     <li><a href="doc">Enter Polymer</a></li>
                 </ul>
             </nav>
-            <form class="polymer-data-form" action="results.html">
+            <form class="polymer-data-form">
                 <p class="form-instrucion">Please enter the required fieds</p>
-                <fieldset class="polymer entery">
+                <fieldset class="polymerEntry">
                     <label for="polymerName">
                         Polymer Name
                         <input type="text" name="name" id="polymerName" required>
+                    </label>
+                    <label for="critHigh">
+                        Critical High
+                        <input type="number" name="number" id="critHigh" required>
+                    </label>
+                    <label for="critLow">
+                        Critical Low
+                        <input type="number" name="number" id="critLow" required>
+                    </label>
+                    <label for="mass">
+                        Molar Masses
+                        <input type="number" name="number" id="mass">
+                    </label>
+                    <label for="samp">
+                        Used Sample
+                        <input type="text" name="name" id="samp">
                     </label>
                 </fieldset>
             </form>

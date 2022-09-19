@@ -33,7 +33,7 @@ nav.sitenavigation li {
     margin-left: 2.0em;
 }
 nav.form-options {
-    background-color: grey;
+    background-color: lightgrey;
     text-align: left;
     color: black;
     float: left;
@@ -71,6 +71,7 @@ nav.form-options a:hover, nav.form-options a:focus {
     padding: 0.2em;
     border-radius: 0.8em;
 }
+
 /* form styles */
 form.polymer-data-form {
     float: right;
@@ -80,6 +81,17 @@ form.polymer-data-form {
 }
 form.polymer-data-form p.form-instrucion {
     text-align: center;
+}
+
+form.polymer-data-form fieldset.polymerEntry label{
+    text-align: left;
+    display: block;
+    margin-top: 1.5em;
+    margin-right: 65%;
+}
+form.polymer-data-form fieldset.polymerEntry label input{
+    text-align: left;
+    float: right;
 }
 
 /* body and content styles */
