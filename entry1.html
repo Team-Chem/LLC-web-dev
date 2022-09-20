@@ -2,6 +2,14 @@
 <html lang="en">
     <head>
         <title>Data entry page</title>
+        <!-- 
+            LCCC - Data Entry
+            Filename: entry.html
+
+            Author: Nathaniel Dixon, Mathew Hosier, Hunter Jackson
+            Date: 9/19/2022
+            References: HTML5 and CSS3 Illustrated, W3 Schools
+        -->
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -27,20 +35,27 @@
             <h1>LCCC</h1>
         </header>
 
+        <!-- Using the article here for structuring-->
         <article id="start">
             <h2>Polymer Entry</h2>
+            <!--These are the in page button form options.-->
             <nav class="form-options">
                 <p>Select a Field</p>
                 <div class="forms">
-                    <button id="btn1">Polymer Information</button>
+                    <button id="btn1">Polymer</button>
+                    <button id="btn2">Mobile Phase</button>
+                    <button id="btn3">Stationsry Phase</button>
                 </div>
             </nav>
-            <div class="form-wrapper">
+            <!-- Nesting everything in a wrapper just in case I need outside styling. -->
+            <div id="form-wrapper">
+                <!-- This is the first form option. The action is supposed to post this form information into the database. -->
                 <form id="polymer-data-form" action="process-form.php" method="post">
                     <p class="form-instrucion">Please enter the required fieds</p>
                     <fieldset class="polymerEntry">
                         <div class="polySelector">
-                            <label for="polyName">Poly Name</label>
+                            <label for="polyName" class="needed">Poly Name</label>
+                            <!--This is for a dropdown box for poly names-->
                             <select id="polyid" name="polyName">
                                 <option value="01">Polystyleine</option>
                                 <option value="02">Polybutadeine</option>
@@ -58,11 +73,12 @@
                                 <option value="14">Option 14</option>
                             </select>
                         </div>
-                        <label for="critHigh">
+                        <!--Pretty standard input tactics. -->
+                        <label for="critHigh" class="needed">
                             Critical High
                             <input type="number" name="number" id="critHigh" required>
                         </label>
-                        <label for="critLow">
+                        <label for="critLow" class="needed">
                             Critical Low
                             <input type="number" name="number" id="critLow" required>
                         </label>
@@ -79,12 +95,65 @@
                         <input type="submit" id="submit" value="Submit">
                     </fieldset>
                 </form>
-            </div>
-        </article>
 
+                <!--Form 2-->
+                <form id="Mobile-phase-form" action="process-form.php" method="post">
+                    <p class="form-instrucion">Please enter the required fieds</p>
+                    <fieldset class="MobileEntry">
+                        <label for="solv">
+                            Solvent
+                            <input type="text" name="name" id="solv" required>
+                        </label>
+                        <label for="nonSolv">
+                            Nonsolvent
+                            <input type="text" name="name" id="nonSolv" required>
+                        </label>
+                        <label for="adsorli">
+                            Adsorli
+                            <input type="text" name="name" id="adsorli" required>
+                        </label>
+                        <label for="desorli">
+                            Desorli
+                            <input type="text" name="name" id="desorli" required>
+                        </label>
+                    </fieldset>
+                    <fieldset class="submitbutton2">
+                        <input type="submit" id="submit2" value="Submit">
+                    </fieldset>
+                </form>
+
+                <!--Form 3-->
+                <form id="stationary-phase-form" action="process-form.php", method="post">
+                    <p class="form-instrucion">Please enter the required fieds</p>
+                    <fieldset class="staionaryEntry">
+                        <label for="particlediam">
+                            Particle Diameter
+                            <input type="number" name="number" id="particlediam" required>
+                        </label>
+                        <label for="poreSize">
+                            Pore sizes
+                            <input type="number" name="number" id="poreSize" required>
+                        </label>
+                        <label for="columnDim">
+                            Column Dimension
+                            <input type="number" name="number" id="columnDim" required>
+                        </label>
+                    </fieldset>
+                    <fieldset class="submitbutton3">
+                        <input type="submit" id="submit3" value="Submit">
+                    </fieldset>
+                </form>
+            </div>
+            
+        </article>
+        <section>
+            
+        </section>
+        <!--Of course footer is included everywhere.-->
         <footer>
             <h2>This is for contact information</h2>
         </footer>
+        <!--Scripting in my JavaScript file for page functionality. -->
         <script src="forms.js"></script>
     </body>
 </html>
