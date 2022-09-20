@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Data entry page</title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles.css">
+        <script src="respond.min.js"></script>
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <link rel="icon" sizes="192x192" href="images/android.png">
+
+    </head>
+
+    <body>
+        <nav class="default-style">
+            <ul>
+                <li><a href="default.asp">Home</a></li>
+                <li><a href="polyer_search_page.html">Search</a></li>
+                <li><a href="entry.html">New Entry</a></li>
+                <li><a href="about.asp">About</a></li>
+                <li><a href="account.asp">Account</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>LCCC</h1>
+        </header>
+
+        <article id="start">
+            <h2>Polymer Entry</h2>
+            <nav class="form-options">
+                <p>Select a Field</p>
+                <div class="forms">
+                    <button id="btn1">Polymer Information</button>
+                </div>
+            </nav>
+            <div class="form-wrapper">
+                <form id="polymer-data-form" action="process-form.php" method="post">
+                    <p class="form-instrucion">Please enter the required fieds</p>
+                    <fieldset class="polymerEntry">
+                        <div class="polySelector">
+                            <label for="polyName">Poly Name</label>
+                            <select id="polyid" name="polyName">
+                                <option value="01">Polystyleine</option>
+                                <option value="02">Polybutadeine</option>
+                                <option value="03">Polystyethaline</option>
+                                <option value="04">Polystyrone</option>
+                                <option value="05">Option 5</option>
+                                <option value="06">Option 6</option>
+                                <option value="07">Option 7</option>
+                                <option value="08">Option 8</option>
+                                <option value="09">Option 9</option>
+                                <option value="10">Option 10</option>
+                                <option value="11">Option 11</option>
+                                <option value="12">Option 12</option>
+                                <option value="13">Option 13</option>
+                                <option value="14">Option 14</option>
+                            </select>
+                        </div>
+                        <label for="critHigh">
+                            Critical High
+                            <input type="number" name="number" id="critHigh" required>
+                        </label>
+                        <label for="critLow">
+                            Critical Low
+                            <input type="number" name="number" id="critLow" required>
+                        </label>
+                        <label for="mass">
+                            Molar Masses
+                            <input type="number" name="number" id="mass">
+                        </label>
+                        <label for="samp">
+                            Used Sample
+                            <input type="text" name="name" id="samp">
+                        </label>
+                    </fieldset>
+                    <fieldset class="submitbutton">
+                        <input type="submit" id="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </div>
+        </article>
+
+        <footer>
+            <h2>This is for contact information</h2>
+        </footer>
+        <script src="forms.js"></script>
+    </body>
+</html>
