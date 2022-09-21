@@ -141,20 +141,25 @@ button:active {
 }
 
 /* form styles */
-#polymer-data-form, #Mobile-phase-form, #stationary-phase-form {
+#polymer-data-form, #Mobile-phase-form, #stationary-phase-form, #condition-form, #investigation-form,
+#upload-form {
     float: right;
     width: 65%;
     display: none;
     background-color: white;
     bottom: 0%;
 }
+/*The instruction is misspelled.*/
+/* All of the forms follow the same styling */
 #polymer-data-form p.form-instrucion, #Mobile-phase-form p.form-instrucion, #stationary-phase-form 
-p.form-instrucion {
+p.form-instrucion, #condition-form p.form-instrucion, #upload-form p.form-instrucion {
     text-align: center;
 }
 
 #polymer-data-form fieldset.polymerEntry label, #polymer-data-form fieldset.polymerEntry div.polySelector, 
-#Mobile-phase-form fieldset.MobileEntry label, #stationary-phase-form fieldset.staionaryEntry label{
+#Mobile-phase-form fieldset.MobileEntry label, #stationary-phase-form fieldset.staionaryEntry label
+#condition-form fieldset.conditions label, #investigation-form fieldset.investigation label, 
+#upload-form p.form-instrucion label{
     text-align: left;
     display: block;
     margin-top: 2.5em;
@@ -162,7 +167,9 @@ p.form-instrucion {
 }
 
 #polymer-data-form fieldset.polymerEntry label input, #polymer-data-form fieldset.polymerEntry div.polySelector select,
-#Mobile-phase-form fieldset.MobileEntry label input, #stationary-phase-form fieldset.staionaryEntry label input{
+#Mobile-phase-form fieldset.MobileEntry label input, #stationary-phase-form fieldset.staionaryEntry label input
+#condition-form fieldset.conditions label input, #investigation-form fieldset.investigation label textarea, 
+#upload-form p.form-instrucion label input{
     text-align: left;
     float: right;
 }
@@ -170,6 +177,7 @@ p.form-instrucion {
 p.form-instrucion{
     color: red;
 }
+
 p.form-instrucion:before, label.needed:before {
     content: "* ";
     color: red;
@@ -187,7 +195,7 @@ select {
     height: 8%;
 }
 
-#submit, #submit2, #submit3 {
+#submit, #submit2, #submit3, #submit4, #submit5, #submit6 {
     border: none;
     padding: 0.4em 0.6em;
     background-color: yellow;
@@ -201,7 +209,9 @@ select {
     top: 2px;
     left: 2px;
 }
-.submitbutton, .submitbutton2, .submitbutton3 {
+
+.submitbutton, .submitbutton2, .submitbutton3, .submitbutton4, .submitbutton5,
+.submitbutton6 {
     display: none;
 }
 
@@ -252,6 +262,7 @@ article {
     /* background-color: lightblue; */
     position: relative;
     border: 2px solid black;
+    background-color: grey;
 }
 
 article h2 {
@@ -259,6 +270,11 @@ article h2 {
 
     border: 2px solid black;
     background-color: blue;
+}
+/* results styles */
+.results {
+    text-align: center;
+    background-color: white;
 }
 
 /* table styles */
