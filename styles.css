@@ -86,7 +86,7 @@ form.polymer-data-form p.form-instrucion {
 /* body and content styles */
 body {
     background-color: rgb(93, 169, 255);
-    background-image: url("../images/chem.png");
+    background-image: url("chem.png");
 }
 
 main {
