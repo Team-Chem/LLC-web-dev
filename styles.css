@@ -1,5 +1,20 @@
 /* This file is for styling the html page content. */
 
+/* 
+    LCCC
+    Filename: styles.css
+
+    Author: Nathaniel Dixon, Mathew Hosier, Hunter Jackson
+    Date: 9/19/2022
+    References: HTML5 and CSS3 Illustrated, W3Schools
+*/
+/* Reset styles */
+/*a, article, aside, nav, div, fieldset, figcaption, figure, footer, header, h1, h2,
+input, label, legend, li, option, p, section, select, ul {
+    border: 0;
+    padding: 0;
+    margin: 0;
+} */
 
 /* This is for generalizing default font sizes on the page. Will most likely 
 be overrided. */
@@ -28,13 +43,33 @@ nav.sitenavigation {
     text-align: center;
     color: white;
 }
+
+nav.default-style {
+    text-align: center;
+    background-color: darkblue; 
+    position: relative;
+    margin-top: 0px;
+    border: 4px solid black;
+}
+
+nav.default-style li {
+    display: inline-block;
+    list-style-type: none;
+    font-size: 2em;
+    margin-left: 1.2em;
+}
+
+/* This was the old nav bar name can use for references
 nav.sitenavigation li {
     display: inline-block;
     line-height: 1.2em;
     margin-left: 2.0em;
 }
+*/
+
+/* these need to be swapped to div selectors */
 nav.form-options {
-    background-color: grey;
+    background-color: whitesmoke;
     text-align: left;
     color: black;
     float: left;
@@ -48,6 +83,12 @@ nav.form-options li{
     margin-top: 2.0em;
     margin-right: 1.2em;
     padding: 3px 6px;
+    text-align: left;
+}
+nav.form-options p{
+    text-align: center;
+    background-color: blue;
+    color: white;
 }
 
 nav li a {
@@ -55,6 +96,15 @@ nav li a {
 }
 
 /* link styles */
+nav.default-style a:link {
+    color: white;
+}
+
+nav.default-style a:visited {
+    color: grey;
+}
+
+/* This is currently not in use prob will delete later
 nav.form-options a:link {
     color: blue;
 }
@@ -72,15 +122,102 @@ nav.form-options a:hover, nav.form-options a:focus {
     padding: 0.2em;
     border-radius: 0.8em;
 }
+*/
+
+/* button styles */
+button {
+    display: block;
+    margin: 1.8em auto;
+    width: 40%;
+    padding: 3%;
+    background-color: blue;
+    color: white;
+}
+
+button:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
 /* form styles */
-form.polymer-data-form {
+#polymer-data-form, #Mobile-phase-form, #stationary-phase-form, #condition-form, #investigation-form,
+#upload-form {
     float: right;
     width: 65%;
-    display: block;
+    display: none;
     background-color: white;
+    bottom: 0%;
 }
-form.polymer-data-form p.form-instrucion {
+/*The instruction is misspelled.*/
+/* All of the forms follow the same styling */
+#polymer-data-form p.form-instrucion, #Mobile-phase-form p.form-instrucion, #stationary-phase-form 
+p.form-instrucion, #condition-form p.form-instrucion, #upload-form p.form-instrucion {
     text-align: center;
+}
+
+#polymer-data-form fieldset.polymerEntry label, #polymer-data-form fieldset.polymerEntry div.polySelector, 
+#Mobile-phase-form fieldset.MobileEntry label, #stationary-phase-form fieldset.staionaryEntry label
+#condition-form fieldset.conditions label, #investigation-form fieldset.investigation label, 
+#upload-form p.form-instrucion label{
+    text-align: left;
+    display: block;
+    margin-top: 2.5em;
+    margin-right: 65%;
+}
+
+#polymer-data-form fieldset.polymerEntry label input, #polymer-data-form fieldset.polymerEntry div.polySelector select,
+#Mobile-phase-form fieldset.MobileEntry label input, #stationary-phase-form fieldset.staionaryEntry label input
+#condition-form fieldset.conditions label input, #investigation-form fieldset.investigation label textarea, 
+#upload-form p.form-instrucion label input{
+    text-align: left;
+    float: right;
+}
+
+p.form-instrucion{
+    color: red;
+}
+
+p.form-instrucion:before, label.needed:before {
+    content: "* ";
+    color: red;
+}
+
+/*div.polySelector{
+    border: 2px solid black;
+} */
+
+select {
+    position: absolute;
+    right: 42%;
+    top: 31%;
+    width: 10%;
+    height: 8%;
+}
+
+#submit, #submit2, #submit3, #submit4, #submit5, #submit6 {
+    border: none;
+    padding: 0.4em 0.6em;
+    background-color: yellow;
+    font-size: 1.2em;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+#submit:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.submitbutton, .submitbutton2, .submitbutton3, .submitbutton4, .submitbutton5,
+.submitbutton6 {
+    display: none;
+}
+
+/* Feedback buttons */
+.show {
+    display: block;
 }
 
 /* body and content styles */
@@ -122,9 +259,10 @@ aside h2 {
 article {
     clear: both;
     overflow: auto;
-    background-color: lightblue;
+    /* background-color: lightblue; */
     position: relative;
     border: 2px solid black;
+    background-color: grey;
 }
 
 article h2 {
@@ -133,21 +271,13 @@ article h2 {
     border: 2px solid black;
     background-color: blue;
 }
-
-nav.default-style li {
-    display: inline-block;
-    list-style-type: none;
-    margin: 1em;
-    font-size: 2em;
-}
-
-nav.default-style {
+/* results styles */
+.results {
     text-align: center;
-    background-color: rgb(0,0,0);
-    position: relative;
-    margin-top: 0px;
-    padding-top: 2%;
+    background-color: white;
 }
+
+/* table styles */
 
 table.db-table {
     margin: 0 auto;
