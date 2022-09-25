@@ -279,6 +279,19 @@ article h2 {
 
 /* table styles */
 
+/* nav bar list styling */
+nav.default-style li {
+    display: inline-block;
+    list-style-type: none;
+}
+/* nav bar box structure around list */
+nav.default-style {
+    text-align: center;
+    background-color: blueviolet;
+    position: relative;
+    margin: 5%;
+}
+/* db cell format */
 table.db-table {
     margin: 0 auto;
     border: 2px solid black;
@@ -286,7 +299,7 @@ table.db-table {
     border-spacing: 0;
     width: 100%;
 }
-
+/*  db cell styling on search page*/
 td, th {
     text-align: center;
     border: 1px solid black;
@@ -295,25 +308,28 @@ td, th {
     padding: 1%;
     font-size: 1.2em;
 }
-
+/* cell grouping of rows for data */
 thead, tbody {
     border: 2px solid black;
 }
-
+/* table data holding db data */
 tr th {
     background-color: darkblue;
-    color: white;
+    color: red;
+    font-weight: bold;
 }
-
+/* caption above db cell table on search page*/
 caption {
     display: table-caption;
     padding: 1%;
     margin: 1em;
     font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
 
     border-bottom: 2px solid black;
 }
-
+/* content at bottom of page */
 footer {
     text-align: center;
 }
