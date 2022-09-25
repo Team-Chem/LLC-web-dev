@@ -53,7 +53,7 @@
             <!-- Nesting everything in a wrapper just in case I need outside styling. -->
             <div id="form-wrapper">
                 <!-- This is the first form option. The action is supposed to post this form information into the database. -->
-                <form id="polymer-data-form" action="process-form.php" method="post">
+                <form id="polymer-data-form" action="process-form-polymer.php" method="post">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="polymerEntry">
                         <div class="polySelector">
@@ -100,7 +100,7 @@
                 </form>
 
                 <!--Form 2-->
-                <form id="Mobile-phase-form" action="results.html">
+                <form id="Mobile-phase-form" action="process-form-mobile_phase.php" method="post">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="MobileEntry">
                         <label for="solv">
@@ -111,14 +111,6 @@
                             Nonsolvent
                             <input type="text" name="Nonsolvent" id="nonSolv" required>
                         </label>
-                        <label for="adsorli">
-                            Adsorli
-                            <input type="text" name="Adsorli" id="adsorli" required>
-                        </label>
-                        <label for="desorli">
-                            Desorli
-                            <input type="text" name="Desorli" id="desorli" required>
-                        </label>
                     </fieldset>
                     <fieldset class="submitbutton2">
                         <input type="submit" id="submit2" value="Submit">
@@ -126,12 +118,12 @@
                 </form>
 
                 <!--Form 3-->
-                <form id="stationary-phase-form" action="results.html">
+                <form id="stationary-phase-form" action="process-form-stationary_phase.php" method="post">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="staionaryEntry">
-                        <label for="particlediam">
+                        <label for="particleDiam">
                             Particle Diameter
-                            <input type="number" name="Particle Diameter" id="particlediam" required>
+                            <input type="number" name="Particle Diameter" id="particleDiam" required>
                         </label>
                         <label for="poreSize">
                             Pore sizes
@@ -147,7 +139,7 @@
                     </fieldset>
                 </form>
                 <!--Form 4-->
-                <form id="condition-form" action="results.html">
+                <form id="condition-form" action="process-form-condition.php" method="post">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="conditions">
                         <label for="temp">
@@ -175,7 +167,7 @@
                         <input type="submit" id="submit4" value="Submit">
                     </fieldset>
                 </form>
-                <form id="investigation-form" action="results.html">
+                <form id="investigation-form" action="process-form-investigation.php" method="post">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="investigation">
                         <label for="reference">
@@ -187,7 +179,7 @@
                         <input type="submit" id="submit5" value="Submit">
                     </fieldset>
                 </form>
-                <form id="upload-form" action="results.html">
+                <form id="upload-form" action="process-form-document.php" method="post">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="docUpload">
                         <label for="doc">
