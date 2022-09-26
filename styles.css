@@ -289,10 +289,11 @@ nav.default-style {
     text-align: center;
     background-color: blueviolet;
     position: relative;
-    margin: 5%;
+    margin-top: 0%;
 }
 /* db cell format */
 table.db-table {
+    background-color: grey;
     margin: 0 auto;
     border: 2px solid black;
     border-collapse: collapse;
@@ -332,4 +333,27 @@ caption {
 /* content at bottom of page */
 footer {
     text-align: center;
+}
+
+.content-border-container {
+    border: 2px solid black;
+}
+/*
+.grid-container {
+    gap: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+*/
+
+.grid-container > .btn-format {
+    border: 1px solid black;
+    background-color: blue;
+    
+}
+
+.btn-format {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
 }
