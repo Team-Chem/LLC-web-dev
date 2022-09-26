@@ -291,7 +291,14 @@ nav.default-style {
     position: relative;
     margin-top: 0%;
 }
-/* db cell format */
+/* db cell format  TODO*/
+
+    text-align: center;
+    background-color: white;
+}
+
+/* table styles */
+
 table.db-table {
     background-color: grey;
     margin: 0 auto;
