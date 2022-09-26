@@ -24,11 +24,11 @@
     <body>
         <nav class="default-style">
             <ul>
-                <li><a href="default.asp">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="polyer_search_page.html">Search</a></li>
                 <li><a href="entry1.html">New Entry</a></li>
-                <li><a href="about.asp">About</a></li>
-                <li><a href="account.asp">Account</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="account.html">Account</a></li>
             </ul>
         </nav>
         <header>
@@ -51,9 +51,10 @@
                 </div>
             </nav>
             <!-- Nesting everything in a wrapper just in case I need outside styling. -->
+            <!-- Form 1 -->
             <div id="form-wrapper">
                 <!-- This is the first form option. The action is supposed to post this form information into the database. -->
-                <form id="polymer-data-form" action="process-form-polymer.php" method="post">
+                <form id="polymer-data-form" action="results.html" method="post">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="polymerEntry">
                         <div class="polySelector">
@@ -100,7 +101,7 @@
                 </form>
 
                 <!--Form 2-->
-                <form id="Mobile-phase-form" action="process-form-mobile_phase.php" method="post">
+                <form id="Mobile-phase-form" action="results.html">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="MobileEntry">
                         <label for="solv">
@@ -111,6 +112,14 @@
                             Nonsolvent
                             <input type="text" name="Nonsolvent" id="nonSolv" required>
                         </label>
+                        <label for="adsorli">
+                            Adsorli
+                            <input type="text" name="Adsorli" id="adsorli" required>
+                        </label>
+                        <label for="desorli">
+                            Desorli
+                            <input type="text" name="Desorli" id="desorli" required>
+                        </label>
                     </fieldset>
                     <fieldset class="submitbutton2">
                         <input type="submit" id="submit2" value="Submit">
@@ -118,12 +127,12 @@
                 </form>
 
                 <!--Form 3-->
-                <form id="stationary-phase-form" action="process-form-stationary_phase.php" method="post">
+                <form id="stationary-phase-form" action="results.html">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="staionaryEntry">
-                        <label for="particleDiam">
+                        <label for="particlediam">
                             Particle Diameter
-                            <input type="number" name="Particle Diameter" id="particleDiam" required>
+                            <input type="number" name="Particle Diameter" id="particlediam" required>
                         </label>
                         <label for="poreSize">
                             Pore sizes
@@ -139,7 +148,7 @@
                     </fieldset>
                 </form>
                 <!--Form 4-->
-                <form id="condition-form" action="process-form-condition.php" method="post">
+                <form id="condition-form" action="results.html">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="conditions">
                         <label for="temp">
@@ -167,7 +176,7 @@
                         <input type="submit" id="submit4" value="Submit">
                     </fieldset>
                 </form>
-                <form id="investigation-form" action="process-form-investigation.php" method="post">
+                <form id="investigation-form" action="results.html">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="investigation">
                         <label for="reference">
@@ -179,7 +188,7 @@
                         <input type="submit" id="submit5" value="Submit">
                     </fieldset>
                 </form>
-                <form id="upload-form" action="process-form-document.php" method="post">
+                <form id="upload-form" action="results.html">
                     <p class="form-instrucion">Please enter the required fields</p>
                     <fieldset class="docUpload">
                         <label for="doc">
