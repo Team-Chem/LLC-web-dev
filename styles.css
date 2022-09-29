@@ -318,14 +318,36 @@ table {
     /*width: 100%; */
 }
 
+/* nav bar list styling */
+nav.default-style li {
+    display: inline-block;
+    list-style-type: none;
+}
+/* nav bar box structure around list */
+nav.default-style {
+    text-align: center;
+    background-color: blueviolet;
+    position: relative;
+    margin-top: 0%;
+}
+/* db cell format  TODO*/
+/* this was changed during merge may not be correct */
+table {
+    text-align: center;
+    background-color: white;
+}
+
+/* table styles */
+
 table.db-table {
+    background-color: grey;
     margin: 0 auto;
     border: 2px solid black;
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
 }
-
+/*  db cell styling on search page*/
 td, th {
     text-align: center;
     border: 1px solid black;
@@ -334,14 +356,15 @@ td, th {
     padding: 1%;
     font-size: 1.2em;
 }
-
+/* cell grouping of rows for data */
 thead, tbody {
     border: 2px solid black;
 }
-
+/* table data holding db data */
 tr th {
     background-color: darkblue;
-    color: white;
+    color: red;
+    font-weight: bold;
 }
 
 th, td {
@@ -361,15 +384,41 @@ div.poly-data-preview{
     padding-top: 2%;
 }
 
+/* caption above db cell table on search page*/
 caption {
     display: table-caption;
     padding: 1%;
     margin: 1em;
     font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
 
     border-bottom: 2px solid black;
 }
-
+/* content at bottom of page */
 footer {
     text-align: center;
+}
+
+.content-border-container {
+    border: 2px solid black;
+}
+/*
+.grid-container {
+    gap: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+*/
+
+.grid-container > .btn-format {
+    border: 1px solid black;
+    background-color: blue;
+    
+}
+
+.btn-format {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
 }
