@@ -22,6 +22,9 @@ html {
     font-size: 20px;
 }
 
+body {
+    margin: 2.5em;
+}
 /* header styles */
 header {
     background-color: blue;
@@ -125,7 +128,7 @@ nav.form-options a:hover, nav.form-options a:focus {
 */
 
 /* button styles */
-button {
+nav.form-options button {
     display: block;
     margin: 1.8em auto;
     width: 40%;
@@ -134,27 +137,45 @@ button {
     color: white;
 }
 
-button:active {
+nav.form-options button:active {
     position: relative;
     top: 2px;
     left: 2px;
 }
 
+/*Do not believe this is in use. */
+#sub-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 1%;
+    width: 120px;
+    margin-top: 1.5em;
+}
+
+#prev {
+    clear: both;
+}
+
 /* form styles */
-#polymer-data-form, #Mobile-phase-form, #stationary-phase-form {
+#polymer-data-form, #Mobile-phase-form, #stationary-phase-form, #condition-form, #investigation-form,
+#upload-form {
     float: right;
     width: 65%;
     display: none;
     background-color: white;
     bottom: 0%;
 }
+/*The instruction is misspelled.*/
+/* All of the forms follow the same styling */
 #polymer-data-form p.form-instrucion, #Mobile-phase-form p.form-instrucion, #stationary-phase-form 
-p.form-instrucion {
+p.form-instrucion, #condition-form p.form-instrucion, #upload-form p.form-instrucion {
     text-align: center;
 }
 
 #polymer-data-form fieldset.polymerEntry label, #polymer-data-form fieldset.polymerEntry div.polySelector, 
-#Mobile-phase-form fieldset.MobileEntry label, #stationary-phase-form fieldset.staionaryEntry label{
+#Mobile-phase-form fieldset.MobileEntry label, #stationary-phase-form fieldset.staionaryEntry label
+#condition-form fieldset.conditions label, #investigation-form fieldset.investigation label, 
+#upload-form p.form-instrucion label{
     text-align: left;
     display: block;
     margin-top: 2.5em;
@@ -162,7 +183,9 @@ p.form-instrucion {
 }
 
 #polymer-data-form fieldset.polymerEntry label input, #polymer-data-form fieldset.polymerEntry div.polySelector select,
-#Mobile-phase-form fieldset.MobileEntry label input, #stationary-phase-form fieldset.staionaryEntry label input{
+#Mobile-phase-form fieldset.MobileEntry label input, #stationary-phase-form fieldset.staionaryEntry label input
+#condition-form fieldset.conditions label input, #investigation-form fieldset.investigation label textarea, 
+#upload-form p.form-instrucion label input{
     text-align: left;
     float: right;
 }
@@ -170,24 +193,23 @@ p.form-instrucion {
 p.form-instrucion{
     color: red;
 }
-p.form-instrucion:before, label.needed:before {
+
+/*p.form-instrucion:before, label.neededPoly:before, label.neededMobile:before {
     content: "* ";
     color: red;
-}
+} */
 
 /*div.polySelector{
     border: 2px solid black;
 } */
 
 select {
-    position: absolute;
-    right: 42%;
-    top: 31%;
-    width: 10%;
-    height: 8%;
+    position: inline-block;
+    width: 25%;
+    margin-top: 0%;
 }
 
-#submit, #submit2, #submit3 {
+#submit {
     border: none;
     padding: 0.4em 0.6em;
     background-color: yellow;
@@ -201,13 +223,21 @@ select {
     top: 2px;
     left: 2px;
 }
-.submitbutton, .submitbutton2, .submitbutton3 {
+
+.submitbutton {
     display: none;
 }
 
 /* Feedback buttons */
 .show {
     display: block;
+    clear: both;
+    text-align: right;
+}
+
+/* until we know the required fields */
+.form-instrucion {
+    display: none;
 }
 
 /* body and content styles */
@@ -252,6 +282,7 @@ article {
     /* background-color: lightblue; */
     position: relative;
     border: 2px solid black;
+    background-color: grey;
 }
 
 article h2 {
@@ -260,44 +291,134 @@ article h2 {
     border: 2px solid black;
     background-color: blue;
 }
+/* results styles */
+.results {
+    text-align: center;
+    background-color: white;
+}
+
+/* table styles */
+.poly-data-preview {
+    display: none;
+    border: 2px solid black;
+}
+
+table.poly-data-preview td, table.poly-data-preview tr {
+    background-color: white;
+    border: 2px solid black;
+}
+
+.show2 {
+    display: block;
+    clear: both;
+}
+
+table {
+    border: 2px solid black;
+    /*width: 100%; */
+}
+
+/* nav bar list styling */
+nav.default-style li {
+    display: inline-block;
+    list-style-type: none;
+}
+/* nav bar box structure around list */
+nav.default-style {
+    text-align: center;
+    background-color: blueviolet;
+    position: relative;
+    margin-top: 0%;
+}
+/* db cell format  TODO*/
+/* this was changed during merge may not be correct */
+table {
+    text-align: center;
+    background-color: white;
+}
 
 /* table styles */
 
 table.db-table {
+    background-color: grey;
     margin: 0 auto;
     border: 2px solid black;
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
 }
-
+/*  db cell styling on search page*/
 td, th {
     text-align: center;
     border: 1px solid black;
-    border-spacing: 1px solid #999;
+    /*border-spacing: 1px solid #999; */
     margin: 1%;
     padding: 1%;
     font-size: 1.2em;
 }
-
+/* cell grouping of rows for data */
 thead, tbody {
     border: 2px solid black;
 }
-
+/* table data holding db data */
 tr th {
     background-color: darkblue;
-    color: white;
+    color: red;
+    font-weight: bold;
 }
 
+th, td {
+    width: 10%;
+    background-color: white;
+}
+
+td p {
+    display: inline-block;
+}
+
+td {
+    font-size: 1em;
+}
+div.poly-data-preview{
+    clear: both;
+    padding-top: 2%;
+}
+
+/* caption above db cell table on search page*/
 caption {
     display: table-caption;
     padding: 1%;
     margin: 1em;
     font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
 
     border-bottom: 2px solid black;
 }
-
+/* content at bottom of page */
 footer {
     text-align: center;
+}
+
+.content-border-container {
+    border: 2px solid black;
+}
+/*
+.grid-container {
+    gap: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+*/
+
+.grid-container > .btn-format {
+    border: 1px solid black;
+    background-color: blue;
+    
+}
+
+.btn-format {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
 }

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Data entry page</title>
+        <!-- 
+            LCCC - Data Entry
+            Filename: entry.html
+
+            Author: Nathaniel Dixon, Mathew Hosier, Hunter Jackson
+            Date: 9/19/2022
+            References: HTML5 and CSS3 Illustrated, W3 Schools
+        -->
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="styles.css">
+        <script src="respond.min.js"></script>
+        <link rel="shortcut icon" href="images/favicon.ico">
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+        <link rel="icon" sizes="192x192" href="images/android.png">
+
+    </head>
+
+    <body>
+        <nav class="default-style">
+            <ul>
+                <li><a href="default.asp">Home</a></li>
+                <li><a href="polymer_search.html">Search</a></li>
+                <li><a href="entry.html">New Entry</a></li>
+                <li><a href="about.asp">About</a></li>
+                <li><a href="account.asp">Account</a></li>
+            </ul>
+        </nav>
+        <header>
+            <h1>LCCC</h1>
+        </header>
+
+        <!-- Using the article here for structuring-->
+        <article id="start">
+            <h2>Polymer Entry</h2>
+            <!--These are the in page button form options.-->
+            <nav class="form-options">
+                <p>Select a Field</p>
+                <div class="forms">
+                    <button id="btn1">Polymer</button>
+                    <button id="btn2">Mobile Phase</button>
+                    <button id="btn3">Stationary Phase</button>
+                    <button id="btn4">Conditions</button>
+                    <button id="btn5">Investigations</button>
+                    <button id="btn6">Upload</button>
+                </div>
+            </nav>
+            <!-- Nesting everything in a wrapper just in case I need outside styling. -->
+            <div id="form-wrapper">
+                <form id="for-submit" action="results.html">
+                    <!-- This is the first form option. The action is supposed to post this form information into the database. -->
+                    <fieldset id="polymer-data-form">
+                        <p class="form-instrucion">Please enter the required fields</p>
+                        <fieldset class="polymerEntry">
+                            <div class="polySelector">
+                                <label for="polyName" class="neededPoly">Poly Name</label>
+                                <!--This is for a dropdown box for poly names-->
+                                <select id="polyName" name="Polymer Name" required>
+                                    <option value="Polystyleine">Polystyleine</option>
+                                    <option value="Polybutadeine">Polybutadeine</option>
+                                    <option value="Polystyethaline">Polystyethaline</option>
+                                    <option value="Polystyrone">Polystyrone</option>
+                                </select>
+                            </div>
+                            <!--Pretty standard input tactics.-->
+                            <label for="critHigh" class="neededPoly">
+                                Critical High
+                                <input type="number" name="Critical High" id="critHigh">
+                            </label>
+                            <label for="critLow" class="neededPoly">
+                                Critical Low
+                                <input type="number" name="Critical Low" id="critLow">
+                            </label>
+                            <label for="mass">
+                                Molar Masses
+                                <input type="number" name="Mass" id="mass">
+                            </label>
+                            <label for="samp">
+                                Used Sample
+                                <input type="text" name="Used Sample" id="samp">
+                            </label>
+                        </fieldset>
+                        <!--<fieldset class="submitbutton">
+                            <input type="submit" id="submit" value="Submit">
+                        </fieldset>-->
+                    </fieldset>
+
+                    <!--Form 2-->
+                    <fieldset id="Mobile-phase-form" action="results.html">
+                        <p class="form-instrucion">Please enter the required fields</p>
+                        <fieldset class="MobileEntry">
+                            <label for="solv" class="neededMobile">
+                                Solvent
+                                <input type="text" name="Solvent" id="solv">
+                            </label>
+                            <label for="nonSolv" class="neededMobile">
+                                Nonsolvent
+                                <input type="text" name="Nonsolvent" id="nonSolv">
+                            </label>
+                        </fieldset>
+                        <!--<fieldset class="submitbutton2">
+                            <input type="submit" id="submit2" value="Submit">
+                        </fieldset>-->
+                    </fieldset>
+
+                    <!--Form 3-->
+                    <fieldset id="stationary-phase-form" action="results.html">
+                        <p class="form-instrucion">Please enter the required fields</p>
+                        <fieldset class="staionaryEntry">
+                            <label for="particlediam">
+                                Particle Diameter
+                                <input type="number" name="Particle Diameter" id="particlediam">
+                            </label>
+                            <label for="poreSize">
+                                Pore sizes
+                                <input type="number" name="Pore Size" id="poreSize">
+                            </label>
+                            <label for="columnDim">
+                                Column Dimension
+                                <input type="number" name="Column Dimension" id="columnDim">
+                            </label>
+                        </fieldset>
+                        <!--<fieldset class="submitbutton3">
+                            <input type="submit" id="submit3" value="Submit">
+                        </fieldset>-->
+                    </fieldset>
+                    <!--Form 4-->
+                    <fieldset id="condition-form" action="results.html">
+                        <p class="form-instrucion">Please enter the required fields</p>
+                        <fieldset class="conditions">
+                            <label for="temp">
+                                Temperature
+                                <input type="number" step="0.01" name="Temperature" id="temp">
+                            </label>
+                            <label for="press">
+                                Pressure
+                                <input type="number" name="Pressure" id="press">
+                            </label>
+                            <label for="flowRate">
+                                Flow Rate
+                                <input type="number" name="Flow Rate" id="flowRate">
+                            </label>
+                            <label for="injVolume">
+                                Injection injVolume
+                                <input type="number" name="Inject Volume" id="injVolume">
+                            </label>
+                            <label for="detect">
+                                Detector
+                                <input type="text" name="Detector" id="detect">
+                            </label>
+                        </fieldset>
+                        <!--<fieldset class="submitbutton4">
+                            <input type="submit" id="submit4" value="Submit">
+                        </fieldset>-->
+                    </fieldset>
+                    <fieldset id="investigation-form" action="results.html">
+                        <p class="form-instrucion">Please enter the required fields</p>
+                        <fieldset class="investigation">
+                            <label for="reference">
+                                References: 
+                                <textarea name="References" id="reference" row="6" cols="55"></textarea>
+                            </label>
+                        </fieldset>
+                        <!--<fieldset class="submitbutton5">
+                            <input type="submit" id="submit5" value="Submit">
+                        </fieldset>-->
+                    </fieldset>
+                    <fieldset id="upload-form" action="results.html">
+                        <p class="form-instrucion">Please enter the required fields</p>
+                        <fieldset class="docUpload">
+                            <label for="doc">
+                                Upload Document
+                                <input type="file" name="File Name" id="doc">
+                            </label>
+                        </fieldset>
+                        <!--<fieldset class="submitbutton6">
+                            <input type="submit" id="submit6" value="Submit">
+                        </fieldset>-->
+                    </fieldset>
+                    <fieldset class="submitbutton">
+                        <input type="submit" id="submit" value="Submit">
+                    </fieldset>
+                </form>
+            </div>
+            <div id="prev">
+                <h2>Data Preview</h2>
+            </div>
+
+            <div>
+                <table class="poly-data-preview">
+                    <thead>
+                        <tr>
+                            <th>Polymer Info</th>
+                            <th>Mobile Phase</th>
+                            <th>Stationary Phase</th>
+                            <th>Conditions</th>
+                            <th>Investigations</th>
+                            <th>Upload</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Poly Name: <p class="request-polyName"></p></td>
+                            <td>Solvent: <p class="request-solv"></p></td>
+                            <td>Particle Diameter: <p class="request-diam"></p></td>
+                            <td>Temperature: <p class="request-temp"></p></td>
+                            <td>References: <p class="request-ref"></p></td>
+                            <td>Upload: <p class="request-upload"></p></td>
+                        </tr>
+                        <tr>
+                            <td>Critical High: <p class="request-critHigh"></p></td>
+                            <td>Non Solvent: <p class="request-nonsolv"></p></td>
+                            <td>Pore Size <p class="request-poresize"></p></td>
+                            <td>Pressure: <p class="request-pressure"></p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Critical Low: <p class="request-critLow"></p></td>
+                            <td></td>
+                            <td>Column Dimension <p class="request-ColumnDiam"></p></td>
+                            <td>Flow Rate: <p class="request-flow"></p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Molar Mass: <p class="request-mass"></p></td>
+                            <td></td>
+                            <td></td>
+                            <td>Injection Volume: <p class="request-inj"></p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Used Samples: <p class="request-samp"></p></td>
+                            <td></td>
+                            <td></td>
+                            <td>Detector: <p class="request-detect"></p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+        </article>
+        <section>
+            
+        </section>
+        <!--Of course footer is included everywhere.-->
+        <footer>
+            <h2>This is for contact information</h2>
+        </footer>
+        <!--Scripting in my JavaScript file for page functionality. -->
+        <script src="forms.js"></script>
+    </body>
+</html>

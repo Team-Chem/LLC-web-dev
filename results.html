@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Lakeland Reeds Bed &amp; Breakfast - Results</title>
+      <!-- 
+         LCCC Results Page
+         Filename: entry.html
+
+         Author:   HTML5 and CSS3 Illustrated Unit J, Lessons
+         Date:     
+         HTML5 and CSS3 Illustrated Unit J, Lessons
+      -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width">
+      <script src="modernizr.custom.40753.js"></script>
+      <link href='http://fonts.googleapis.com/css?family=Bitter:400,700' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" href="styles.css">
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="icon" sizes="192x192" href="images/android.png">
+   </head>
+   <body>
+      
+      <nav class="default-style">
+         <ul>
+             <li><a href="default.asp">Home</a></li>
+             <li><a href="polyer_search_page.html">Search</a></li>
+             <li><a href="entry1.html">New Entry</a></li>
+             <li><a href="about.asp">About</a></li>
+             <li><a href="account.asp">Account</a></li>
+         </ul>
+     </nav>
+     <header>
+         <h1>LCCC</h1>
+     </header>
+      <article id="start">
+         <div class="form-wrapper">
+            <h2>Your form has been submitted</h2>
+            <div class="results">
+               <h3>You entered the following data:</h3>
+         
+               <script>
+                   var formData = location.search;
+                   formData = formData.substring(1, formData.length);
+                   while (formData.indexOf("+") !== -1) {
+                      formData = formData.replace("+", " ");
+                   }
+                   formData = decodeURIComponent(formData);
+                   var formArray = formData.split("&");
+                   for (var i = 0; i < formArray.length; i = i + 1) {
+                      document.write("<p>" + formArray[i] + "</p>");
+                   }
+               </script>
+            </div>
+         </div>
+      </article>
+      <button><a href="entry1.html">Back</a></button>
+      <footer>
+         <h2>This is for contact information</h2>
+     </footer>
+   </body>
+</html>
