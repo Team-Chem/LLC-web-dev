@@ -22,6 +22,9 @@ html {
     font-size: 20px;
 }
 
+body {
+    margin: 2.5em;
+}
 /* header styles */
 header {
     background-color: blue;
@@ -125,7 +128,7 @@ nav.form-options a:hover, nav.form-options a:focus {
 */
 
 /* button styles */
-button {
+nav.form-options button {
     display: block;
     margin: 1.8em auto;
     width: 40%;
@@ -134,10 +137,23 @@ button {
     color: white;
 }
 
-button:active {
+nav.form-options button:active {
     position: relative;
     top: 2px;
     left: 2px;
+}
+
+/*Do not believe this is in use. */
+#sub-btn{
+    display: block;
+    margin: 0 auto;
+    padding: 1%;
+    width: 120px;
+    margin-top: 1.5em;
+}
+
+#prev {
+    clear: both;
 }
 
 /* form styles */
@@ -178,24 +194,22 @@ p.form-instrucion{
     color: red;
 }
 
-p.form-instrucion:before, label.needed:before {
+/*p.form-instrucion:before, label.neededPoly:before, label.neededMobile:before {
     content: "* ";
     color: red;
-}
+} */
 
 /*div.polySelector{
     border: 2px solid black;
 } */
 
 select {
-    position: absolute;
-    right: 42%;
-    top: 31%;
-    width: 10%;
-    height: 8%;
+    position: inline-block;
+    width: 25%;
+    margin-top: 0%;
 }
 
-#submit, #submit2, #submit3, #submit4, #submit5, #submit6 {
+#submit {
     border: none;
     padding: 0.4em 0.6em;
     background-color: yellow;
@@ -210,14 +224,20 @@ select {
     left: 2px;
 }
 
-.submitbutton, .submitbutton2, .submitbutton3, .submitbutton4, .submitbutton5,
-.submitbutton6 {
+.submitbutton {
     display: none;
 }
 
 /* Feedback buttons */
 .show {
     display: block;
+    clear: both;
+    text-align: right;
+}
+
+/* until we know the required fields */
+.form-instrucion {
+    display: none;
 }
 
 /* body and content styles */
@@ -278,6 +298,25 @@ article h2 {
 }
 
 /* table styles */
+.poly-data-preview {
+    display: none;
+    border: 2px solid black;
+}
+
+table.poly-data-preview td, table.poly-data-preview tr {
+    background-color: white;
+    border: 2px solid black;
+}
+
+.show2 {
+    display: block;
+    clear: both;
+}
+
+table {
+    border: 2px solid black;
+    /*width: 100%; */
+}
 
 table.db-table {
     margin: 0 auto;
@@ -290,7 +329,7 @@ table.db-table {
 td, th {
     text-align: center;
     border: 1px solid black;
-    border-spacing: 1px solid #999;
+    /*border-spacing: 1px solid #999; */
     margin: 1%;
     padding: 1%;
     font-size: 1.2em;
@@ -303,6 +342,23 @@ thead, tbody {
 tr th {
     background-color: darkblue;
     color: white;
+}
+
+th, td {
+    width: 10%;
+    background-color: white;
+}
+
+td p {
+    display: inline-block;
+}
+
+td {
+    font-size: 1em;
+}
+div.poly-data-preview{
+    clear: both;
+    padding-top: 2%;
 }
 
 caption {

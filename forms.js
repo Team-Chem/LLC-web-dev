@@ -33,19 +33,51 @@ var btn5 = document.getElementById("btn5");
 var form5Sub = document.querySelector("#investigation-form");
 var btn6 = document.getElementById("btn6");
 var form6Sub = document.querySelector("#upload-form");
-//Did not need this just set base display to none */
-/*document.addEventListener("load", () => {
-    form = document.getElementById("polymer-data-form");
-    form.style.display = none;
-}); */
+var formWrapper = document.getElementById("form-wrapper");
+var nameContent = document.querySelector(".request-critHigh");
+var feedbackPoly = document.querySelector(".poly-data-preview");
+var CritHigh = document.getElementById("critHigh");
+var CritLow = document.getElementById("critLow");
+var nameContent2 = document.querySelector(".request-critLow");
+var PolyName = document.querySelector("#polyName");
+var nameContent3 = document.querySelector(".request-polyName");
+var Mass = document.querySelector("#mass");
+var nameContent4 = document.querySelector(".request-mass");
+var Sample = document.querySelector("#samp");
+var nameContent5 = document.querySelector(".request-samp");
+var nameContent6 = document.querySelector(".request-solv");
+var Solvent = document.querySelector("#solv");
+var Nonsolvent = document.getElementById("nonSolv");
+var nameContent7 = document.querySelector(".request-nonsolv");
+var Diameter = document.getElementById("particlediam");
+var nameContent8 = document.querySelector(".request-diam");
+var PoreSize = document.getElementById("poreSize");
+var nameContent9 = document.querySelector(".request-poresize");
+var nameContent10 = document.querySelector(".request-ColumnDiam");
+var ColumnDim = document.getElementById("columnDim");
+var Temp = document.getElementById("temp");
+var Pressure = document.getElementById("press");
+var FlowRate = document.getElementById("flowRate");
+var InjectionVol = document.getElementById("injVolume");
+var Detector = document.getElementById("detect");
+var nameContent11 = document.querySelector(".request-temp");
+var nameContent12 = document.querySelector(".request-pressure");
+var nameContent13 = document.querySelector(".request-flow");
+var nameContent14 = document.querySelector(".request-inj");
+var nameContent15 = document.querySelector(".request-detect");
+var nameContent16 = document.querySelector(".request-ref");
+var Ref = document.getElementById("reference");
+var nameContent17 = document.querySelector(".request-upload");
+var Doc = document.getElementById("doc");
+var form = document.getElementById("for-submit");
 
 function Submit1(){
     //Checking to see if all required form fields are filled. If so, display the submit button.
-    if(form1Sub.checkValidity() === true){
+    if(form.checkValidity() === true){
         submitButton.className = "submitbutton show";
     }
 }
-
+/*
 function Submit2(){
 
     if(form2Sub.checkValidity() === true){
@@ -76,7 +108,7 @@ function Submit6(){
         submitButton6.className = "submitbutton6 show";
     }
 }
-
+*/
 //These are functions made to reset the previous forms to display none when user clicks on a new form.
 function DefaultForm1(){
     form1 = document.getElementById("polymer-data-form");
@@ -112,7 +144,10 @@ function DefaultForm6(){
 btn1.addEventListener("click", () => {
     form1 = document.getElementById("polymer-data-form");
     
-    if(form1.style.display === "none"){
+    if(form1.style.display === "block"){
+        form1.style.display = "none";
+    }
+    else {
         form1.style.display = "block";
         DefaultForm2();
         DefaultForm3();
@@ -120,16 +155,27 @@ btn1.addEventListener("click", () => {
         DefaultForm5();
         DefaultForm6();
     }
-    else {
-        form1.style.display = "none";
-    }
+    form1.addEventListener("change", updatePreview, false);
 });
+
+function updatePreview(){
+    nameContent.textContent = CritHigh.value;
+    nameContent2.textContent = CritLow.value;
+    nameContent3.textContent = PolyName.value;
+    nameContent4.textContent = Mass.value;
+    nameContent5.textContent = Sample.value;
+    feedbackPoly.className = ".poly-data-preview show2";
+}
+
 
 //Second hidden field.
 btn2.addEventListener("click", () =>  {
     form2 = document.getElementById("Mobile-phase-form");
     
-    if(form2.style.display === "none"){
+    if(form2.style.display === "block"){
+        form2.style.display = "none";
+    }
+    else {
         form2.style.display = "block";
         DefaultForm1();
         DefaultForm3();
@@ -137,15 +183,24 @@ btn2.addEventListener("click", () =>  {
         DefaultForm5();
         DefaultForm6();
     }
-    else {
-        form2.style.display = "none";
-    }
+
+    form2.addEventListener("change", updatePreview2, false);
 });
+
+function updatePreview2(){
+    nameContent6.textContent = Solvent.value;
+    nameContent7.textContent = Nonsolvent.value;
+    feedbackPoly.className = ".poly-data-preview show2";
+}
 
 btn3.addEventListener("click", () => {
     form3 = document.getElementById("stationary-phase-form");
    
-    if(form3.style.display === "none"){
+    if(form3.style.display === "block"){
+        form3.style.display = "none";
+        
+    }
+    else {
         form3.style.display = "block";
         DefaultForm1();
         DefaultForm2();
@@ -153,15 +208,24 @@ btn3.addEventListener("click", () => {
         DefaultForm5();
         DefaultForm6();
     }
-    else {
-        form3.style.display = "none";
-    }
+
+    form3.addEventListener("change", updatePreview3, false);
 });
+
+function updatePreview3(){
+    nameContent8.textContent = Diameter.value;
+    nameContent9.textContent = PoreSize.value;
+    nameContent10.textContent = ColumnDim.value;
+    feedbackPoly.className = ".poly-data-preview show2";
+}
 
 btn4.addEventListener("click", () => {
     form4 = document.getElementById("condition-form");
 
-    if(form4.style.display === "none"){
+    if(form4.style.display === "block"){
+        form4.style.display = "none";
+    }
+    else {
         form4.style.display = "block";
         DefaultForm1();
         DefaultForm2();
@@ -169,31 +233,50 @@ btn4.addEventListener("click", () => {
         DefaultForm5();
         DefaultForm6();
     }
-    else {
-        form4.style.display = "none";
-    }
+
+    form4.addEventListener("change", updatePreview4, false);
 });
+
+function updatePreview4(){
+    nameContent11.textContent = Temp.value;
+    nameContent12.textContent = Pressure.value;
+    nameContent13.textContent = FlowRate.value;
+    nameContent14.textContent = InjectionVol.value;
+    nameContent15.textContent = Detector.value;
+
+    feedbackPoly.className = ".poly-data-preview show2";
+}
 
 btn5.addEventListener("click", () => {
     form5 = document.getElementById("investigation-form");
 
-    if(form5.style.display === "none"){
+    if(form5.style.display === "block"){
+        form5.style.display = "none";
+    }
+    else {
         form5.style.display = "block";
         DefaultForm1();
         DefaultForm2();
         DefaultForm3();
         DefaultForm4();
-        DefaultForm6()
+        DefaultForm6();
     }
-    else {
-        form5.style.display = "none";
-    }
+
+    form5.addEventListener("change", updatePreview5, false);
 });
+
+function updatePreview5(){
+    nameContent16.textContent = Ref.value;
+    feedbackPoly.className = ".poly-data-preview show2";
+}
 
 btn6.addEventListener("click", () => {
     form6 = document.getElementById("upload-form");
 
-    if(form6.style.display === "none"){
+    if(form6.style.display === "block"){
+        form6.style.display = "none";
+    }
+    else {
         form6.style.display = "block";
         DefaultForm1();
         DefaultForm2();
@@ -201,14 +284,20 @@ btn6.addEventListener("click", () => {
         DefaultForm4();
         DefaultForm5();
     }
-    else {
-        form6.style.display = "none";
-    }
+
+    form6.addEventListener("change", updatePreview6, false);
 });
+
+function updatePreview6(){
+
+    nameContent17.textContent = Doc.value;
+    feedbackPoly.className = ".poly-data-preview show2";
+}
 
 //These are to enable the submit button option after valid inputs.
 form1Sub.addEventListener("change", Submit1, false);
 
+/*
 form2Sub.addEventListener("change", Submit2, false);
 
 form3Sub.addEventListener("change", Submit3, false);
@@ -217,4 +306,7 @@ form4Sub.addEventListener("change", Submit4, false);
 
 form5Sub.addEventListener("change", Submit5, false);
 
-form6Sub.addEventListener("change", Submit6, false);
+form6Sub.addEventListener("change", Submit6, false); */
+
+/*form1.addEventListener("load", DefaultDisplay, false); */
+
