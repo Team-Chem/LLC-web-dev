@@ -165,6 +165,7 @@ nav.form-options button:active {
     background-color: white;
     bottom: 0%;
 }
+
 /*The instruction is misspelled.*/
 /* All of the forms follow the same styling */
 #polymer-data-form p.form-instrucion, #Mobile-phase-form p.form-instrucion, #stationary-phase-form 
@@ -173,17 +174,17 @@ p.form-instrucion, #condition-form p.form-instrucion, #upload-form p.form-instru
 }
 
 #polymer-data-form fieldset.polymerEntry label, #polymer-data-form fieldset.polymerEntry div.polySelector, 
-#Mobile-phase-form fieldset.MobileEntry label, #stationary-phase-form fieldset.staionaryEntry label
+#Mobile-phase-form fieldset.MobileEntry label, #stationary-phase-form fieldset.staionaryEntry label,
 #condition-form fieldset.conditions label, #investigation-form fieldset.investigation label, 
-#upload-form p.form-instrucion label{
+#upload-form p.form-instrucion label {
     text-align: left;
     display: block;
     margin-top: 2.5em;
-    margin-right: 65%;
+    margin-right: 60%;
 }
 
 #polymer-data-form fieldset.polymerEntry label input, #polymer-data-form fieldset.polymerEntry div.polySelector select,
-#Mobile-phase-form fieldset.MobileEntry label input, #stationary-phase-form fieldset.staionaryEntry label input
+#Mobile-phase-form fieldset.MobileEntry label input, #stationary-phase-form fieldset.staionaryEntry label input,
 #condition-form fieldset.conditions label input, #investigation-form fieldset.investigation label textarea, 
 #upload-form p.form-instrucion label input{
     text-align: left;
