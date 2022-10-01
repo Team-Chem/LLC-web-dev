@@ -52,7 +52,8 @@
             </nav>
             <!-- Nesting everything in a wrapper just in case I need outside styling. -->
             <div id="form-wrapper">
-                <form id="for-submit" action="results.html">
+                <!--Start of Forms-->
+                <form id="for-submit" action="process-form-polymer.php" method="POST">
                     <!-- This is the first form option. The action is supposed to post this form information into the database. -->
                     <fieldset id="polymer-data-form">
                         <p class="form-instrucion">Please enter the required fields</p>
@@ -85,9 +86,6 @@
                                 <input type="text" name="Used Sample" id="samp">
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton">
-                            <input type="submit" id="submit" value="Submit">
-                        </fieldset>-->
                     </fieldset>
 
                     <!--Form 2-->
@@ -103,9 +101,6 @@
                                 <input type="text" name="Nonsolvent" id="nonSolv">
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton2">
-                            <input type="submit" id="submit2" value="Submit">
-                        </fieldset>-->
                     </fieldset>
 
                     <!--Form 3-->
@@ -125,10 +120,8 @@
                                 <input type="number" name="Column Dimension" id="columnDim">
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton3">
-                            <input type="submit" id="submit3" value="Submit">
-                        </fieldset>-->
                     </fieldset>
+
                     <!--Form 4-->
                     <fieldset id="condition-form" action="results.html">
                         <p class="form-instrucion">Please enter the required fields</p>
@@ -154,10 +147,9 @@
                                 <input type="text" name="Detector" id="detect">
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton4">
-                            <input type="submit" id="submit4" value="Submit">
-                        </fieldset>-->
                     </fieldset>
+
+                    <!-- Form 5-->
                     <fieldset id="investigation-form" action="results.html">
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="investigation">
@@ -166,10 +158,8 @@
                                 <textarea name="References" id="reference" row="6" cols="55"></textarea>
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton5">
-                            <input type="submit" id="submit5" value="Submit">
-                        </fieldset>-->
                     </fieldset>
+                    <!-- Form 6-->
                     <fieldset id="upload-form" action="results.html">
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="docUpload">
@@ -178,13 +168,14 @@
                                 <input type="file" name="File Name" id="doc">
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton6">
-                            <input type="submit" id="submit6" value="Submit">
-                        </fieldset>-->
                     </fieldset>
+
+                    <!--Submit Button-->
                     <fieldset class="submitbutton">
                         <input type="submit" id="submit" value="Submit">
                     </fieldset>
+
+                    <!--End of Form-->
                 </form>
             </div>
             <div id="prev">
