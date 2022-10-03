@@ -70,45 +70,17 @@ var Ref = document.getElementById("reference");
 var nameContent17 = document.querySelector(".request-upload");
 var Doc = document.getElementById("doc");
 var form = document.getElementById("for-submit");
+var PolySolv = document.getElementById("polySolv");
+var nameContent18 = document.querySelector(".request-poly-solv");
+var Submit = document.querySelector(".submitbutton");
 
 function Submit1(){
     //Checking to see if all required form fields are filled. If so, display the submit button.
     if(form.checkValidity() === true){
-        submitButton.className = "submitbutton show";
-    }
-}
-/*
-function Submit2(){
-
-    if(form2Sub.checkValidity() === true){
-        submitButton2.className = "submitbutton2 show";
+        Submit.className = "submitbutton show";
     }
 }
 
-function Submit3(){
-    if(form3Sub.checkValidity() === true){
-        submitButton3.className = "submitbutton3 show";
-    }
-}
-
-function Submit4(){
-    if(form4Sub.checkValidity() === true){
-        submitButton4.className = "submitbutton4 show";
-    }
-}
-
-function Submit5(){
-    if(form5Sub.checkValidity() === true){
-        submitButton5.className = "submitbutton5 show";
-    }
-}
-
-function Submit6(){
-    if(form6Sub.checkValidity() === true){
-        submitButton6.className = "submitbutton6 show";
-    }
-}
-*/
 //These are functions made to reset the previous forms to display none when user clicks on a new form.
 function DefaultForm1(){
     form1 = document.getElementById("polymer-data-form");
@@ -164,6 +136,7 @@ function updatePreview(){
     nameContent3.textContent = PolyName.value;
     nameContent4.textContent = Mass.value;
     nameContent5.textContent = Sample.value;
+    nameContent18.textContent = PolySolv.value;
     feedbackPoly.className = ".poly-data-preview show2";
 }
 
@@ -296,17 +269,3 @@ function updatePreview6(){
 
 //These are to enable the submit button option after valid inputs.
 form1Sub.addEventListener("change", Submit1, false);
-
-/*
-form2Sub.addEventListener("change", Submit2, false);
-
-form3Sub.addEventListener("change", Submit3, false);
-
-form4Sub.addEventListener("change", Submit4, false);
-
-form5Sub.addEventListener("change", Submit5, false);
-
-form6Sub.addEventListener("change", Submit6, false); */
-
-/*form1.addEventListener("load", DefaultDisplay, false); */
-
