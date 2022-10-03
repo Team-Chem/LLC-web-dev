@@ -1,6 +1,6 @@
 <?php
 
-$polyid = $_POST["Polymer_Name"];
+$polyName = $_POST["Polymer_Name"];
 $critHigh = filter_input(INPUT_POST, "Critical_High", FILTER_VALIDATE_INT);
 $critLow = filter_input(INPUT_POST, "Critical_Low", FILTER_VALIDATE_INT);
 $mass = filter_input(INPUT_POST, "Mass", FILTER_VALIDATE_INT);
@@ -30,7 +30,7 @@ if ( ! mysqli_stmt_prepare($stmt, $sql)) {
     die(mysqli_error($conn));
 }
 
-mysqli_stmt_bind_param($stmt, "siiis", $polyid, $critHigh, $critLow, $mass, $samp);
+mysqli_stmt_bind_param($stmt, "siiis", $polyName, $critHigh, $critLow, $mass, $samp);
 
 mysqli_stmt_execute($stmt);
 
