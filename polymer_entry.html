@@ -29,7 +29,7 @@
                 <li><a href="polymer_search.html" target="_blank">Search</a></li>
                 <li><a href="entry.html">New Entry</a></li>
                 <li><a href="about.asp">About</a></li>
-                <li><a href="account.asp" target="_blank">Account</a></li>
+                <li><a href="sign_in.html">Account</a></li>
             </ul>
         </nav>
         <header>
@@ -54,7 +54,7 @@
             <!-- Nesting everything in a wrapper just in case I need outside styling. -->
             <div id="form-wrapper">
                 <!--Start of Forms-->
-                <form id="for-submit" action="process-form-mobile_phase.php" method="post">
+                <form id="for-submit" action="results.html" method="post">
                     <!-- This is the first form option. The action is supposed to post this form information into the database. -->
                     <fieldset id="polymer-data-form">
                         <p class="form-instrucion">Please enter the required fields</p>
@@ -88,7 +88,7 @@
                     </fieldset>
 
                     <!--Form 2-->
-                    <fieldset id="Mobile-phase-form">
+                    <fieldset id="Mobile-phase-form" action="results.html" method="post">
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="MobileEntry">
                             <label for="solv" class="neededMobile">
@@ -103,7 +103,7 @@
                     </fieldset>
 
                     <!--Form 3-->
-                    <fieldset id="stationary-phase-form" action="results.html">
+                    <fieldset id="stationary-phase-form" action="results.html" method="post">
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="staionaryEntry">
                             <label for="particlediam">
@@ -122,7 +122,7 @@
                     </fieldset>
 
                     <!--Form 4-->
-                    <fieldset id="condition-form" action="results.html">
+                    <fieldset id="condition-form" action="results.html" method="post">
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="conditions">
                             <label for="temp">
@@ -147,9 +147,7 @@
                             </label>
                         </fieldset>
                     </fieldset>
-
-                    <!-- Form 5-->
-                    <fieldset id="investigation-form" action="results.html">
+                    <fieldset id="investigation-form" action="results.html" method="post">
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="investigation">
                             <label for="reference">
@@ -158,8 +156,7 @@
                             </label>
                         </fieldset>
                     </fieldset>
-                    <!-- Form 6-->
-                    <fieldset id="upload-form" action="results.html">
+                    <fieldset id="upload-form" action="results.html" method="post">
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="docUpload">
                             <label for="doc">
