@@ -13,6 +13,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <script src="respond.min.js"></script>
         <link rel="shortcut icon" href="images/favicon.ico">
@@ -25,10 +26,14 @@
         <nav class="default-style">
             <ul>
                 <li><a href="default.asp">Home</a></li>
-                <li><a href="polymer_search.html">Search</a></li>
+                <li><a href="polymer_search.html" target="_blank">Search</a></li>
                 <li><a href="entry.html">New Entry</a></li>
                 <li><a href="about.asp">About</a></li>
+<<<<<<< HEAD
                 <li><a href="sign_in.html">Account</a></li>
+=======
+                <li><a href="account.asp" target="_blank">Account</a></li>
+>>>>>>> 7dfb9185f58cda9f1b4ddcb24e6c835ca249b25c
             </ul>
         </nav>
         <header>
@@ -52,46 +57,50 @@
             </nav>
             <!-- Nesting everything in a wrapper just in case I need outside styling. -->
             <div id="form-wrapper">
+<<<<<<< HEAD
                 <form id="for-submit" action="results.html" method="post">
+=======
+                <!--Start of Forms-->
+                <form id="for-submit" action="process-form-mobile_phase.php" method="post">
+>>>>>>> 7dfb9185f58cda9f1b4ddcb24e6c835ca249b25c
                     <!-- This is the first form option. The action is supposed to post this form information into the database. -->
                     <fieldset id="polymer-data-form">
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="polymerEntry">
-                            <div class="polySelector">
-                                <label for="polyName" class="neededPoly">Poly Name</label>
-                                <!--This is for a dropdown box for poly names-->
-                                <select id="polyName" name="Polymer Name" required>
-                                    <option value="Polystyleine">Polystyleine</option>
-                                    <option value="Polybutadeine">Polybutadeine</option>
-                                    <option value="Polystyethaline">Polystyethaline</option>
-                                    <option value="Polystyrone">Polystyrone</option>
-                                </select>
-                            </div>
+                            <label for="polyName" class="neededPoly">
+                                Polymer Name
+                                <input type="text" name="PolymerName" id="polyName" placeholder="Polybutadiene">
+                            </label>
                             <!--Pretty standard input tactics.-->
                             <label for="critHigh" class="neededPoly">
-                                Critical High
-                                <input type="number" name="Critical High" id="critHigh">
+                                Molar High
+                                <input type="number" step="0.000000001" name="Critical High" id="critHigh">
                             </label>
                             <label for="critLow" class="neededPoly">
-                                Critical Low
-                                <input type="number" name="Critical Low" id="critLow">
+                                Molar Low
+                                <input type="number" step="0.000000001" name="Critical Low" id="critLow">
                             </label>
                             <label for="mass">
                                 Molar Masses
-                                <input type="number" name="Mass" id="mass">
+                                <input type="number" step="0.000000001" name="Mass" id="mass">
                             </label>
                             <label for="samp">
                                 Used Sample
                                 <input type="text" name="Used Sample" id="samp">
                             </label>
+                            <label for="polySolv">
+                                Polymer Solvent
+                                <input type="text" name="Solvent" id="polySolv">
+                            </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton">
-                            <input type="submit" id="submit" value="Submit">
-                        </fieldset>-->
                     </fieldset>
 
                     <!--Form 2-->
+<<<<<<< HEAD
                     <fieldset id="Mobile-phase-form" action="results.html" method="post">
+=======
+                    <fieldset id="Mobile-phase-form">
+>>>>>>> 7dfb9185f58cda9f1b4ddcb24e6c835ca249b25c
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="MobileEntry">
                             <label for="solv" class="neededMobile">
@@ -103,9 +112,6 @@
                                 <input type="text" name="Nonsolvent" id="nonSolv">
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton2">
-                            <input type="submit" id="submit2" value="Submit">
-                        </fieldset>-->
                     </fieldset>
 
                     <!--Form 3-->
@@ -114,77 +120,80 @@
                         <fieldset class="staionaryEntry">
                             <label for="particlediam">
                                 Particle Diameter
-                                <input type="number" name="Particle Diameter" id="particlediam">
+                                <input type="number" step="0.000000001" name="Particle Diameter" id="particlediam">
                             </label>
                             <label for="poreSize">
                                 Pore sizes
-                                <input type="number" name="Pore Size" id="poreSize">
+                                <input type="number" step="0.000000001" name="Pore Size" id="poreSize">
                             </label>
                             <label for="columnDim">
                                 Column Dimension
-                                <input type="number" name="Column Dimension" id="columnDim">
+                                <input type="number" step="0.000000001" name="Column Dimension" id="columnDim">
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton3">
-                            <input type="submit" id="submit3" value="Submit">
-                        </fieldset>-->
                     </fieldset>
+
                     <!--Form 4-->
                     <fieldset id="condition-form" action="results.html" method="post">
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="conditions">
                             <label for="temp">
                                 Temperature
-                                <input type="number" step="0.01" name="Temperature" id="temp">
+                                <input type="number" step="0.000000001" name="Temperature" id="temp">
                             </label>
                             <label for="press">
                                 Pressure
-                                <input type="number" name="Pressure" id="press">
+                                <input type="number" step="0.000000001" name="Pressure" id="press">
                             </label>
                             <label for="flowRate">
                                 Flow Rate
-                                <input type="number" name="Flow Rate" id="flowRate">
+                                <input type="number" step="0.000000001" name="Flow Rate" id="flowRate">
                             </label>
                             <label for="injVolume">
-                                Injection injVolume
-                                <input type="number" name="Inject Volume" id="injVolume">
+                                Injection Volume
+                                <input type="number" step="0.000000001" name="Inject Volume" id="injVolume">
                             </label>
                             <label for="detect">
                                 Detector
                                 <input type="text" name="Detector" id="detect">
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton4">
-                            <input type="submit" id="submit4" value="Submit">
-                        </fieldset>-->
                     </fieldset>
+<<<<<<< HEAD
                     <fieldset id="investigation-form" action="results.html" method="post">
+=======
+
+                    <!-- Form 5-->
+                    <fieldset id="investigation-form" action="results.html">
+>>>>>>> 7dfb9185f58cda9f1b4ddcb24e6c835ca249b25c
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="investigation">
                             <label for="reference">
                                 References: 
-                                <textarea name="References" id="reference" row="6" cols="55"></textarea>
+                                <textarea name="References" id="reference" row="6" cols="55" placeholder="First name Last name"></textarea>
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton5">
-                            <input type="submit" id="submit5" value="Submit">
-                        </fieldset>-->
                     </fieldset>
+<<<<<<< HEAD
                     <fieldset id="upload-form" action="results.html" method="post">
+=======
+                    <!-- Form 6-->
+                    <fieldset id="upload-form" action="results.html">
+>>>>>>> 7dfb9185f58cda9f1b4ddcb24e6c835ca249b25c
                         <p class="form-instrucion">Please enter the required fields</p>
                         <fieldset class="docUpload">
                             <label for="doc">
                                 Upload Document
-                                <input type="file" name="File Name" id="doc">
+                                <input type="file" name="File Name" id="doc" accept=".pdf, .doc, .html">
                             </label>
                         </fieldset>
-                        <!--<fieldset class="submitbutton6">
-                            <input type="submit" id="submit6" value="Submit">
-                        </fieldset>-->
                     </fieldset>
+                    <!--Submit Button-->
                     <fieldset class="submitbutton">
                         <input type="submit" id="submit" value="Submit">
                     </fieldset>
+
+                    <!--End of Form-->
                 </form>
             </div>
             <div id="prev">
@@ -242,6 +251,14 @@
                             <td></td>
                             <td></td>
                             <td>Detector: <p class="request-detect"></p></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Polymer Solvent: <p class="request-poly-solv"></p></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td></td>
                         </tr>
