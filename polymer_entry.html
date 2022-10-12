@@ -37,40 +37,29 @@
         </header>
 
         <!-- Using the article here for structuring-->
-        <article id="start">
+        <maine id="start">
             <h2>Polymer Entry</h2>
-            <!--These are the in page button form options.-->
-            <nav class="form-options">
-                <p>Select a Field</p>
-                <div class="forms">
-                    <button id="btn1">Polymer</button>
-                    <button id="btn2">Mobile Phase</button>
-                    <button id="btn3">Stationary Phase</button>
-                    <button id="btn4">Conditions</button>
-                    <button id="btn5">Investigations</button>
-                    <button id="btn6">Upload</button>
-                </div>
-            </nav>
             <!-- Nesting everything in a wrapper just in case I need outside styling. -->
             <div id="form-wrapper">
                 <!--Start of Forms-->
                 <form id="for-submit" action="results.html">
                     <!-- This is the first form option. The action is supposed to post this form information into the database. -->
                     <fieldset id="polymer-data-form">
-                        <p class="form-instrucion">Please enter the required fields</p>
+                        <p class="form-instruction">Please enter the required fields</p>
                         <fieldset class="polymerEntry">
-                            <label for="polyName" class="neededPoly">
+                            <legend>Polymer Data</legend>
+                            <label for="polyName" class="required">
                                 Polymer Name
-                                <input type="text" name="PolymerName" id="polyName" placeholder="Polybutadiene">
+                                <input type="text" name="PolymerName" id="polyName" placeholder="Polybutadiene" required>
                             </label>
                             <!--Pretty standard input tactics.-->
-                            <label for="critHigh" class="neededPoly">
-                                Molar High
-                                <input type="number" step="0.000000001" name="Critical High" id="critHigh">
+                            <label for="critHigh" class="required">
+                                Critical High
+                                <input type="number" step="0.000000001" name="Critical High" id="critHigh" required>
                             </label>
-                            <label for="critLow" class="neededPoly">
-                                Molar Low
-                                <input type="number" step="0.000000001" name="Critical Low" id="critLow">
+                            <label for="critLow" class="required">
+                                Critical Low
+                                <input type="number" step="0.000000001" name="Critical Low" id="critLow" required>
                             </label>
                             <label for="mass">
                                 Molar Masses
@@ -80,32 +69,41 @@
                                 Used Sample
                                 <input type="text" name="Used Sample" id="samp">
                             </label>
-                            <label for="polySolv">
+                            <label for="polySolv" class="required">
                                 Polymer Solvent
-                                <input type="text" name="Solvent" id="polySolv">
+                                <input type="text" name="Solvent" id="polySolv" required>
                             </label>
                         </fieldset>
                     </fieldset>
 
                     <!--Form 2-->
+
                     <fieldset id="Mobile-phase-form" action="results.html">
                         <p class="form-instrucion">Please enter the required fields</p>
+
+                    <fieldset id="Mobile-phase-form" action="results.html" method="post">
+
                         <fieldset class="MobileEntry">
-                            <label for="solv" class="neededMobile">
+                            <legend>Mobile Phase Data</legend>
+                            <label for="solv" class="required">
                                 Solvent
-                                <input type="text" name="Solvent" id="solv">
+                                <input type="text" name="Solvent" id="solv" required>
                             </label>
-                            <label for="nonSolv" class="neededMobile">
+                            <label for="nonSolv" class="required">
                                 Nonsolvent
-                                <input type="text" name="Nonsolvent" id="nonSolv">
+                                <input type="text" name="Nonsolvent" id="nonSolv" required>
                             </label>
                         </fieldset>
                     </fieldset>
 
                     <!--Form 3-->
                     <fieldset id="stationary-phase-form" action="results.html">
+
                         <p class="form-instrucion">Please enter the required fields</p>
+
+
                         <fieldset class="staionaryEntry">
+                            <legend>Stationary Phase Data</legend>
                             <label for="particlediam">
                                 Particle Diameter
                                 <input type="number" step="0.000000001" name="Particle Diameter" id="particlediam">
@@ -123,11 +121,15 @@
 
                     <!--Form 4-->
                     <fieldset id="condition-form" action="results.html">
+
                         <p class="form-instrucion">Please enter the required fields</p>
+
+
                         <fieldset class="conditions">
-                            <label for="temp">
+                            <legend>Polymer Conditions</legend>
+                            <label for="temp" class="required">
                                 Temperature
-                                <input type="number" step="0.000000001" name="Temperature" id="temp">
+                                <input type="number" step="0.000000001" name="Temperature" id="temp" required>
                             </label>
                             <label for="press">
                                 Pressure
@@ -137,28 +139,40 @@
                                 Flow Rate
                                 <input type="number" step="0.000000001" name="Flow Rate" id="flowRate">
                             </label>
-                            <label for="injVolume">
+                            <label for="injVolume" class="required">
                                 Injection Volume
-                                <input type="number" step="0.000000001" name="Inject Volume" id="injVolume">
+                                <input type="number" step="0.000000001" name="Inject Volume" id="injVolume" required>
                             </label>
                             <label for="detect">
                                 Detector
-                                <input type="text" name="Detector" id="detect">
+                                <input type="text" name="Detector" id="detect" requred>
                             </label>
                         </fieldset>
                     </fieldset>
+
                     <fieldset id="investigation-form" action="results.html">
                         <p class="form-instrucion">Please enter the required fields</p>
+
+
+                    <!-- Form 5-->
+                    <fieldset id="investigation-form" action="results.html">
+
                         <fieldset class="investigation">
+                            <legend>Researchers</legend>
                             <label for="reference">
                                 References: 
                                 <textarea name="References" id="reference" row="6" cols="55" placeholder="First name Last name"></textarea>
                             </label>
                         </fieldset>
                     </fieldset>
+                    
                     <fieldset id="upload-form" action="results.html">
                         <p class="form-instrucion">Please enter the required fields</p>
+                    <!-- Form 6-->
+                    <fieldset id="upload-form" action="results.html">
+             
                         <fieldset class="docUpload">
+                            <legend>Additional Documentation</legend>
                             <label for="doc">
                                 Upload Document
                                 <input type="file" name="File Name" id="doc" accept=".pdf, .doc, .html">
@@ -169,7 +183,6 @@
                     <fieldset class="submitbutton">
                         <input type="submit" id="submit" value="Submit">
                     </fieldset>
-
                     <!--End of Form-->
                 </form>
             </div>
@@ -177,7 +190,7 @@
                 <h2>Data Preview</h2>
             </div>
 
-            <div>
+            <!--<div>
                 <table class="poly-data-preview">
                     <thead>
                         <tr>
@@ -241,12 +254,132 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> -->
+            <table class="polymer-data-preview">
+                <thead>
+                    <tr>
+                        <th colspan="2">Polymer Data Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Polymer Name</td>
+                        <td class="request-polyName"></td>
+                    </tr>
+                    <tr>
+                        <td>Critical High</td>
+                        <td class="request-critHigh"></td>
+                    </tr>
+                    <tr>
+                        <td>Critical Low</td>
+                        <td class="request-critLow"></td>
+                    </tr>
+                    <tr>
+                        <td>Molar Mass</td>
+                        <td class="request-mass"></td>
+                    </tr>
+                    <tr>
+                        <td>Used Sample</td>
+                        <td class="request-samp"></td>
+                    </tr>
+                    <tr>
+                        <td>Polymer Solvent</td>
+                        <td class="request-poly-solv"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="mobile-phase-preview">
+                <thead>
+                    <tr>
+                        <th colspan="2">Mobile Phase Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Solvent</td>
+                        <td class="request-solv"></td>
+                    </tr>
+                    <tr>
+                        <td>Non-Solvent</td>
+                        <td class="request-nonsolv"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="stationary-phase-preview">
+                <thead>
+                    <tr>
+                        <th colspan="2">Stationary Phase Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Particle Diameter</td>
+                        <td class="request-diam"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <table class="conditions-preview">
+                <thead>
+                    <tr>
+                        <th colspan="2">Conditions Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Temperature</td>
+                        <td class="request-temp"></td>
+                    </tr>
+                    <tr>
+                        <td>Pressure</td>
+                        <td class="request-pressure"></td>
+                    </tr>
+                    <tr>
+                        <td>Flow Rate</td>
+                        <td class="request-flow"></td>
+                    </tr>
+                    <tr>
+                        <td>Injection Volume</td>
+                        <td class="request-inj"></td>
+                    </tr>
+                    <tr>
+                        <td>Detector</td>
+                        <td class="request-detect"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="reference-preview">
+                <thead>
+                    <tr>
+                        <th colspan="2">Researchers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Names</td>
+                        <td class="request-ref"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <table class="document-preview">
+                <thead>
+                    <tr>
+                        <th colspan="2">Research Document</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>PDF/Doc</td>
+                        <td class="request-upload"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+
             
-        </article>
-        <section>
-            
-        </section>
+        </maine>
         <!--Of course footer is included everywhere.-->
         <footer>
             <h2>This is for contact information</h2>
