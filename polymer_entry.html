@@ -29,7 +29,7 @@
                 <li><a href="polymer_search.html" target="_blank">Search</a></li>
                 <li><a href="entry.html">New Entry</a></li>
                 <li><a href="about.asp">About</a></li>
-                <li><a href="account.asp" target="_blank">Account</a></li>
+                <li><a href="sign_in.html">Account</a></li>
             </ul>
         </nav>
         <header>
@@ -42,7 +42,7 @@
             <!-- Nesting everything in a wrapper just in case I need outside styling. -->
             <div id="form-wrapper">
                 <!--Start of Forms-->
-                <form id="for-submit" action="process-form-polymer" method="post">
+                <form id="for-submit" action="results.html" method="post">
                     <!-- This is the first form option. The action is supposed to post this form information into the database. -->
                     <fieldset id="polymer-data-form">
                         <p class="form-instruction">Please enter the required fields</p>
@@ -77,7 +77,7 @@
                     </fieldset>
 
                     <!--Form 2-->
-                    <fieldset id="Mobile-phase-form">
+                    <fieldset id="Mobile-phase-form" action="results.html" method="post">
                         <fieldset class="MobileEntry">
                             <legend>Mobile Phase Data</legend>
                             <label for="solv" class="required">
@@ -358,9 +358,6 @@
 
             
         </maine>
-        <section>
-            
-        </section>
         <!--Of course footer is included everywhere.-->
         <footer>
             <h2>This is for contact information</h2>

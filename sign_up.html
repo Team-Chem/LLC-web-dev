@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<!--This is for the sign up portion of the modal sign up pop up-->
+<div class="sign-up-div">
+    <img class="image-flask" src="bubble-2022490_960_720.png">
+<form action="account.php" class="sign_up-form">
+    <h1>Sign Up</h1>
+    <div class="container">
+            
+    <label for="first_name"><b>First Name</b></label>
+    <input type="text" placeholder="Enter Name" id="first_name" name="first_name" required>
+
+    <label for="last_name"><b>Last Name</b></label>
+    <input type="text" placeholder="Enter Name" id="last_name" name="last_name" required>
+
+    <label for="email"><b>Email</b></label>
+<input type="text" placeholder="Enter Email" id="email" name="email" required>
+
+<label for="password"><b>Password</b></label>
+<input type="password" id="password" placeholder="Enter password" name="password" required>
+
+<label for="re-enter-password">Re-enter password</label>
+<input type="password" placeholder="Re-enter password" id="re-password" name="re-password" required>
+    
+        <input type="submit" id="submit" value="Submit">
+</form>
+</div>
+</div>
+
+<style>
+    body {
+
+margin: 0;
+padding: 0;
+font-family: 'Times New Roman', Times, serif;
+}
+
+.sign-up-div {
+width: 600px;
+box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+background: 25px;
+padding: 50px;
+margin: 8% auto 0;
+text-align: center;
+background-color: rgb(255, 255, 255);
+display: block;
+
+}
+
+.image-flask {
+width: 60px;
+}
+
+#first_name {
+border-radius: 30px;
+padding: 10px;
+width: 150px;
+margin: 10px;
+border: 1px solid;
+}
+
+#last_name {
+border-radius: 30px;
+padding: 10px;
+width: 150px;
+margin: 10px 0;
+border: 1px solid;
+
+}
+
+#email {
+border-radius: 30px;
+padding: 10px;
+width: 150px;
+margin: 10px 0;
+border: 1px solid;
+
+}
+
+#password {
+border-radius: 30px;
+padding: 10px;
+width: 150px;
+margin: 10px 0;
+border: 1px solid;
+
+}
+
+#re-password {
+border-radius: 30px;
+padding: 10px;
+width: 150px;
+margin: 10px 0;
+border: 1px solid;
+
+}
+
+
+.sign-in-form h1 {
+color: rgb(13, 13, 14);
+margin-bottom: 30px;
+}
+
+label{
+    width: 100px;
+    display: inline-block;
+    vertical-align: center;
+}
+
+
+</style>
+
+</body>
+</html>
