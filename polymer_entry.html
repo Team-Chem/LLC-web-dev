@@ -42,7 +42,7 @@
             <!-- Nesting everything in a wrapper just in case I need outside styling. -->
             <div id="form-wrapper">
                 <!--Start of Forms-->
-                <form id="for-submit" action="results.html" method="post">
+                <form id="for-submit" action="results.html">
                     <!-- This is the first form option. The action is supposed to post this form information into the database. -->
                     <fieldset id="polymer-data-form">
                         <p class="form-instruction">Please enter the required fields</p>
@@ -77,7 +77,12 @@
                     </fieldset>
 
                     <!--Form 2-->
+
+                    <fieldset id="Mobile-phase-form" action="results.html">
+                        <p class="form-instrucion">Please enter the required fields</p>
+
                     <fieldset id="Mobile-phase-form" action="results.html" method="post">
+
                         <fieldset class="MobileEntry">
                             <legend>Mobile Phase Data</legend>
                             <label for="solv" class="required">
@@ -93,6 +98,10 @@
 
                     <!--Form 3-->
                     <fieldset id="stationary-phase-form" action="results.html">
+
+                        <p class="form-instrucion">Please enter the required fields</p>
+
+
                         <fieldset class="staionaryEntry">
                             <legend>Stationary Phase Data</legend>
                             <label for="particlediam">
@@ -112,6 +121,10 @@
 
                     <!--Form 4-->
                     <fieldset id="condition-form" action="results.html">
+
+                        <p class="form-instrucion">Please enter the required fields</p>
+
+
                         <fieldset class="conditions">
                             <legend>Polymer Conditions</legend>
                             <label for="temp" class="required">
@@ -137,8 +150,13 @@
                         </fieldset>
                     </fieldset>
 
+                    <fieldset id="investigation-form" action="results.html">
+                        <p class="form-instrucion">Please enter the required fields</p>
+
+
                     <!-- Form 5-->
                     <fieldset id="investigation-form" action="results.html">
+
                         <fieldset class="investigation">
                             <legend>Researchers</legend>
                             <label for="reference">
@@ -147,8 +165,12 @@
                             </label>
                         </fieldset>
                     </fieldset>
+                    
+                    <fieldset id="upload-form" action="results.html">
+                        <p class="form-instrucion">Please enter the required fields</p>
                     <!-- Form 6-->
                     <fieldset id="upload-form" action="results.html">
+             
                         <fieldset class="docUpload">
                             <legend>Additional Documentation</legend>
                             <label for="doc">
