@@ -581,3 +581,111 @@ input:focus {
     background-color: lightblue;
 }
 
+/* sign in */
+
+.image-flask {
+    width: 60px;
+}
+
+.sign-in-div {
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    margin: 8% auto 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.email-user {
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
+}
+
+.pass-user {
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;
+    position: relative;
+}
+
+
+.sign-in-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;
+}
+
+/* sign up */
+
+.sign-up-div {
+    width: 400px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    margin: 8% auto 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    
+    }
+
+    #first_name {
+        border-radius: 30px;
+        padding: 10px;
+        width: 150px;
+        margin: 10px;
+        border: 1px solid;
+        display: inline-block;
+        }
+
+    #last_name {
+        border-radius: 30px;
+        padding: 10px;
+        width: 150px;
+        margin: 10px 0;
+        border: 1px solid;
+            
+        }
+            
+    #email {
+        border-radius: 30px;
+        padding: 10px;
+        width: 150px;
+        margin: 10px 0;
+        border: 1px solid;
+            
+        }
+            
+    #password {
+        border-radius: 30px;
+        padding: 10px;
+        width: 150px;
+        margin: 10px 0;
+        border: 1px solid;
+            
+        }
+            
+    #re-password {
+        border-radius: 30px;
+        padding: 10px;
+        width: 150px;
+        margin: 10px 0;
+        border: 1px solid;
+            
+        }
+
+    .sign-up-form {
+        color: rgb(13, 13, 14);
+        margin-bottom: 30px;
+        
+        }
+
+        .sign-up-div label {
+            display: flex;
+        }
