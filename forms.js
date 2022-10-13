@@ -88,6 +88,22 @@ function updatePreview(){
     PreviewUsedSample.textContent = UsedSample.value;
     PreviewPolymerSolvent.textContent = PolymerSolvent.value;
 
+    PreviewSolvent.textContent = Solvent.value;
+    PreviewNonSolvent.textContent = NonSolvent.value;
+
+    PreviewParticleDiameter.textContent = ParticleDiameter.value;
+    PreviewPoreSize.textContent = PoreSizes.value;
+    PreviewColumnDimension.textContent = ColumnDimension.value;
+
+    PreviewTemperature.textContent = Temperature.value;
+    PreviewPressure.textContent = Pressure.value;
+    PreviewFlowRate.textContent = FlowRate.value;
+    PreviewInjectionVolume.textContent = InjectionVolume.value;
+    PreviewDetector.textContent = Detector.value;
+
+    PreviewReferences.textContent = References.value;
+
+    PreviewDocumentation.textContent = UploadDocument.value;
 
     formPreview.className = ".poly-data-preview show2";
 }

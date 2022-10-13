@@ -63,14 +63,6 @@ nav.default-style li {
     margin-left: 1.2em;
 }
 
-/* This was the old nav bar name can use for references
-nav.sitenavigation li {
-    display: inline-block;
-    line-height: 1.2em;
-    margin-left: 2.0em;
-}
-*/
-
 /* form styles */
 #for-submit {
     background-color: blueviolet;
@@ -130,6 +122,16 @@ p.form-instruction:after {
     content: "*";
     color: red;
 }
+/* submit styles */
+.submitbutton {
+    text-align: center;
+}
+
+#submit {
+    background-color: yellow;
+    border-radius: 10px;
+    font-size: 1.25em;
+}
 nav li a {
     text-decoration: none;
 }
@@ -144,9 +146,14 @@ nav.default-style a:visited {
 }
 
 
-/*#prev {
+#prev {
+    float: right;
+    position: absolute;
+    right: 19%;
+    top: 22%;
+    background-color: white;
     clear: both;
-}*/
+}
 
 
 /* body and content styles */
@@ -162,15 +169,15 @@ main {
 }
 
 main h2 {
-    text-align: center;
+    text-align: right;
     border: 2px solid black;
     background-color: blue;
-    margin-top: 0px;   
+    margin-top: 0px;
 }
 
 h2 {
     color: black;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 aside {
@@ -299,6 +306,7 @@ div.poly-data-preview{
     right: 15%;
     top: 30%;
     max-width: 400px;
+    z-index: -1;
 }
 
 .mobile-phase-preview{
@@ -339,6 +347,7 @@ div.poly-data-preview{
     top: 215%;
     max-width: 400px;
 }
+
 /* caption above db cell table on search page*/
 caption {
     display: table-caption;
@@ -350,6 +359,7 @@ caption {
 
     border-bottom: 2px solid black;
 }
+
 /* content at bottom of page */
 footer {
     text-align: center;
@@ -358,14 +368,6 @@ footer {
 .content-border-container {
     border: 2px solid black;
 }
-
-/*
-.grid-container {
-    gap: 25px;
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
-*/
 
 .grid-container > .btn-format {
     border: 1px solid black;
@@ -390,7 +392,6 @@ input:focus {
     width: 60px;
 
 }
-
 .sign-in-div {
     width: 300px;
     box-shadow: 0 0 3px 0 rgb(106, 13, 212);
@@ -427,8 +428,7 @@ input:focus {
     margin-bottom: 30px;
 }
 
-/* sign up */
-
+/* sign up*/
 .sign-up-div {
     width: 400px;
     box-shadow: 0 0 3px 0 rgb(106, 13, 212);
@@ -438,72 +438,81 @@ input:focus {
     text-align: center;
     background-color: rgb(255, 255, 255);
     display: block;
-    
+}
+
+#first_name {
+    position: relative;
+    left: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
+    display: inline-block;
+}
+
+#last_name {
+    position: relative;
+    left: 32px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;    
+}
+            
+#email {
+    position: relative;
+    left: 55px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+            
+#password {
+    position: relative;
+    left: 38px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;         
+}
+            
+#re-password {
+    position: relative;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+
+.sign-up-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;     
+}
+
+.sign-up-div label {
+    display: left;
+    margin-left: 60px;
+}
+
+@media screen and (max-width: 1439px), print{
+    .polymer-data-preview, .mobile-phase-preview, .stationary-phase-preview,
+    .conditions-preview, .reference-preview, .document-preview {    
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        clear: both;
     }
-
-    #first_name {
+    #prev {
         position: relative;
-        left: 30px;
-        border-radius: 30px;
-        padding: 10px;
-        width: 150px;
-        margin: 10px;
-        border: 1px solid;
-        display: inline-block;
-        }
-
-    #last_name {
-        position: relative;
-        left: 32px;
-        border-radius: 30px;
-        padding: 10px;
-        width: 150px;
-        margin: 10px 0;
-        border: 1px solid;
-            
-        }
-            
-    #email {
-        position: relative;
-        left: 55px;
-        border-radius: 30px;
-        padding: 10px;
-        width: 150px;
-        margin: 10px 0;
-        border: 1px solid;
-        
+        clear: both;
     }
-            
-    #password {
-        position: relative;
-        left: 38px;
-        border-radius: 30px;
-        padding: 10px;
-        width: 150px;
-        margin: 10px 0;
-        border: 1px solid;
-            
-        }
-            
-    #re-password {
-        position: relative;
-        border-radius: 30px;
-        padding: 10px;
-        width: 150px;
-        margin: 10px 0;
-        border: 1px solid;
-            
-        }
-
-    .sign-up-form {
-        color: rgb(13, 13, 14);
-        margin-bottom: 30px;
-        
-        }
-
-        .sign-up-div label {
-            display: left;
-            margin-left: 60px;
-            
-        }
-
+    footer {
+        clear: both;
+    }
+}
