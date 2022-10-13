@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Data entry page</title>
         <!-- 
             LCCC - Data Entry
-            Filename: entry.html
+            Filename: polymer_entry.html
 
             Author: Nathaniel Dixon, Mathew Hosier, Hunter Jackson
             Date: 9/19/2022
@@ -149,6 +148,7 @@
                             </label>
                         </fieldset>
                     </fieldset>
+
                     <!-- Form 6-->
                     <fieldset id="upload-form">
                         <fieldset class="docUpload">
@@ -170,71 +170,7 @@
                 <h2>Data Preview</h2>
             </div>
 
-            <!--<div>
-                <table class="poly-data-preview">
-                    <thead>
-                        <tr>
-                            <th>Polymer Info</th>
-                            <th>Mobile Phase</th>
-                            <th>Stationary Phase</th>
-                            <th>Conditions</th>
-                            <th>Investigations</th>
-                            <th>Upload</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td>Poly Name: <p class="request-polyName"></p></td>
-                            <td>Solvent: <p class="request-solv"></p></td>
-                            <td>Particle Diameter: <p class="request-diam"></p></td>
-                            <td>Temperature: <p class="request-temp"></p></td>
-                            <td>References: <p class="request-ref"></p></td>
-                            <td>Upload: <p class="request-upload"></p></td>
-                        </tr>
-                        <tr>
-                            <td>Critical High: <p class="request-critHigh"></p></td>
-                            <td>Non Solvent: <p class="request-nonsolv"></p></td>
-                            <td>Pore Size <p class="request-poresize"></p></td>
-                            <td>Pressure: <p class="request-pressure"></p></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Critical Low: <p class="request-critLow"></p></td>
-                            <td></td>
-                            <td>Column Dimension <p class="request-ColumnDiam"></p></td>
-                            <td>Flow Rate: <p class="request-flow"></p></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Molar Mass: <p class="request-mass"></p></td>
-                            <td></td>
-                            <td></td>
-                            <td>Injection Volume: <p class="request-inj"></p></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Used Samples: <p class="request-samp"></p></td>
-                            <td></td>
-                            <td></td>
-                            <td>Detector: <p class="request-detect"></p></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td>Polymer Solvent: <p class="request-poly-solv"></p></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> -->
+            <!-- Start of preview tables -->
             <table class="polymer-data-preview">
                 <thead>
                     <tr>
