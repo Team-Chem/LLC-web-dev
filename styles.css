@@ -388,6 +388,7 @@ input:focus {
 
 .image-flask {
     width: 60px;
+
 }
 
 .sign-in-div {
@@ -402,6 +403,8 @@ input:focus {
 }
 
 .email-user {
+    position: relative;
+    left: 13px;
     border-radius: 30px;
     padding: 10px;
     width: 150px;
@@ -439,6 +442,8 @@ input:focus {
     }
 
     #first_name {
+        position: relative;
+        left: 30px;
         border-radius: 30px;
         padding: 10px;
         width: 150px;
@@ -448,6 +453,8 @@ input:focus {
         }
 
     #last_name {
+        position: relative;
+        left: 32px;
         border-radius: 30px;
         padding: 10px;
         width: 150px;
@@ -457,15 +464,19 @@ input:focus {
         }
             
     #email {
+        position: relative;
+        left: 55px;
         border-radius: 30px;
         padding: 10px;
         width: 150px;
         margin: 10px 0;
         border: 1px solid;
-            
-        }
+        
+    }
             
     #password {
+        position: relative;
+        left: 38px;
         border-radius: 30px;
         padding: 10px;
         width: 150px;
@@ -475,6 +486,7 @@ input:focus {
         }
             
     #re-password {
+        position: relative;
         border-radius: 30px;
         padding: 10px;
         width: 150px;
@@ -490,5 +502,8 @@ input:focus {
         }
 
         .sign-up-div label {
-            display: flex;
+            display: left;
+            margin-left: 60px;
+            
         }
+
