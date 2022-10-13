@@ -130,6 +130,16 @@ p.form-instruction:after {
     content: "*";
     color: red;
 }
+/* submit styles */
+.submitbutton {
+    text-align: center;
+}
+
+#submit {
+    background-color: yellow;
+    border-radius: 10px;
+    font-size: 1.25em;
+}
 nav li a {
     text-decoration: none;
 }
@@ -144,9 +154,14 @@ nav.default-style a:visited {
 }
 
 
-/*#prev {
+#prev {
+    float: right;
+    position: absolute;
+    right: 19%;
+    top: 22%;
+    background-color: white;
     clear: both;
-}*/
+}
 
 
 /* body and content styles */
@@ -162,15 +177,15 @@ main {
 }
 
 main h2 {
-    text-align: center;
+    text-align: right;
     border: 2px solid black;
     background-color: blue;
-    margin-top: 0px;   
+    margin-top: 0px;
 }
 
 h2 {
     color: black;
-    font-size: 1.5em;
+    font-size: 2em;
 }
 
 aside {
@@ -299,6 +314,7 @@ div.poly-data-preview{
     right: 15%;
     top: 30%;
     max-width: 400px;
+    z-index: -1;
 }
 
 .mobile-phase-preview{
@@ -386,4 +402,23 @@ input:focus {
 
 input:invalid {
     background-color: white;
+}
+
+@media screen and (max-width: 1439px), print{
+    .polymer-data-preview, .mobile-phase-preview, .stationary-phase-preview,
+    .conditions-preview, .reference-preview, .document-preview {
+        
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        clear: both;
+    }
+    #prev {
+        position: relative;
+        clear: both;
+    }
+
+    footer {
+        clear: both;
+    }
 }
