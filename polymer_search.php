@@ -61,9 +61,18 @@
                             </label>
                         </div>
 
+        <!-- <div class="content-border-container">
+            <table class="grid-container">
+                <div class="btn-format">
+                    <form class="">
+                        <label for="poly-name">
+                            <input class="search-input" type="text" id="poly-name">Enter Polymer
+                        </label>
+                        <input class="search-input" type="text">
+                        <label>Enter Solvent</label> -->
                     </form>
                 </div>
-            </div>
+            </table>
             <table class="db-table"><caption>Critical Conditions for Polymers</caption>
                 <thead>
                     <tr>
@@ -76,78 +85,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
                     <tr>                            
                         <td>data</td>
                         <td>data</td>
