@@ -34,29 +34,33 @@
                 <div class="answer-region">
                     <form class="check-mark-col">
                         <label>
-                            <input type="checkbox">One
+                            <input type="radio">
                             <span class="checkmark"></span>
                         </label>
                         <label>
-                            <input type="checkbox">Two
+                            <input type="radio">
                             <span class="checkmark"></span>
                         </label>
                         <label>
-                            <input type="checkbox">Three
+                            <input type="checkbox">
                             <span class="checkmark"></span>
                         </label>
                         <label>
-                            <input type="checkbox">Four
+                            <input type="checkbox">
                             <span class="checkmark"></span>
                         </label>
-                        <label>
-                            <input type="text" placeholder="Min">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label>
-                            <input type="text" placeholder="Max">
-                            <span class="checkmark"></span>
-                        </label>
+
+                        <div class="CR-Container">
+                            <label id="min-CR-searchbox">
+                                <input type="text" placeholder="Min">
+                                <span class="textbox"></span>
+                            </label>
+                            <label id="max-CR-searchbox">
+                                <input type="text" placeholder="Max">
+                                <span class="textbox"></span>
+                            </label>
+                        </div>
+
                     </form>
                 </div>
             </div>

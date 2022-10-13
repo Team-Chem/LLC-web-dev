@@ -546,7 +546,7 @@ footer {
 /* search page - left side rail */
 .left-sidebar-grid-container {
     height: 50%;
-    width: 160px;
+    width: 140px;
     background-color: white;
     display: inline-block;
     position: absolute;
@@ -574,6 +574,18 @@ footer {
 .check-mark-col {
     grid-template-columns: auto auto auto;
     gap: 10px;
+}
+/*  */
+.CR-container {
+    display: block;
+}
+/*  */
+#min-CR-searchbox > input {
+    width: 10%;
+}
+/*  */
+#max-CR-searchbox > input {
+    width: 10%;
 }
 
 /* button colors */
