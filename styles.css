@@ -8,13 +8,13 @@
     Date: 9/19/2022
     References: HTML5 and CSS3 Illustrated, W3Schools
 */
-/* Reset styles */
-/*a, article, aside, nav, div, fieldset, figcaption, figure, footer, header, h1, h2,
-input, label, legend, li, option, p, section, select, ul {
+
+a, article, aside, nav, div, fieldset, figcaption, figure, footer, header, h1, h2,
+input, label, legend, li, option, p, section, select, ul, form {
     border: 0;
     padding: 0;
     margin: 0;
-} */
+} 
 
 /* This is for generalizing default font sizes on the page. Will most likely 
 be overrided. */
@@ -23,12 +23,13 @@ html {
 }
 
 body {
-    margin: 2.5em;
+    margin: 4.5em;
+    font-family: "Cinzel", "Times New Roman", Times, serif serif;
 }
 /* header styles */
 header {
-    background-color: blue;
-    border: 2px solid black;
+    background-color: grey;
+    /*border: 2px solid black;*/
     padding: 1%;
     opacity: 50%;
 }
@@ -62,38 +63,75 @@ nav.default-style li {
     margin-left: 1.2em;
 }
 
-/* This was the old nav bar name can use for references
-nav.sitenavigation li {
-    display: inline-block;
-    line-height: 1.2em;
-    margin-left: 2.0em;
-}
-*/
-
-/* these need to be swapped to div selectors */
-nav.form-options {
-    background-color: whitesmoke;
-    text-align: left;
-    color: black;
-    float: left;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
-    width: 25%;
-}
-nav.form-options li{
-    display: block;
-    line-height: 1.2em;
-    margin-top: 2.0em;
-    margin-right: 1.2em;
-    padding: 3px 6px;
-    text-align: left;
-}
-nav.form-options p{
-    text-align: center;
-    background-color: blue;
+/* form styles */
+#for-submit {
+    background-color: blueviolet;
+    padding: 10px;
     color: white;
+    width: 700px;
+    margin: 0 0;
+    border: 6px solid black;
 }
 
+#for-submit fieldset {
+    margin-bottom: 1em;
+    border: none;
+}
+#for-submit fieldset fieldset {
+    margin-top: 1em;
+    padding: 0.8em;
+}
+#for-submit legend {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin-left: -0.3em;
+}
+#for-submit input, #for-submit textarea {
+    border: 1px solid black;
+    padding: 0.2em;
+    font-size: 1em;
+}
+.docUpload input {
+    border: none;
+}
+
+.polymerEntry label, .MobileEntry label, .staionaryEntry label, 
+.conditions label, .investigation label, .docUpload label{
+    display: block;
+    position: relative;
+    margin: 0.8em 0;
+    margin-top: 1.7em;
+}
+.polymerEntry input, .MobileEntry input, .staionaryEntry input,
+.conditions input, .docUpload input{
+    position: absolute;
+    left: 10em;
+    /*border: 2px solid black;*/
+}
+#for-submit label {
+    font-size: 1em;
+}
+.required:before {
+    content: "* ";
+    color: red;
+}
+p.form-instruction {
+    color: red;
+}
+p.form-instruction:after {
+    content: "*";
+    color: red;
+}
+/* submit styles */
+.submitbutton {
+    text-align: center;
+}
+
+#submit {
+    background-color: yellow;
+    border-radius: 10px;
+    font-size: 1.25em;
+}
 nav li a {
     text-decoration: none;
 }
@@ -107,145 +145,21 @@ nav.default-style a:visited {
     color: grey;
 }
 
-/* This is currently not in use prob will delete later
-nav.form-options a:link {
-    color: blue;
-}
-nav.form-options a:visited {
-    color: black;
-}
-nav.form-options a:active {
-    position: relative;
-    top: 2px;
-    left: 2px;
-}
-nav.form-options a:hover, nav.form-options a:focus {
-    background-color: lightblue;
-    border: 2px solid black;
-    padding: 0.2em;
-    border-radius: 0.8em;
-}
-*/
-
-/* button styles */
-nav.form-options button {
-    display: block;
-    margin: 1.8em auto;
-    width: 40%;
-    padding: 3%;
-    background-color: blue;
-    color: white;
-}
-
-nav.form-options button:active {
-    position: relative;
-    top: 2px;
-    left: 2px;
-}
-
-/*Do not believe this is in use. */
-#sub-btn{
-    display: block;
-    margin: 0 auto;
-    padding: 1%;
-    width: 120px;
-    margin-top: 1.5em;
-}
 
 #prev {
-    clear: both;
-}
-
-/* form styles */
-#polymer-data-form, #Mobile-phase-form, #stationary-phase-form, #condition-form, #investigation-form,
-#upload-form {
     float: right;
-    width: 65%;
-    display: none;
+    position: absolute;
+    right: 19%;
+    top: 22%;
     background-color: white;
-    bottom: 0%;
-}
-
-/*The instruction is misspelled.*/
-/* All of the forms follow the same styling */
-#polymer-data-form p.form-instrucion, #Mobile-phase-form p.form-instrucion, #stationary-phase-form 
-p.form-instrucion, #condition-form p.form-instrucion, #upload-form p.form-instrucion {
-    text-align: center;
-}
-
-#polymer-data-form fieldset.polymerEntry label, #polymer-data-form fieldset.polymerEntry div.polySelector, 
-#Mobile-phase-form fieldset.MobileEntry label, #stationary-phase-form fieldset.staionaryEntry label,
-#condition-form fieldset.conditions label, #investigation-form fieldset.investigation label, 
-#upload-form p.form-instrucion label {
-    text-align: left;
-    display: block;
-    margin-top: 2.5em;
-    margin-right: 60%;
-}
-
-#polymer-data-form fieldset.polymerEntry label input, #polymer-data-form fieldset.polymerEntry div.polySelector select,
-#Mobile-phase-form fieldset.MobileEntry label input, #stationary-phase-form fieldset.staionaryEntry label input,
-#condition-form fieldset.conditions label input, #investigation-form fieldset.investigation label textarea, 
-#upload-form p.form-instrucion label input{
-    text-align: left;
-    float: right;
-}
-
-p.form-instrucion{
-    color: red;
-}
-
-/*p.form-instrucion:before, label.neededPoly:before, label.neededMobile:before {
-    content: "* ";
-    color: red;
-} */
-
-/*div.polySelector{
-    border: 2px solid black;
-} */
-
-select {
-    position: inline-block;
-    width: 25%;
-    margin-top: 0%;
-}
-
-#submit {
-    border: none;
-    padding: 0.4em 0.6em;
-    background-color: yellow;
-    font-size: 1.2em;
-    border-radius: 10px;
-    border: 2px solid black;
-}
-
-#submit:active {
-    position: relative;
-    top: 2px;
-    left: 2px;
-}
-
-.submitbutton {
-    display: none;
-}
-
-/* Feedback buttons */
-.show {
-    display: block;
     clear: both;
-    text-align: right;
 }
 
-/* until we know the required fields */
-.form-instrucion {
-    display: none;
-}
 
 /* body and content styles */
 body {
-    background-color: rgb(93, 169, 255);
-    /* background-image: url("chem.png"); */
-    background-image: url("polymer.png");
+    background: rgb(93, 169, 255);
+    background: url("chem.png");
 }
 
 main {
@@ -255,14 +169,15 @@ main {
 }
 
 main h2 {
-    text-align: center;
+    text-align: right;
     border: 2px solid black;
     background-color: blue;
-    margin-top: 0px;   
+    margin-top: 0px;
 }
 
 h2 {
     color: black;
+    font-size: 2em;
 }
 
 aside {
@@ -281,17 +196,16 @@ aside h2 {
 article {
     clear: both;
     overflow: auto;
-    /* background-color: lightblue; */
     position: relative;
     border: 2px solid black;
-    background-color: grey;
+    background-color: white;
 }
 
 article h2 {
     text-align: center;
 
-    border: 2px solid black;
-    background-color: blue;
+    /*border: 2px solid black; */
+    /*background-color: blue; */
 }
 /* results styles */
 .results {
@@ -336,19 +250,18 @@ nav.default-style {
 /* this was changed during merge may not be correct */
 table {
     text-align: center;
-    clear: both;
+    background-color: white;
 }
 
 /* table styles */
+
 table.db-table {
+    background-color: grey;
     margin: 0 auto;
-    border: 5px solid #111;
+    border: 2px solid black;
     border-collapse: collapse;
     border-spacing: 0;
-    width: 79%;
-    clear: both;
-    overflow: auto;
-    margin-bottom: 32px;
+    width: 100%;
 }
 /*  db cell styling on search page*/
 td, th {
@@ -365,8 +278,8 @@ thead, tbody {
 }
 /* table data holding db data */
 tr th {
-    background-color: lightcyan;
-    color: black;
+    background-color: blueviolet;
+    color: white;
     font-weight: bold;
 }
 
@@ -387,7 +300,55 @@ div.poly-data-preview{
     padding-top: 2%;
 }
 
-/* search page - caption above db cell table on search page*/
+.polymer-data-preview {
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 30%;
+    max-width: 400px;
+    z-index: -1;
+}
+
+.mobile-phase-preview{
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 80%;
+    max-width: 400px;
+}
+
+.stationary-phase-preview {
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 108%;
+    max-width: 400px;
+}
+
+.conditions-preview {
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 140%;
+    max-width: 400px;
+}
+
+.reference-preview {
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 190%;
+    max-width: 400px;
+}
+.document-preview {
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 215%;
+    max-width: 400px;
+}
+
+/* caption above db cell table on search page*/
 caption {
     display: table-caption;
     padding: 1%;
@@ -395,31 +356,34 @@ caption {
     font-size: 1.3rem;
     font-style: italic;
     font-weight: bold;
+
     border-bottom: 2px solid black;
 }
+
 /* content at bottom of page */
 footer {
     text-align: center;
 }
 
-/* search page - black border */
-.page-border {
-    border: 1px solid #111;
-    background-color: white;
+.content-border-container {
+    border: 2px solid black;
 }
-/*  */
-.search-grid-container {
-    display: grid;
-    position: absolute;
-    grid-template-columns: auto;
-    padding: 10px;
-}
-/* search page - */
-.search-box-col {
-    display: inline-block;
-    position: relative;
-    left: 150%;
+
+.grid-container > .btn-format {
+    border: 1px solid black;
+    background-color: blue;
     
+}
+
+.btn-format {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+/* button colors */
+input:focus {
+    background-color: lightblue;
 }
 /*  */
 .search-box {
@@ -431,66 +395,250 @@ footer {
     outline: 0;
     background-color: #f5f5f5;
   }
-  /* search page - positioning of "magnifying class" icon on search bar */
+/* search page - positioning of "magnifying class" icon on search bar */
 .search-icon {
     position: absolute;
     top: 8px;
     left: 9px;
     width: 14px;
 }
-/* search page - positioning of search bar "exit" icon ***TODO fix JS*** */
-.clear-icon {
-    position: absolute;
-    bottom: 32px;
-    left: 34rem;
-    width: 10px;
-    cursor: pointer;
-    /* visibility: hidden; FIX ME */
-  }
-  /*  */
-#searchBoxBtn {
+
+.email-user {
     position: relative;
-    left: 272%;
-    bottom: 27px;
-
+    left: 13px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
 }
 
-  .search-box:hover, .search-box:focus {
-    border: 1.5px solid #009688;
-    background-color: white;
-  }
-/* search page - left side rail */
-.left-sidebar-grid-container {
-    height: 50%;
-    width: 160px;
-    background-color: white;
+.pass-user {
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;
+    position: relative;
+}
+
+
+.sign-in-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;
+}
+
+/* sign up*/
+.sign-up-div {
+    width: 400px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    margin: 8% auto 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+#first_name {
+    position: relative;
+    left: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
     display: inline-block;
-    position: absolute;
-    bottom: 32px;
-    
-    /* display: grid;
-    position:absolute;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; */
-  }
-  .left-sidebar-grid-container label {
-    margin-left: 30%;
-  }
-  .left-sidebar-grid-container label input {
-    margin-top: 1.6em;
-  }
+}
 
+#last_name {
+    position: relative;
+    left: 32px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;    
+}
+            
+#email {
+    position: relative;
+    left: 55px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+            
+#password {
+    position: relative;
+    left: 38px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;         
+}
+            
+#re-password {
+    position: relative;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
 
-.check-mark-col {
-    grid-template-columns: auto auto auto;
-    color: blue;
+.sign-up-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;     
+}
+/*  */
+.CR-container {
+    display: block;
+}
+/*  */
+#min-CR-searchbox > input {
+    width: 10%;
+}
+/*  */
+#max-CR-searchbox > input {
+    width: 10%;
+}
+
+.sign-up-div label {
+    display: left;
+    margin-left: 60px;
+}
+
+/* sign in */
+
+.image-flask {
+    width: 60px;
+
+}
+.sign-in-div {
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    margin: 8% auto 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.email-user {
+    position: relative;
+    left: 13px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
+}
+
+.pass-user {
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;
+    position: relative;
 }
 
 
+.sign-in-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;
+}
 
+/* sign up*/
+.sign-up-div {
+    width: 400px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    margin: 8% auto 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+#first_name {
+    position: relative;
+    left: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
+    display: inline-block;
+}
+
+#last_name {
+    position: relative;
+    left: 32px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;    
+}
+            
+#email {
+    position: relative;
+    left: 55px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+            
+#password {
+    position: relative;
+    left: 38px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;         
+}
+            
+#re-password {
+    position: relative;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+
+.sign-up-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;     
+}
+
+.sign-up-div label {
+    display: left;
+    margin-left: 60px;
+}
+
+@media screen and (max-width: 1439px), print{
+    .polymer-data-preview, .mobile-phase-preview, .stationary-phase-preview,
+    .conditions-preview, .reference-preview, .document-preview {    
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        clear: both;
+    }
+    #prev {
+        position: relative;
+        clear: both;
+    }
+    footer {
+        clear: both;
+    }
+}

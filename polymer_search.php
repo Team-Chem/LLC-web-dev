@@ -34,32 +34,45 @@
                 <div class="answer-region">
                     <form class="check-mark-col">
                         <label>
-                            <input type="checkbox">One
+                            <input type="radio">
                             <span class="checkmark"></span>
                         </label>
                         <label>
-                            <input type="checkbox">Two
+                            <input type="radio">
                             <span class="checkmark"></span>
                         </label>
                         <label>
-                            <input type="checkbox">Three
+                            <input type="checkbox">
                             <span class="checkmark"></span>
                         </label>
                         <label>
-                            <input type="checkbox">Four
+                            <input type="checkbox">
                             <span class="checkmark"></span>
                         </label>
-                        <label>
-                            <input type="text" placeholder="Min">
-                            <span class="checkmark"></span>
+
+                        <div class="CR-Container">
+                            <label id="min-CR-searchbox">
+                                <input type="text" placeholder="Min">
+                                <span class="textbox"></span>
+                            </label>
+                            <label id="max-CR-searchbox">
+                                <input type="text" placeholder="Max">
+                                <span class="textbox"></span>
+                            </label>
+                        </div>
+
+        <!-- <div class="content-border-container">
+            <table class="grid-container">
+                <div class="btn-format">
+                    <form class="">
+                        <label for="poly-name">
+                            <input class="search-input" type="text" id="poly-name">Enter Polymer
                         </label>
-                        <label>
-                            <input type="text" placeholder="Max">
-                            <span class="checkmark"></span>
-                        </label>
+                        <input class="search-input" type="text">
+                        <label>Enter Solvent</label> -->
                     </form>
                 </div>
-            </div>
+            </table>
             <table class="db-table"><caption>Critical Conditions for Polymers</caption>
                 <thead>
                     <tr>
@@ -72,78 +85,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
-                    <tr>                            
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                        <td>data</td>
-                    </tr>
                     <tr>                            
                         <td>data</td>
                         <td>data</td>
