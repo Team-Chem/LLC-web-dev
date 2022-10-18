@@ -21,9 +21,13 @@ be overrided. */
 html {
     font-size: 20px;
 }
-
+iframe {
+    display: none;
+    z-index: -1;
+    position: absolute;
+    left: -10000;
+}
 body {
-    margin: 4.5em;
     font-family: "Cinzel", "Times New Roman", Times, serif serif;
 }
 /* content at bottom of page */
@@ -46,95 +50,181 @@ header h1 {
 }
 
 /* site navigation styles */
-nav.sitenavigation {
-    background-color: black;
-    text-align: center;
-    color: white;
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.7em;
+    margin-left: 1.7em;
 }
+.navbar .navbar-nav .nav-link:hover{
+    background-color: #ffff;
+    font-size: 1.9em;
+    border-radius: 45px;
+}
+.navbar-logo-centered .navbar-nav .nav-link{
+    padding: .5em 1em;
+}
+.navbar {
+    background-color: black;
+}
+/* form styles */
 
-nav.default-style {
-    text-align: center;
-    background-color: darkblue; 
-    position: relative;
-    margin-top: 0px;
+.polymer-entry, .polymer-preview {
+    padding: 10px;
+    background-color: #9bacb3;
+    max-width: 800px;
+    margin: 12px auto;
+    border-radius: 10px;
     border: 4px solid black;
 }
 
-nav.default-style li {
-    display: inline-block;
-    list-style-type: none;
-    font-size: 2em;
-    margin-left: 1.2em;
+.image-flask {
+    float: right;
+}
+/*fieldset styles */
+
+fieldset{
+    margin-bottom: 0.4em;
+    border-bottom: 1px solid black;
 }
 
-/* form styles */
-#for-submit {
-    background-color: blueviolet;
-    padding: 10px;
-    color: white;
-    width: 700px;
-    margin: 0 0;
-    border: 6px solid black;
-}
-
-#for-submit fieldset {
-    margin-bottom: 1em;
-    border: none;
-}
-#for-submit fieldset fieldset {
+fieldset fieldset {
     margin-top: 1em;
     padding: 0.8em;
-}
-#for-submit legend {
-    font-size: 1.7em;
-    font-weight: bold;
-    margin-left: -0.3em;
-}
-#for-submit input, #for-submit textarea {
-    border: 1px solid black;
-    padding: 0.2em;
-    font-size: 1em;
-}
-.docUpload input {
     border: none;
 }
 
-.polymerEntry label, .MobileEntry label, .staionaryEntry label, 
-.conditions label, .investigation label, .docUpload label{
-    display: block;
-    position: relative;
-    margin: 0.8em 0;
-    margin-top: 1.7em;
-}
-.polymerEntry input, .MobileEntry input, .staionaryEntry input,
-.conditions input, .docUpload input{
-    position: absolute;
-    left: 10em;
-    /*border: 2px solid black;*/
-}
-#for-submit label {
+legend{
     font-size: 1em;
 }
-.required:before {
-    content: "* ";
-    color: red;
+
+.poly-data > legend, .mobile-data, .stationary-data,
+.condition-data, .reference-data, .upload-data {
+    margin-left: -0.1em;
+    font-weight: bold;
 }
-p.form-instruction {
-    color: red;
+
+/* field styles */
+
+.poly-data input, .mobile-data input, 
+.stationary-data input, .condition-data input,
+.reference-data input, span{
+    border: 1px solid #ccc;
+    font-size: 1em;
+    position: relative;
+    border-radius: 10px;
 }
-p.form-instruction:after {
-    content: "*";
-    color: red;
+
+.polymer-preview p{
+    width: 34%;
 }
-/* submit styles */
-.submitbutton {
+span {
+    border: none;
+    font-weight: normal;
+}
+
+.upload-data input {
+    border: none;
+}
+
+#polyName {
+    width: 12em;
+}
+
+#critHigh, #critLow {
+    width: 4em;
+}
+
+#solvents {
+    width: 12em;
+}
+
+#comp {
+    width: 12em;
+}
+
+#ref {
+    width: 12em;
+}
+
+/* Submit styles */
+#submit {
+    border: 2px solid black;
+    padding: 0.4em 0.6em;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+
+.submitbutton{
     text-align: center;
 }
 
-#submit {
-    background-color: yellow;
-    border-radius: 10px;
-    font-size: 1.25em;
+.submitbutton legend {
+    margin-bottom: 1.2em;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+/* label styles */
+.polymer-entry label, .polymer-preview label{
+    font-size: 1em;
+    line-height: 1.6em;
+}
+.poly-data #polyName label, .stationary-data label, .mobile-data label, .condition-data label, 
+.reference-data label, .polymer-preview p{
+    display: inline-block;
+    position: relative;
+    margin: 0.8em 0;
+    clear: right;
+}
+
+.poly-data fieldset fieldset {
+    display: inline-block;
+}
+
+.possible-composition {
+    display: none;
+}
+
+/*.submitbutton {
+    display: none;
+}*/
+.show {
+    display: inline-block;
+}
+
+.required:before {
+    content: " *";
+    color: red;
+}
+
+.polymer-entry p{
+    text-align: right;
+    color: red;
+    font-weight: bold;
+}
+/* help tips style */
+
+.helptip {
+    /*border: 1px solid black;*/
+    /*display: inline-block;*/
+    position: relative;
+    border-radius: 999px;
+    margin-left: 1.5em;
+    width: 30px;
+    text-align: center;
+    float: right;
+    color: black;
+    font-weight: bold;
+    background-color: lightgrey;
+}
+
+.helptip:hover {
+    cursor: pointer;
+}
+
+
+select {
+    margin-left: 1.2em;
+    font-size: 0.9em;
 }
 nav li a {
     text-decoration: none;
@@ -159,24 +249,26 @@ nav.default-style a:visited {
     clear: both;
 }
 
-
 /* body and content styles */
 body {
-    background: rgb(93, 169, 255);
-    background: url("chem.png");
+    background: #9bacb3;
+    background: url("https://www.cappex.com/sites/default/files/styles/college_hero_desktop/public/images/hero/college/220862_hero.jpg?itok=tbgwOMxg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main {
-    float: right;
-    width: 65%;
-    background-color: lightblue;
+    background-color: #5d8799;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 6px solid #DEC3AD;
 }
 
 main h2 {
-    text-align: right;
     border: 2px solid black;
-    background-color: blue;
+    background-color: #9bacb3;
     margin-top: 0px;
+    text-align: center;
 }
 
 h2 {
@@ -246,7 +338,7 @@ nav.default-style li {
 /* nav bar box structure around list */
 nav.default-style {
     text-align: center;
-    background-color: blueviolet;
+    background-color: #DEC3AD;;
     position: relative;
     margin-top: 0%;
 }
@@ -561,21 +653,4 @@ div.poly-data-preview{
 .sign-up-div label {
     display: left;
     margin-left: 60px;
-}
-
-@media screen and (max-width: 1439px), print{
-    .polymer-data-preview, .mobile-phase-preview, .stationary-phase-preview,
-    .conditions-preview, .reference-preview, .document-preview {    
-        position: relative;
-        display: block;
-        margin: 0 auto;
-        clear: both;
-    }
-    #prev {
-        position: relative;
-        clear: both;
-    }
-    footer {
-        clear: both;
-    }
 }
