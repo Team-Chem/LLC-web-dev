@@ -1,0 +1,726 @@
+/* This file is for styling the html page content. */
+
+/* 
+    LCCC
+    Filename: styles.css
+
+    Author: Nathaniel Dixon, Mathew Hosier, Hunter Jackson
+    Date: 9/19/2022
+    References: HTML5 and CSS3 Illustrated, W3Schools
+*/
+
+a, article, aside, nav, div, fieldset, figcaption, figure, footer, header, h1, h2,
+input, label, legend, li, option, p, section, select, ul, form {
+    border: 0;
+    padding: 0;
+    margin: 0;
+} 
+
+/* This is for generalizing default font sizes on the page. Will most likely 
+be overrided. */
+html {
+    font-size: 20px;
+}
+iframe {
+    display: none;
+    z-index: -1;
+    position: absolute;
+    left: -10000;
+}
+body {
+    font-family: "Cinzel", "Times New Roman", Times, serif serif;
+}
+/* header styles */
+header {
+    background-color: grey;
+    /*border: 2px solid black;*/
+    padding: 1%;
+    opacity: 50%;
+}
+
+header h1 {
+    color: white;
+    font-size: 1em;
+    text-align: center;
+    opacity: 1;
+}
+
+/* site navigation styles */
+.navbar .navbar-nav .nav-link {
+    color: #000000;
+    font-size: 1.7em;
+    margin-left: 1.7em;
+}
+.navbar .navbar-nav .nav-link:hover{
+    background-color: #ffff;
+    font-size: 1.9em;
+    border-radius: 45px;
+}
+.navbar-logo-centered .navbar-nav .nav-link{
+    padding: .5em 1em;
+}
+.navbar {
+    background-color: black;
+}
+/* form styles */
+
+.polymer-entry, .polymer-preview {
+    padding: 10px;
+    background-color: #9bacb3;
+    max-width: 800px;
+    margin: 12px auto;
+    border-radius: 10px;
+    border: 4px solid black;
+}
+
+.image-flask {
+    float: right;
+}
+/*fieldset styles */
+
+fieldset{
+    margin-bottom: 0.4em;
+    border-bottom: 1px solid black;
+}
+
+fieldset fieldset {
+    margin-top: 1em;
+    padding: 0.8em;
+    border: none;
+}
+
+legend{
+    font-size: 1em;
+}
+
+.poly-data > legend, .mobile-data, .stationary-data,
+.condition-data, .reference-data, .upload-data {
+    margin-left: -0.1em;
+    font-weight: bold;
+}
+
+/* field styles */
+
+.poly-data input, .mobile-data input, 
+.stationary-data input, .condition-data input,
+.reference-data input, span{
+    border: 1px solid #ccc;
+    font-size: 1em;
+    position: relative;
+    border-radius: 10px;
+}
+
+.polymer-preview p{
+    width: 34%;
+}
+span {
+    border: none;
+    font-weight: normal;
+}
+
+.upload-data input {
+    border: none;
+}
+
+#polyName {
+    width: 12em;
+}
+
+#critHigh, #critLow {
+    width: 4em;
+}
+
+#solvents {
+    width: 12em;
+}
+
+#comp {
+    width: 12em;
+}
+
+#ref {
+    width: 12em;
+}
+
+/* Submit styles */
+#submit {
+    border: 2px solid black;
+    padding: 0.4em 0.6em;
+    font-size: 1.1em;
+    border-radius: 10px;
+}
+
+.submitbutton{
+    text-align: center;
+}
+
+.submitbutton legend {
+    margin-bottom: 1.2em;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+/* label styles */
+.polymer-entry label, .polymer-preview label{
+    font-size: 1em;
+    line-height: 1.6em;
+}
+.poly-data #polyName label, .stationary-data label, .mobile-data label, .condition-data label, 
+.reference-data label, .polymer-preview p{
+    display: inline-block;
+    position: relative;
+    margin: 0.8em 0;
+    clear: right;
+}
+
+.poly-data fieldset fieldset {
+    display: inline-block;
+}
+
+.possible-composition {
+    display: none;
+}
+
+/*.submitbutton {
+    display: none;
+}*/
+.show {
+    display: inline-block;
+}
+
+.required:before {
+    content: " *";
+    color: red;
+}
+
+.polymer-entry p{
+    text-align: right;
+    color: red;
+    font-weight: bold;
+}
+/* help tips style */
+
+.helptip {
+    /*border: 1px solid black;*/
+    /*display: inline-block;*/
+    position: relative;
+    border-radius: 999px;
+    margin-left: 1.5em;
+    width: 30px;
+    text-align: center;
+    float: right;
+    color: black;
+    font-weight: bold;
+    background-color: lightgrey;
+}
+
+.helptip:hover {
+    cursor: pointer;
+}
+
+
+select {
+    margin-left: 1.2em;
+    font-size: 0.9em;
+}
+nav li a {
+    text-decoration: none;
+}
+
+/* link styles */
+nav.default-style a:link {
+    color: white;
+}
+
+nav.default-style a:visited {
+    color: grey;
+}
+
+
+#prev {
+    float: right;
+    position: absolute;
+    right: 19%;
+    top: 22%;
+    background-color: white;
+    clear: both;
+}
+
+/* body and content styles */
+body {
+    background: #9bacb3;
+    background: url("https://www.cappex.com/sites/default/files/styles/college_hero_desktop/public/images/hero/college/220862_hero.jpg?itok=tbgwOMxg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main {
+    background-color: #5d8799;
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 6px solid #DEC3AD;
+}
+
+main h2 {
+    border: 2px solid black;
+    background-color: #9bacb3;
+    margin-top: 0px;
+    text-align: center;
+}
+
+h2 {
+    color: black;
+    font-size: 2em;
+}
+
+aside {
+    float: left;
+    width: 30%;
+    background-color: lightblue;
+}
+
+aside h2 {
+    text-align: center;
+    border: 2px solid black;
+    background-color: blue;
+    margin-top: 0px;
+}
+
+article {
+    clear: both;
+    overflow: auto;
+    position: relative;
+    border: 2px solid black;
+    background-color: white;
+}
+
+article h2 {
+    text-align: center;
+
+    /*border: 2px solid black; */
+    /*background-color: blue; */
+}
+/* results styles */
+.results {
+    text-align: center;
+    background-color: white;
+}
+
+/* table styles */
+.poly-data-preview {
+    display: none;
+    border: 2px solid black;
+}
+
+table.poly-data-preview td, table.poly-data-preview tr {
+    background-color: white;
+    border: 2px solid black;
+}
+
+.show2 {
+    display: block;
+    clear: both;
+}
+
+table {
+    border: 2px solid black;
+    /*width: 100%; */
+}
+
+/* nav bar list styling */
+nav.default-style li {
+    display: inline-block;
+    list-style-type: none;
+}
+/* nav bar box structure around list */
+nav.default-style {
+    text-align: center;
+    background-color: #DEC3AD;;
+    position: relative;
+    margin-top: 0%;
+}
+/* db cell format  TODO*/
+/* this was changed during merge may not be correct */
+table {
+    text-align: center;
+    background-color: white;
+}
+
+/* table styles */
+
+table.db-table {
+    background-color: grey;
+    margin: 0 auto;
+    border: 2px solid black;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+/*  db cell styling on search page*/
+td, th {
+    text-align: center;
+    border: 1px solid black;
+    /*border-spacing: 1px solid #999; */
+    margin: 1%;
+    padding: 1%;
+    font-size: 1.2em;
+}
+/* cell grouping of rows for data */
+thead, tbody {
+    border: 2px solid black;
+}
+/* table data holding db data */
+tr th {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+}
+
+th, td {
+    width: 10%;
+    background-color: white;
+}
+
+td p {
+    display: inline-block;
+}
+
+td {
+    font-size: 1em;
+}
+div.poly-data-preview{
+    clear: both;
+    padding-top: 2%;
+}
+
+.polymer-data-preview {
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 30%;
+    max-width: 400px;
+    z-index: -1;
+}
+
+.mobile-phase-preview{
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 80%;
+    max-width: 400px;
+}
+
+.stationary-phase-preview {
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 108%;
+    max-width: 400px;
+}
+
+.conditions-preview {
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 140%;
+    max-width: 400px;
+}
+
+.reference-preview {
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 190%;
+    max-width: 400px;
+}
+.document-preview {
+    float: right;
+    position: absolute;
+    right: 15%;
+    top: 215%;
+    max-width: 400px;
+}
+
+/* caption above db cell table on search page*/
+caption {
+    display: table-caption;
+    padding: 1%;
+    margin: 1em;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
+
+    border-bottom: 2px solid black;
+}
+
+/* content at bottom of page */
+footer {
+    text-align: center;
+}
+
+.content-border-container {
+    border: 2px solid black;
+}
+
+.grid-container > .btn-format {
+    border: 1px solid black;
+    background-color: blue;
+    
+}
+
+.btn-format {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+#color{
+    background-color: yellow;
+}
+#success {
+    position: fixed;
+    margin: 0 auto;
+}
+/* button colors */
+input:focus {
+    background-color: #DEC3AD;;
+}
+/*  */
+.search-box {
+    border: 1px solid grey;
+    border-radius: 5px;
+    height: 20px;
+    width: 250%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: #f5f5f5;
+  }
+/* search page - positioning of "magnifying class" icon on search bar */
+.search-icon {
+    position: absolute;
+    top: 8px;
+    left: 9px;
+    width: 14px;
+}
+
+.email-user {
+    position: relative;
+    left: 13px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
+}
+
+.pass-user {
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;
+    position: relative;
+}
+
+
+.sign-in-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;
+}
+
+/* sign up*/
+.sign-up-div {
+    width: 400px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    margin: 8% auto 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+#first_name {
+    position: relative;
+    left: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
+    display: inline-block;
+}
+
+#last_name {
+    position: relative;
+    left: 32px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;    
+}
+            
+#email {
+    position: relative;
+    left: 55px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+            
+#password {
+    position: relative;
+    left: 38px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;         
+}
+            
+#re-password {
+    position: relative;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+
+.sign-up-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;     
+}
+/*  */
+.CR-container {
+    display: block;
+}
+/*  */
+#min-CR-searchbox > input {
+    width: 10%;
+}
+/*  */
+#max-CR-searchbox > input {
+    width: 10%;
+}
+
+.sign-up-div label {
+    display: left;
+    margin-left: 60px;
+}
+
+/* sign in */
+
+.image-flask {
+    width: 60px;
+
+}
+.sign-in-div {
+    width: 300px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    margin: 8% auto 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.email-user {
+    position: relative;
+    left: 13px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
+}
+
+.pass-user {
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;
+    position: relative;
+}
+
+
+.sign-in-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;
+}
+
+/* sign up*/
+.sign-up-div {
+    width: 400px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    margin: 8% auto 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+#first_name {
+    position: relative;
+    left: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
+    display: inline-block;
+}
+
+#last_name {
+    position: relative;
+    left: 32px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;    
+}
+            
+#email {
+    position: relative;
+    left: 55px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+            
+#password {
+    position: relative;
+    left: 38px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;         
+}
+            
+#re-password {
+    position: relative;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+
+.sign-up-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;     
+}
+
+.sign-up-div label {
+    display: left;
+    margin-left: 60px;
+}
