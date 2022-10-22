@@ -33,7 +33,6 @@ body {
 /* header styles */
 header {
     background-color: grey;
-    /*border: 2px solid black;*/
     padding: 1%;
     opacity: 50%;
 }
@@ -52,9 +51,9 @@ header h1 {
     margin-left: 1.7em;
 }
 .navbar .navbar-nav .nav-link:hover{
-    background-color: #ffff;
+    /*background-color: #ffff;*/
     font-size: 1.9em;
-    border-radius: 45px;
+   /* border-radius: 45px;*/
 }
 .navbar-logo-centered .navbar-nav .nav-link{
     padding: .5em 1em;
@@ -66,7 +65,7 @@ header h1 {
 
 .polymer-entry, .polymer-preview {
     padding: 10px;
-    background-color: #9bacb3;
+    background-color: #ffff;
     max-width: 800px;
     margin: 12px auto;
     border-radius: 10px;
@@ -80,7 +79,6 @@ header h1 {
 
 fieldset{
     margin-bottom: 0.4em;
-    border-bottom: 1px solid black;
 }
 
 fieldset fieldset {
@@ -96,7 +94,7 @@ legend{
 .poly-data > legend, .mobile-data, .stationary-data,
 .condition-data, .reference-data, .upload-data {
     margin-left: -0.1em;
-    font-weight: bold;
+    /*font-weight: bold;*/
 }
 
 /* field styles */
@@ -143,11 +141,16 @@ span {
 }
 
 /* Submit styles */
-#submit {
+#submit, #top-search, .back {
     border: 2px solid black;
     padding: 0.4em 0.6em;
     font-size: 1.1em;
     border-radius: 10px;
+}
+
+#needABack {
+    text-align: center;
+    padding: 10px;
 }
 
 .submitbutton{
@@ -217,34 +220,6 @@ span {
     cursor: pointer;
 }
 
-
-select {
-    margin-left: 1.2em;
-    font-size: 0.9em;
-}
-nav li a {
-    text-decoration: none;
-}
-
-/* link styles */
-nav.default-style a:link {
-    color: white;
-}
-
-nav.default-style a:visited {
-    color: grey;
-}
-
-
-#prev {
-    float: right;
-    position: absolute;
-    right: 19%;
-    top: 22%;
-    background-color: white;
-    clear: both;
-}
-
 /* body and content styles */
 body {
     background: #9bacb3;
@@ -272,174 +247,6 @@ h2 {
     font-size: 2em;
 }
 
-aside {
-    float: left;
-    width: 30%;
-    background-color: lightblue;
-}
-
-aside h2 {
-    text-align: center;
-    border: 2px solid black;
-    background-color: blue;
-    margin-top: 0px;
-}
-
-article {
-    clear: both;
-    overflow: auto;
-    position: relative;
-    border: 2px solid black;
-    background-color: white;
-}
-
-article h2 {
-    text-align: center;
-
-    /*border: 2px solid black; */
-    /*background-color: blue; */
-}
-/* results styles */
-.results {
-    text-align: center;
-    background-color: white;
-}
-
-/* table styles */
-.poly-data-preview {
-    display: none;
-    border: 2px solid black;
-}
-
-table.poly-data-preview td, table.poly-data-preview tr {
-    background-color: white;
-    border: 2px solid black;
-}
-
-.show2 {
-    display: block;
-    clear: both;
-}
-
-table {
-    border: 2px solid black;
-    /*width: 100%; */
-}
-
-/* nav bar list styling */
-nav.default-style li {
-    display: inline-block;
-    list-style-type: none;
-}
-/* nav bar box structure around list */
-nav.default-style {
-    text-align: center;
-    background-color: #DEC3AD;;
-    position: relative;
-    margin-top: 0%;
-}
-/* db cell format  TODO*/
-/* this was changed during merge may not be correct */
-table {
-    text-align: center;
-    background-color: white;
-}
-
-/* table styles */
-
-table.db-table {
-    background-color: grey;
-    margin: 0 auto;
-    border: 2px solid black;
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-}
-/*  db cell styling on search page*/
-td, th {
-    text-align: center;
-    border: 1px solid black;
-    /*border-spacing: 1px solid #999; */
-    margin: 1%;
-    padding: 1%;
-    font-size: 1.2em;
-}
-/* cell grouping of rows for data */
-thead, tbody {
-    border: 2px solid black;
-}
-/* table data holding db data */
-tr th {
-    background-color: blueviolet;
-    color: white;
-    font-weight: bold;
-}
-
-th, td {
-    width: 10%;
-    background-color: white;
-}
-
-td p {
-    display: inline-block;
-}
-
-td {
-    font-size: 1em;
-}
-div.poly-data-preview{
-    clear: both;
-    padding-top: 2%;
-}
-
-.polymer-data-preview {
-    float: right;
-    position: absolute;
-    right: 15%;
-    top: 30%;
-    max-width: 400px;
-    z-index: -1;
-}
-
-.mobile-phase-preview{
-    float: right;
-    position: absolute;
-    right: 15%;
-    top: 80%;
-    max-width: 400px;
-}
-
-.stationary-phase-preview {
-    float: right;
-    position: absolute;
-    right: 15%;
-    top: 108%;
-    max-width: 400px;
-}
-
-.conditions-preview {
-    float: right;
-    position: absolute;
-    right: 15%;
-    top: 140%;
-    max-width: 400px;
-}
-
-.reference-preview {
-    float: right;
-    position: absolute;
-    right: 15%;
-    top: 190%;
-    max-width: 400px;
-}
-.document-preview {
-    float: right;
-    position: absolute;
-    right: 15%;
-    top: 215%;
-    max-width: 400px;
-}
-
 /* caption above db cell table on search page*/
 caption {
     display: table-caption;
@@ -457,25 +264,6 @@ footer {
     text-align: center;
 }
 
-.content-border-container {
-    border: 2px solid black;
-}
-
-.grid-container > .btn-format {
-    border: 1px solid black;
-    background-color: blue;
-    
-}
-
-.btn-format {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
-}
-
-#color{
-    background-color: yellow;
-}
 #success {
     position: fixed;
     margin: 0 auto;
@@ -483,23 +271,6 @@ footer {
 /* button colors */
 input:focus {
     background-color: #DEC3AD;;
-}
-/*  */
-.search-box {
-    border: 1px solid grey;
-    border-radius: 5px;
-    height: 20px;
-    width: 250%;
-    padding: 2px 23px 2px 30px;
-    outline: 0;
-    background-color: #f5f5f5;
-  }
-/* search page - positioning of "magnifying class" icon on search bar */
-.search-icon {
-    position: absolute;
-    top: 8px;
-    left: 9px;
-    width: 14px;
 }
 
 .email-user {
@@ -522,22 +293,22 @@ input:focus {
 }
 
 
-.sign-in-form {
+/*.sign-in-form {
     color: rgb(13, 13, 14);
     margin-bottom: 30px;
-}
+}*/
 
 /* sign up*/
-.sign-up-div {
-    width: 400px;
+/*.sign-up-div {
+    /*width: 800px;
     box-shadow: 0 0 3px 0 rgb(106, 13, 212);
-    background: 25px;
-    padding: 75px;
-    margin: 8% auto 0;
+    background: 25px;*/
+    /*padding: 20px;
+    /*margin: 8% auto 0;
     text-align: center;
     background-color: rgb(255, 255, 255);
-    display: block;
-}
+    /*display: block;
+}*/
 
 #first_name {
     position: relative;
@@ -606,10 +377,10 @@ input:focus {
     width: 10%;
 }
 
-.sign-up-div label {
+/*.sign-up-div label {
     display: left;
     margin-left: 60px;
-}
+}*/
 
 /* sign in */
 
@@ -655,7 +426,7 @@ input:focus {
 
 /* sign up*/
 .sign-up-div {
-    width: 400px;
+    width: 800px;
     box-shadow: 0 0 3px 0 rgb(106, 13, 212);
     background: 25px;
     padding: 75px;
@@ -721,6 +492,66 @@ input:focus {
 }
 
 .sign-up-div label {
-    display: left;
-    margin-left: 60px;
+    /*display: left;
+    margin-left: 60px;*/
+    text-align: left;
+    display: block;
+}
+
+.datasearched {
+    background-color: white;
+    margin: 0 auto;
+}
+
+.table-container {
+   /* max-width: 1000px;*/
+    position: relative;
+    height: 1000px;
+    overflow-y: scroll;
+}
+.table {
+    background-color: #ffff;
+    font-size: 0.7em;
+    width: 900px;
+}
+
+.table thead tr {
+    background-color: #5d8799;
+}
+
+.search-form {
+    text-align: center;
+    padding: 10px;
+}
+
+.search-form input {
+    width: 400px;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 1.2em;
+}
+
+.search-form button {
+    width: 100px;
+    padding: 0 10px;
+}
+
+#hideComp {
+    display: none;
+}
+
+.table-container {
+    position: relative;
+    margin: auto;
+    background-color: white;
+}
+
+#search-description {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#options {
+    text-align: center;
 }
