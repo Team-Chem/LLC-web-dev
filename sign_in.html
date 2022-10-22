@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
 
 
 </head>
@@ -17,12 +18,12 @@
             <div class="container">
             
                 <label for="email"><b>Email</b></label>
-        <input type="text" class="email-user" placeholder="Enter Email" name="email" required>
+        <input type="text" class="email-user" placeholder="Email" name="email" required>
 
         <label for="password"><b>Password</b></label>
-        <input type="password" class="pass-user" placeholder="Enter password" name="password" required>
+        <input type="password" class="pass-user" placeholder="Password" name="password" required>
 
-        <a style="position: relative; right: 115px;" href="#">Forgot your password</a>
+        <a style="position: relative; right: 60px;" href="#">Forgot your password</a>
         
         <p class="check-box">
             <input type="checkbox" id="remember-user">
@@ -33,58 +34,12 @@
         </form>
 
         <hr>
-        <p>Don't have an account? <a href="sign_up.html">Sign Up</a></p>
+        <p>Don't have an account? <a href="sign_up.php">Sign Up</a></p>
+
+        <hr>
+        <input type="button" value="Go Back" onclick="history.back()">
     </div>
     </div>
-
-        <style>
-
-            body {
-
-                margin: 0;
-                padding: 0;
-                font-family: 'Times New Roman', Times, serif;
-            }
-
-            .sign-in-div {
-                width: 500px;
-                box-shadow: 0 0 3px 0 rgb(106, 13, 212);
-                background: 25px;
-                padding: 50px;
-                margin: 8% auto 0;
-                text-align: center;
-                background-color: rgb(255, 255, 255);
-                display: block;
-                
-            }
-
-            .image-flask {
-                width: 60px;
-            }
-
-            .email-user {
-                border-radius: 30px;
-                padding: 10px;
-                width: 150px;
-                margin: 10px;
-                border: 1px solid;
-            }
-
-            .pass-user {
-                border-radius: 30px;
-                padding: 10px;
-                width: 150px;
-                margin: 10px 0;
-                border: 1px solid;
-            
-            }
-
-            .sign-in-form h1 {
-                color: rgb(13, 13, 14);
-                margin-bottom: 30px;
-            }
-
-        </style>
 
 </body>
 </html>

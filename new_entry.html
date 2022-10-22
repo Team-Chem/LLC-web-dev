@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Data entry page</title>
+    <!-- 
+        LCCC - Data Entry
+        Filename: entry.html
+
+        Author: Nathaniel Dixon, Mathew Hosier, Hunter Jackson
+        Date: 9/19/2022
+        References: HTML5 and CSS3 Illustrated, W3 Schools
+    -->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="respond.min.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="images/android.png">
+
+</head>
+
+<body>
+    <nav class="default-style">
+        <ul>
+            <li>Home</li>
+            <li><a href="polymer_search.html">Search</a></li>
+            <li><a href="polymer_entry.html">New Entry</a></li>
+            <li>About</li>
+            <li><a href="sign_in.html">Account</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Data Entry</h1>
+    </header>
+
+    <form>
+        <fieldset>
+            <label for="p">
+                Polymer Name:
+                <input type="text" name="Polymer_Name" id="p" >
+            </label>
+            <label for="crit">
+                Critical High
+                <input type="number" step="0.000000001" name="Critical Hight" id="crit">
+            </label>
+            <label for="crit">
+                Critical Low
+                <input type="number" step="0.000000001" name="Critical Low" id="crit">
+            </label>
+            <label for="polySolvent">
+                Polymer Solvent
+                <input type="text" name="Polymer Solvent" id="polySolvent">
+            </label>
+        </fieldset>
+        <fieldset>
+            <label>
+                Solvent
+                <input type="text" name="Solvent" id="mSolvent">
+            </label>
+            <label>
+                Nonsolvent
+                <input type="text" name="Nonsolvent" id="mnonsolvent">
+            </label>
+        </fieldset>
+        <fieldset>
+            
+        </fieldset>
+    </form>
+</body>
+
+</html>
