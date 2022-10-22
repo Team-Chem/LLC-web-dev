@@ -116,9 +116,7 @@
                                 </span>
                             </div>
                      </div>
-                     
                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
-                    </div>
                 </fieldset>
 
                 <fieldset class="stationary-data">
