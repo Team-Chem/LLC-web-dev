@@ -1,312 +1,340 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Data entry page</title>
-        <!-- 
-            LCCC - Data Entry
-            Filename: polymer_entry.html
-
-            Author: Nathaniel Dixon, Mathew Hosier, Hunter Jackson
-            Date: 9/19/2022
-            References: HTML5 and CSS3 Illustrated, W3 Schools
-        -->
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-        <script src="respond.min.js"></script>
-        <link rel="shortcut icon" href="images/favicon.ico">
-        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-        <link rel="icon" sizes="192x192" href="images/android.png">
-
-    </head>
-
-    <body>
-
-        <nav class="default-style">
-            <ul>
-                <li><a href="default.asp">Home</a></li>
-                <li><a href="polymer_search.html" target="_blank">Search</a></li>
-                <li><a href="entry.html">New Entry</a></li>
-                <li><a href="about.asp">About</a></li>
-                <li><a href="sign_in.html">Account</a></li>
-            </ul>
-        </nav>
+<?php 
+    include "header.php";
+?>
         <header>
             <h1>LCCC</h1>
         </header>
 
+        <?php
+            if(isset($_SESSION['previewStatus'])){
+                ?>
+                    <div class="alert alert-danger d-flex align-items-center" role="alert" id="color">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" color="green" aria-label="Error:"><use xlink:href="#check-circle-fill"/></svg>
+                        <div>
+                            <?php echo $_SESSION['previewStatus'];?>
+                        </div>
+                    </div>
+                <?php
+                unset($_SESSION['previewStatus']);
+            }
+        ?>
         <!-- Using the article here for structuring-->
-        <maine id="start">
+        <main id="start">
             <h2>Polymer Entry</h2>
-            <!-- Nesting everything in a wrapper just in case I need outside styling. -->
-            <div id="form-wrapper">
-                <!--Start of Forms-->
-                <form id="for-submit" action="includes/polymer-insert.php" method="POST">
-                    <!-- This is the first form option. The action is supposed to post this form information into the database. -->
-                    <fieldset id="polymer-data-form">
-                        <p class="form-instruction">Please enter the required fields</p>
-                        <fieldset class="polymerEntry">
-                            <legend>Polymer Data</legend>
-                            <label for="polyName" class="required">
-                                Polymer Name
-                                <input type="text" name="PolymerName" id="polyName" placeholder="Polybutadiene" required>
-                            </label>
-                            <!--Pretty standard input tactics.-->
-                            <label for="critHigh" class="required">
-                                Critical High
-                                <input type="number" step="0.000000001" name="CriticalHigh" id="critHigh" required>
-                            </label>
-                            <label for="critLow" class="required">
-                                Critical Low
-                                <input type="number" step="0.000000001" name="CriticalLow" id="critLow" required>
-                            </label>
-                            <label for="mass">
-                                Molar Masses
-                                <input type="number" step="0.000000001" name="Mass" id="mass">
-                            </label>
-                            <label for="samp">
-                                Used Sample
-                                <input type="text" name="UsedSample" id="samp">
-                            </label>
-                            <label for="polySolv" class="required">
-                                Polymer Solvent
-                                <input type="text" name="PolySolv" id="polySolv" required>
-                            </label>
-                        </fieldset>
+            <img class="image-flask" src="bubble-2022490_960_720.png">
+
+            <form class="polymer-entry" action="polymer-preview.php" method="get">
+                <p>Please enter the required fields *</p>
+                <fieldset class="poly-data  border border-dark">
+                    <legend>Polymer Data</legend>
+                   <fieldset>
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="polyName" class="col-form-label required">Polymer Name</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="polyName" name="PolyName" class="form-control" aria-describedby="Description" placeholder="Polybutadiene" required>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter in a single polymer 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                        
                     </fieldset>
-
-                    <!--Form 2-->
-                    <fieldset id="Mobile-phase-form">
-                        <fieldset class="MobileEntry">
-                            <legend>Mobile Phase Data</legend>
-                            <label for="solv" class="required">
-                                Solvent
-                                <input type="text" name="Solvent" id="solv" required>
-                            </label>
-                            <label for="nonSolv" class="required">
-                                Nonsolvent
-                                <input type="text" name="Nonsolvent" id="nonSolv" required>
-                            </label>
-                        </fieldset>
+                    <fieldset>
+                        <legend>Molar Mass Range</legend>
+                        <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="critLow" class="col-form-label required">Low</label>
+                            </div>
+                            <div class="col-auto">
+                                <span>kd</span>
+                            </div>
+                            <div class="col-auto">
+                                <label class="col-form-label">-</label>
+                            </div>
+                            <div class="col-auto">
+                                <label for="critHigh" class="col-form-label required">High</label>
+                            </div>
+                            <div class="col-auto">
+                                <span>kd</span>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-3 align-items-center">
+                            <div class="input-group mb-3" style="width:45%;">
+                                    <input type="number" step="any" class="form-control" id="critLow" name="CriticalLow" aria-label="Username" required>
+                                    <span class="input-group-text">to</span>
+                                    <input type="number" step="any" class="form-control" id="critHigh" name="CriticalHigh" aria-label="Server" required>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter in kilograms per mole
+                                </span>
+                            </div>
+                        </div>
+                        <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
                     </fieldset>
+                </fieldset>
 
-                    <!--Form 3-->
-                    <fieldset id="stationary-phase-form">
-                        <fieldset class="staionaryEntry">
-                            <legend>Stationary Phase Data</legend>
-                            <label for="particlediam">
-                                Particle Diameter
-                                <input type="number" step="0.000000001" name="ParticleDiameter" id="particlediam">
-                            </label>
-                            <label for="poreSize">
-                                Pore sizes
-                                <input type="number" step="0.000000001" name="PoreSize" id="poreSize">
-                            </label>
-                            <label for="columnDim">
-                                Column Dimension
-                                <input type="number" step="0.000000001" name="ColumnDimension" id="columnDim">
-                            </label>
-                        </fieldset>
-                    </fieldset>
+                <fieldset class="mobile-data">
+                    <legend>Mobile Phase Data</legend>
+                    <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="solvents" class="col-form-label required">Solvent(s)</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="solvents" name="Solvents" class="form-control" aria-describedby="Description" placeholder="solvent1/solvent2" required>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter in a solvent or a list seperated by /
+                                </span>
+                            </div>
+                     </div>
+                     
+                     <div id="hideComp">
+                     <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="comp" class="col-form-label required">Composition</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="comp" name="Composition" class="form-control" aria-describedby="Description" required>
+                            </div>
+                            <div class="col-auto">
+                            <select id="type" name="type">
+                                <option value="weight">wt</option>
+                                <option value="volume">vol</option>
+                            </select>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter your composition as a weight or volume
+                                </span>
+                            </div>
+                     </div>
+                     
+                    <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                    </div>
+                </fieldset>
 
-                    <!--Form 4-->
-                    <fieldset id="condition-form">
-                        <fieldset class="conditions">
-                            <legend>Polymer Conditions</legend>
-                            <label for="temp" class="required">
-                                Temperature
-                                <input type="number" step="0.000000001" name="Temperature" id="temp" required>
-                            </label>
-                            <label for="press">
-                                Pressure
-                                <input type="number" step="0.000000001" name="Pressure" id="press">
-                            </label>
-                            <label for="flowRate">
-                                Flow Rate
-                                <input type="number" step="0.000000001" name="FlowRate" id="flowRate">
-                            </label>
-                            <label for="injVolume" class="required">
-                                Injection Volume
-                                <input type="number" step="0.000000001" name="InjectVolume" id="injVolume" required>
-                            </label>
-                            <label for="detect">
-                                Detector
-                                <input type="text" name="Detector" id="detect" requred>
-                            </label>
-                        </fieldset>
-                    </fieldset>
+                <fieldset class="stationary-data">
+                    <legend>Stationary Phase Data</legend>
+                    <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                    <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="partDiam" class="col-form-label">Particle Diameter</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" step="any" id="partDiam" name="ParticleDiameter" class="form-control" aria-describedby="Description">
+                            </div>
+                            <div class="col-auto">
+                                <span> &#xb5;m</span>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter in Microns
+                                </span>
+                            </div>
+                     </div>
+                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="poreSize" class="col-form-label">Pore sizes</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" step="any" id="poreSize" name="PoreSize" class="form-control" aria-describedby="Description">
+                            </div>
+                            <div class="col-auto">
+                                <span>&#8491;</span>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter in Angstroms
+                                </span>
+                            </div>
+                     </div>
+                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="colDim" class="col-form-label">Column Dimension</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" step="any" id="colDim" name="ColumnDimension" class="form-control" aria-describedby="Description">
+                            </div>
+                            <div class="col-auto">
+                                <span>centi</span>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter in U l.
+                                </span>
+                            </div>
+                     </div>
+                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="colName" class="col-form-label">Column Name</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="colName" name="ColumnName" class="form-control" aria-describedby="Description">
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter where you got your column from.
+                                </span>
+                            </div>
+                     </div>
+                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                </fieldset>
 
-                    <!-- Form 5-->
-                    <fieldset id="investigation-form">
-                        <fieldset class="investigation">
-                            <legend>Researchers</legend>
-                            <label for="reference">
-                                References: 
-                                <textarea name="References" id="reference" row="10" cols="30" placeholder="First name Last name"></textarea>
-                            </label>
-                        </fieldset>
-                    </fieldset>
+                <fieldset class="condition-data">
+                    <legend>Chromatography Conditions</legend>
+                    <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="temp" class="col-form-label required">Temperature</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" step="any" id="temp" name="Temperature" class="form-control" aria-describedby="Description" required>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" step="any" class="form-text">
+                                    &#8451;
+                                </span>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                    Please enter in Celsius. 
+                                </span>
+                            </div>
+                     </div>
+                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="press" class="col-form-label">Pressure</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" step="any" id="press" name="Pressure" class="form-control" aria-describedby="Description">
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                    atm
+                                </span>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter in the atmoshperic pressure
+                                </span>
+                            </div>
+                     </div>
+                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="flowRate" class="col-form-label">Flow Rate</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" step="any" id="flowRate" name="FlowRate" class="form-control" aria-describedby="Description">
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                    ml/min
+                                </span>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter in Millileter/Minutes
+                                </span>
+                            </div>
+                     </div>
+                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="injVol" class="col-form-label">Injection Volume</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" step="any" id="injVol" name="InjectionVolume" class="form-control" aria-describedby="Description">
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                    <span> &#xb5;l</span>
+                                </span>
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                    Enter in whatever
+                                </span>
+                            </div>
+                     </div>
+                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="det" class="col-form-label">Detector(s)</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="det" name="Detector" class="form-control" aria-describedby="Description">
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                Enter as a comma seperated list
+                                </span>
+                            </div>
+                     </div>
+                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                </fieldset>
 
-                    <!-- Form 6-->
-                    <fieldset id="upload-form">
-                        <fieldset class="docUpload">
-                            <legend>Additional Documentation</legend>
-                            <label for="doc">
-                                Upload Document
-                                <input type="file" name="FileName" id="doc" accept=".pdf, .doc, .html">
-                            </label>
-                        </fieldset>
-                    </fieldset>
-                    <!--Submit Button-->
-                    <fieldset class="submitbutton">
-                        <input type="submit" id="submit" value="Submit">
-                    </fieldset>
-                    <!--End of Form-->
-                </form>
-            </div>
-            <div id="prev">
-                <h2>Data Preview</h2>
-            </div>
+                <fieldset class="reference-data">
+                    <legend>References</legend>
+                    <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="ref" class="col-form-label">DOI number</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="ref" name="References" class="form-control" aria-describedby="Description" placeholder="0000000/000000000000">
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                    Enter the DOI number or URL
+                                </span>
+                            </div>
+                     </div>
+                    <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                </fieldset>
 
-            <!-- Start of preview tables -->
-            <table class="polymer-data-preview">
-                <thead>
-                    <tr>
-                        <th colspan="2">Polymer Data Preview</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Polymer Name</td>
-                        <td class="request-polyName"></td>
-                    </tr>
-                    <tr>
-                        <td>Critical High</td>
-                        <td class="request-critHigh"></td>
-                    </tr>
-                    <tr>
-                        <td>Critical Low</td>
-                        <td class="request-critLow"></td>
-                    </tr>
-                    <tr>
-                        <td>Molar Mass</td>
-                        <td class="request-mass"></td>
-                    </tr>
-                    <tr>
-                        <td>Used Sample</td>
-                        <td class="request-samp"></td>
-                    </tr>
-                    <tr>
-                        <td>Polymer Solvent</td>
-                        <td class="request-poly-solv"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="mobile-phase-preview">
-                <thead>
-                    <tr>
-                        <th colspan="2">Mobile Phase Preview</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Solvent</td>
-                        <td class="request-solv"></td>
-                    </tr>
-                    <tr>
-                        <td>Non-Solvent</td>
-                        <td class="request-nonsolv"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="stationary-phase-preview">
-                <thead>
-                    <tr>
-                        <th colspan="2">Stationary Phase Preview</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Particle Diameter</td>
-                        <td class="request-diam"></td>
-                    </tr>
-                    <tr>
-                        <td>Pore Size</td>
-                        <td class="request-poresize"></td>
-                    </tr>
-                    <tr>
-                        <td>Column Dimension</td>
-                        <td class="request-ColumnDiam"></td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-            <table class="conditions-preview">
-                <thead>
-                    <tr>
-                        <th colspan="2">Conditions Preview</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Temperature</td>
-                        <td class="request-temp"></td>
-                    </tr>
-                    <tr>
-                        <td>Pressure</td>
-                        <td class="request-pressure"></td>
-                    </tr>
-                    <tr>
-                        <td>Flow Rate</td>
-                        <td class="request-flow"></td>
-                    </tr>
-                    <tr>
-                        <td>Injection Volume</td>
-                        <td class="request-inj"></td>
-                    </tr>
-                    <tr>
-                        <td>Detector</td>
-                        <td class="request-detect"></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <table class="reference-preview">
-                <thead>
-                    <tr>
-                        <th colspan="2">Researchers</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Names</td>
-                        <td class="request-ref"></td>
-                    </tr>
-
-                </tbody>
-            </table>
-            <table class="document-preview">
-                <thead>
-                    <tr>
-                        <th colspan="2">Research Document</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>PDF/Doc</td>
-                        <td class="request-upload"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </maine>
+                <fieldset class="upload-data">
+                    <legend>Additional Documentation</legend>
+                    <div class="row g-3 align-items-center">
+                            <div class="col-auto">
+                                <label for="upload" class="col-form-label">Upload</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="file" id="upload" name="Document" class="form-control" aria-describedby="Description" placeholder="0000000/000000000000">
+                            </div>
+                            <div class="col-auto">
+                                <span id="Description" class="form-text">
+                                   Enter a doc, pdf, or html document.
+                                </span>
+                            </div>
+                     </div>
+                    <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                </fieldset>
+                <fieldset class="Submitbutton">
+                    <legend>Complete Entry</legend>
+                    <label for="submit">
+                        <input type="submit" name="Entry" id="submit" value="Submit">
+                    </label>
+                </fieldset>
+            </form>
+            
+        </main>
         <!--Of course footer is included everywhere.-->
         <footer>
             <h2>This is for contact information</h2>
         </footer>
-        <!--Scripting in my JavaScript file for page functionality. -->
-        <script src="forms.js"></script>
+
+        <script src="FormDisplay.js"></script>
+
     </body>
 </html>
