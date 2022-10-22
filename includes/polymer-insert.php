@@ -1,75 +1,123 @@
 <?php
     session_start();
     include_once 'Connection.php';
-    include 'polymer_entry.php';
+    
+    /*
+        All of the variables that were assigned on the polymer-preview page.
 
-    session_start();
-    //The Polymer Data Entry names
-    $PolymerName = $_GET['PolyName'];
-    $CriticalHigh = $_POST['CriticalHigh'];
-    $CriticalLow = $_POST['CriticalLow'];
+        $_SESSION['poly']
+        $_SESSION['critHigh']
+        $_SESSION['critLow']
+        $_SESSION['solvents']
+        $_SESSION['composition']
+        $_SESSION['type']
+        $_SESSION['particleDiameter']
+        $_SESSION['poreSize']
+        $_SESSION['columnDimension']
+        $_SESSION['columnName']
+        $_SESSION['temperature']
+        $_SESSION['pressure']
+        $_SESSION['flowRate']
+        $_SESSION['injectionVolume']
+        $_SESSION['Detector']
+        $_SESSION['References']
+        $_SESSION['document']
 
-    //The Mobile Phase Data names $_POST[''];
-    $space = " ";
-    $Solvent = $_POST['Solvents'];
-    $Composition = $_POST['Composition'] .= $space .= $_POST['type'];
+    */
 
-    //The Stationary Phase names
-    $ParticleDiameter = $_POST['ParticleDiameter'];
-    $PoreSize = $_POST['PoreSize'];
-    $ColumnDimension = $_POST['ColumnDimension'];
-    $ColumnName = $_POST['ColumnName'];
+    $PolymerName = $_SESSION['poly'];
+    $MolarHigh = $_SESSION['critHigh'];
+    $MolarLow = $_SESSION['critLow'];
+    $Solvents = $_SESSION['solvents'];
+    $Composition = $_SESSION['composition'];
+    $ParticleDiameter = $_SESSION['particleDiameter'];
+    $PoreSize = $_SESSION['poreSize'];
+    $ColumnDimension = $_SESSION['columnDimension'];
+    $ColumnName = $_SESSION['columnName'];
+    $Temperature = $_SESSION['columnName'];
+    $Pressure = $_SESSION['pressure'];
+    $FlowRate = $_SESSION['flowRate'];
+    $InjVolume = $_SESSION['injectionVolume'];
+    $Detector = $_SESSION['Detector'];
+    $DOI = $_SESSION['References'];
+    $Upload = $_SESSION['document'];
+    $Type = $_SESSION['type'];
 
-    //The Condition names
-    $Temperature = $_POST['Temperature'];
-    $Pressure = $_POST['Pressure'];
-    $FlowRate = $_POST['FlowRate'];
-    $InjVolume = $_POST['InjectionVolume'];
-    $Detector = $_POST['Detector'];
 
-    //The References names
-    $Investigations = $_POST['References'];
 
-    //The Upload names
-    $UploadDoc = $_POST['Document'];
+    //Checking if we got the value with the crud method.
+    /*if(isset($PolymerName)){
+        echo "[$PolymerName was set with the post]\n";
+    }
+    else{
+        echo "[The variables are not setting!]\n";
+    }
 
-    $sql = "INSERT INTO polymer (Poly_Name, Critical_High, Critical_Low) 
-    VALUES ('$PolymerName', '$CriticalHigh', '$CriticalLow');";
+    //This is to test the connection status of the server.
+    switch (connection_status())
+    {
+    case CONNECTION_NORMAL:
+      $txt = '[Connection is in a normal state]';
+      break;
+    case CONNECTION_ABORTED:
+      $txt = '[Connection aborted]';
+      break;
+    case CONNECTION_TIMEOUT:
+      $txt = '[Connection timed out]';
+      break;
+    case (CONNECTION_ABORTED & CONNECTION_TIMEOUT):
+      $txt = '[Connection aborted and timed out]';
+      break;
+    default:
+      $txt = '[Unknown]';
+      break;
+    }*/
+
+    //This should insert into the db it has before.
+    $sql = "INSERT INTO polymer (Poly_Name, Critical_High, Critical_Low, Molar_Masses, Used_Sample) 
+    VALUES ('$PolymerName', '12', '1', '7889', 'Night');";
 
     $query_success1 = mysqli_query($conn, $sql);
 
-    $sql = "INSERT INTO mobile_phase (Solvent, NonSolvent)
-    VALUES ('$Solvent', '$Composition');";
 
-    mysqli_query($conn, $sql);
+    //The following items are for if you are having problems with entering the data into the db.
+    //Checking if the insert errored or not.
+   /*if(isset($sql)){
+        echo "[The insert statement was successfully assigned to sql variable.]\n";
+    }*/
 
-    $sql = "INSERT INTO stationary_phase (Particle_Diameter, Pore_Size, Column_Dimension)
-    VALUES ('$ParticleDiameter', '$PoreSize', '$ColumnDimension');";
-
-    mysqli_query($conn, $sql);
-
-    $sql = "INSERT INTO conditions (Temperature, Pressure, Flow_Rate, Inj_Volume, Detector)
-    VALUES ('$Temperature', '$Pressure', '$FlowRate', '$InjVolume', '$Detector');";
-
-    mysqli_query($conn, $sql);
-
-    $sql = "INSERT INTO investigations (Reference)
-    VALUES ('$Investigations');";
-
-    mysqli_query($conn, $sql);
-
-    $sql = "INSERT INTO document (DocumentedCol)
-    VALUES ('$UploadDoc');";
-
-    mysqli_query($conn, $sql);
-    if(CriticalHigh < CriticalLow){
-        echo "The Molar high can not be smaller than the molar low";
-        header("Location: ../polymer_entry.php");
+    //Double checking the connecion by checking the connection variable that should have been included in this file.
+    /*if(isset($conn)){
+        echo "[The connection variable should be usable.]\n";
     }
+    else {
+        echo "[There is something wrong with the connection variable.]\n";
+    }
+
+    mysqli_query($conn, $sql);*/
+
+    //Possibly getting null returns from this connection and query.
+    /*if(mysqli_query($conn, $sql) != null){
+        echo "[Data should have been entered.]\n";
+    }
+    else {
+        echo "[Data is not being entered through php query function.]";
+    }
+
+    mysqli_close($conn);*/
+
+    //FIXME
+    //Some probelm here
+    /*if(isset($query1)) {
+        echo "Connection and Query were both successfull.\n";
+    }
+    else {
+        echo "The query with connection is not working!\n";
+    }*/
 
     if($query_success1) {
         $_SESSION['status'] = "Data inserted successfully";
-        header("Location: ../index.php");
+        header("Location: ../polymer_search.php");
     }
     else {
         echo "Something went wrong";

@@ -1,5 +1,7 @@
 <?php
-    session_start();
+session_start();
+include_once "includes/Connection.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +35,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
         <!-- Image and text -->
-        <div class="hide-content">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #5d8799;">
             <a class="navbar-brand d-lg-none" href="#"><img src="logo.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbarToggler7"
@@ -60,8 +61,3 @@
                 </ul>
             </div>
         </nav>
-        <header>
-            <h1>LCCC</h1>
-        </header>
-    </body>
-</html>
