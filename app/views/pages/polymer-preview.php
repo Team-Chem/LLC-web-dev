@@ -107,7 +107,7 @@
         <!-- Using the article here for structuring-->
         <main id="start">
             <h2>Polymer Entry</h2>
-            <img class="image-flask" src="bubble-2022490_960_720.png">
+            <img class="image-flask" src="../../assets/images/flask.png">
 
             <form class="polymer-preview" action="includes/polymer-insert.php" method="get">
                 <fieldset class="poly-data  border border-dark">
