@@ -1,0 +1,39 @@
+/* Sign in */
+
+.image-flask {
+    width: 60px;
+}
+
+.sign-in-div {
+    width: 500px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    text-align: center;
+    margin: 8% auto 0;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.sign-in-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;
+}
+
+/* Sign up*/
+
+.sign-up-div {
+    width: 500px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    text-align: center;
+    margin: 8% auto 0;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.sign_up-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;
+}
