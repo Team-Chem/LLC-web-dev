@@ -4,42 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
+    <!--
+    <link rel="stylesheet" href="styles.css">
+    -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 </head>
 <body>
         
-        <!--This is for the sign in portion of the modal sign up pop up-->
+        <!--This is for the sign in portion of the modal sign up pop up--> 
         <div class="sign-in-div">
             <img class="image-flask" src="bubble-2022490_960_720.png">
-        <form class="sign-in-form" action="account.php">
-            <h1> Sign In</h1>
+        <form class="sign-in-form" action="action.php">
+            <h1>Sign In</h1>
             <div class="container">
             
-                <label for="email"><b>Email</b></label>
+        <label style="position: relative; right: 225px;" for="email"><b>Email</b></label>
         <input type="text" class="email-user" placeholder="Email" name="email" required>
 
-        <label for="password"><b>Password</b></label>
-        <input type="password" class="pass-user" placeholder="Password" name="password" required>
+        <label style="position: relative; right: 210px;" class="label_password" for="password"><b>Password</b></label>
+        <input type="password" placeholder="Password" name="password" required>
 
-        <a style="position: relative; right: 60px;" href="#">Forgot your password</a>
+        <a style="position: relative; right: 170px;" href="#">Forgot your password</a>
         
         <p class="check-box">
             <input type="checkbox" id="remember-user">
             <label for="remember-user">Remember me</label>
         </p>
         
-        <input type="submit" id="submit" value="Submit">
+        <input style="position: relative; left: 190px;" class="sub-button" type="submit" id="submit" value="Submit">
         </form>
 
         <hr>
         <p>Don't have an account? <a href="sign_up.php">Sign Up</a></p>
 
         <hr>
-        <input type="button" value="Go Back" onclick="history.back()">
+        <input style="position: relative; left: 190px;"  type="button" value="Go Back" onclick="history.back()">
     </div>
     </div>
+
+<style>
+   
+   /* sign in */
+
+.image-flask {
+    width: 60px;
+}
+
+.sign-in-div {
+    width: 500px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    text-align: center;
+    margin: 8% auto 0;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+
+
+.sign-in-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;
+}
+   
+   </style>
+
 
 </body>
 </html>
