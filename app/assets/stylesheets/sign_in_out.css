@@ -4,8 +4,9 @@
     width: 60px;
 }
 
+
 .sign-in-div {
-    width: 500px;
+    width: 675px;
     box-shadow: 0 0 3px 0 rgb(106, 13, 212);
     background: 25px;
     padding: 75px;
@@ -23,7 +24,7 @@
 /* Sign up*/
 
 .sign-up-div {
-    width: 500px;
+    width: 640px;
     box-shadow: 0 0 3px 0 rgb(106, 13, 212);
     background: 25px;
     padding: 75px;
@@ -36,4 +37,8 @@
 .sign_up-form {
     color: rgb(13, 13, 14);
     margin-bottom: 30px;
+}
+
+.nav-bar-sign {
+    width: auto;
 }

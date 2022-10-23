@@ -1,6 +1,13 @@
+<?php 
+include "nav.php";
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +28,7 @@
           <!--  <img class="image-flask" src="../../assets/images/flask.png">  -->
           <h1 style="color: black;">Sign In</h1>
           <hr>
-        <form class="sign-in-form" action="action.php">
+        <form class="sign-in-form" action="sign-in-insert.php">
             <span class="material-symbols-outlined" style="font-size: 60px; color:black">person</span>
             <div class="container">
             
@@ -42,7 +49,7 @@
         </form>
 
         <hr>
-        <p>Don't have an account? <a href="sign_up.php">Sign Up</a></p>
+        <p><b>Don't have an account?</b> <a href="sign_up.php">Sign Up</a></p>
 
         <hr>
         <input style="position: relative; left: 190px;"  type="button" value="Go Back" onclick="history.back()">

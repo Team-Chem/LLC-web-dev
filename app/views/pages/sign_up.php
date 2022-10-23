@@ -1,8 +1,6 @@
 
-<?php
-session_start();
-include_once "includes/Connection.php";
-
+<?php 
+include "nav.php";
 ?>
 
 
@@ -103,7 +101,7 @@ include_once "includes/Connection.php";
 </form>
 
 <hr>
-        <p> Already have an account? <a href="sign_in.html">Sign In</a></p>
+        <p><b>Already have an account?</b> <a href="sign_in.php">Sign In</a></p>
 
         <hr>
         <input style="position: relative; left: 190px;" type="button" value="Go Back" onclick="history.back()">
