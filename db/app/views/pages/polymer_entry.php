@@ -2,7 +2,7 @@
     include "header.php";
 ?>
         <header>
-            <h1>LCCC</h1>
+            <h1>Entry</h1>
         </header>
 
         <?php
@@ -21,7 +21,7 @@
         <!-- Using the article here for structuring-->
         <main id="start">
             <h2>Polymer Entry</h2>
-            <img class="image-flask" src="bubble-2022490_960_720.png">
+            <img class="image-flask" src="../../assets/images/flask.png">
 
             <form class="polymer-entry" action="polymer-preview.php" method="get">
                 <p>Please enter the required fields *</p>
@@ -41,7 +41,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                        <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                         
                     </fieldset>
                     <fieldset>
@@ -76,7 +76,7 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                        <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                     </fieldset>
                 </fieldset>
 
@@ -116,12 +116,12 @@
                                 </span>
                             </div>
                      </div>
-                    <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                    <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                 </fieldset>
 
                 <fieldset class="stationary-data">
                     <legend>Stationary Phase Data</legend>
-                    <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                    <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                     <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label for="partDiam" class="col-form-label">Particle Diameter</label>
@@ -138,7 +138,7 @@
                                 </span>
                             </div>
                      </div>
-                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label for="poreSize" class="col-form-label">Pore sizes</label>
@@ -155,7 +155,7 @@
                                 </span>
                             </div>
                      </div>
-                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label for="colDim" class="col-form-label">Column Dimension</label>
@@ -172,7 +172,7 @@
                                 </span>
                             </div>
                      </div>
-                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                    <!-- <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label for="colName" class="col-form-label">Column Name</label>
@@ -186,7 +186,7 @@
                                 </span>
                             </div>
                      </div>
-                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                    <!-- <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                 </fieldset>
 
                 <fieldset class="condition-data">
@@ -209,7 +209,7 @@
                                 </span>
                             </div>
                      </div>
-                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label for="press" class="col-form-label">Pressure</label>
@@ -228,7 +228,7 @@
                                 </span>
                             </div>
                      </div>
-                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label for="flowRate" class="col-form-label">Flow Rate</label>
@@ -247,7 +247,7 @@
                                 </span>
                             </div>
                      </div>
-                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label for="injVol" class="col-form-label">Injection Volume</label>
@@ -266,7 +266,7 @@
                                 </span>
                             </div>
                      </div>
-                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
                             <div class="col-auto">
                                 <label for="det" class="col-form-label">Detector(s)</label>
@@ -280,7 +280,7 @@
                                 </span>
                             </div>
                      </div>
-                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                     <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                 </fieldset>
 
                 <fieldset class="reference-data">
@@ -298,7 +298,7 @@
                                 </span>
                             </div>
                      </div>
-                    <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
+                    <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                 </fieldset>
 
                 <fieldset class="upload-data">
@@ -318,19 +318,21 @@
                      </div>
                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
                 </fieldset>
-                <fieldset class="Submitbutton">
-                    <legend>Complete Entry</legend>
-                    <label for="submit">
-                        <input type="submit" name="Entry" id="submit" value="Submit">
-                    </label>
-                </fieldset>
+                <div class="text-center">
+                    <fieldset class="submitbutton">
+                        <legend class="py-2" style="font-size:1.2em">Complete Entry</legend>
+                        <label for="submit">
+                            <button type="submit" name="Entry" id="submit">Continue</button>
+                        </label>
+                    </fieldset>
+                </div>
             </form>
             
         </main>
         <!--Of course footer is included everywhere.-->
-        <footer>
-            <h2>This is for contact information</h2>
-        </footer>
+        <?php
+            include "footer.php";
+        ?>
 
         <script src="../../javascript/form_display.js"></script>
 
