@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--
-    <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
-    -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    
+    <link rel="stylesheet" href="../../assets/stylesheets/sign_in_out.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 
 
 </head>
@@ -16,9 +18,11 @@
         
         <!--This is for the sign in portion of the modal sign up pop up--> 
         <div class="sign-in-div">
-            <img class="image-flask" src="../../assets/images/flask.png">
+          <!--  <img class="image-flask" src="../../assets/images/flask.png">  -->
+          <h1 style="color: black;">Sign In</h1>
+          <hr>
         <form class="sign-in-form" action="action.php">
-            <h1>Sign In</h1>
+            <span class="material-symbols-outlined" style="font-size: 60px; color:black">person</span>
             <div class="container">
             
         <label style="position: relative; right: 225px;" for="email"><b>Email</b></label>
@@ -44,34 +48,6 @@
         <input style="position: relative; left: 190px;"  type="button" value="Go Back" onclick="history.back()">
     </div>
     </div>
-
-<style>
-   
-   /* sign in */
-
-.image-flask {
-    width: 60px;
-}
-
-.sign-in-div {
-    width: 500px;
-    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
-    background: 25px;
-    padding: 75px;
-    text-align: center;
-    margin: 8% auto 0;
-    background-color: rgb(255, 255, 255);
-    display: block;
-}
-
-
-
-.sign-in-form {
-    color: rgb(13, 13, 14);
-    margin-bottom: 30px;
-}
-   
-   </style>
 
 
 </body>
