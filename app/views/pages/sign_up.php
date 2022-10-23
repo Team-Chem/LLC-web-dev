@@ -44,7 +44,7 @@
 
 <!--This is for the sign up portion of the modal sign up pop up-->
 <div class="sign-up-div">
-    <img class="image-flask" src="bubble-2022490_960_720.png">
+    <img class="image-flask" src="../../assets/images/flask.png">
 <form class="sign_up-form" id="form" action="sign-up-insert.php" method="POST">
     <h1>Sign Up</h1>
     <div class="form-field success">      
