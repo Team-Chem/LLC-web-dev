@@ -7,6 +7,7 @@ include "nav.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Sign Up</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -55,13 +56,13 @@ include "nav.php";
 <!--This is for the sign up portion of the modal sign up pop up-->
 <div class="sign-up-div">
   <!--  <img class="image-flask" src="../../assets/images/flask.png"> -->
-    <h1 style="color: black;">Sign In</h1>
+    <h1 style="color: black;">Sign Up</h1>
     <hr>
-<form class="sign_up-form" id="form" action="sign-up-insert.php" method="POST">
+<form class="sign_up-form" id="form" action="process-signup.php" method="POST" novalidate>
 <span class="fa fa-solid fa-user-plus" style="font-size: 60px; color:black"></span>
     <div class="form-field success">      
         <label style="position: relative; right: 203px;" class="label_first" generated="true" for="first_name"><b>First Name</b></label>
-        <input type="text" placeholder="First Name" id="first_name" name="FirstName" >
+        <input type="text" placeholder="First Name" id="first_name" name="FirstName" required>
         <small></small>
     </div>
 
