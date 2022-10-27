@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include_once 'Connection.php';
+    include_once 'connection.php';
     
     /*
         All of the variables that were assigned on the polymer-preview page.
@@ -46,7 +46,7 @@
 
 
     //Checking if we got the value with the crud method.
-    /*if(isset($PolymerName)){
+    if(isset($PolymerName)){
         echo "[$PolymerName was set with the post]\n";
     }
     else{
@@ -54,7 +54,7 @@
     }
 
     //This is to test the connection status of the server.
-    switch (connection_status())
+    /*switch (connection_status())
     {
     case CONNECTION_NORMAL:
       $txt = '[Connection is in a normal state]';
@@ -73,28 +73,35 @@
       break;
     }*/
 
+    //echo "High";
     //This should insert into the db it has before.
-    $sql = "INSERT INTO polymer (Poly_Name, Critical_High, Critical_Low, Molar_Masses, Used_Sample) 
-    VALUES ('$PolymerName', '12', '1', '7889', 'Night');";
+    $sql = "INSERT INTO polymer (polymer_name, molar_mass_high, molar_mass_low) 
+    VALUES ('$PolymerName', '$MolarHigh', '$MolarLow');";
 
     $query_success1 = mysqli_query($conn, $sql);
+
+    //echo "Made it here";
 
 
     //The following items are for if you are having problems with entering the data into the db.
     //Checking if the insert errored or not.
-   /*if(isset($sql)){
+   if(isset($sql)){
         echo "[The insert statement was successfully assigned to sql variable.]\n";
-    }*/
+    }
+
+    else {
+        echo "[insert statement did not work]";
+    }
 
     //Double checking the connecion by checking the connection variable that should have been included in this file.
-    /*if(isset($conn)){
+    if(isset($conn)){
         echo "[The connection variable should be usable.]\n";
     }
     else {
         echo "[There is something wrong with the connection variable.]\n";
     }
 
-    mysqli_query($conn, $sql);*/
+    //mysqli_query($conn, $sql);*/
 
     //Possibly getting null returns from this connection and query.
     /*if(mysqli_query($conn, $sql) != null){
@@ -108,20 +115,21 @@
 
     //FIXME
     //Some probelm here
-    /*if(isset($query1)) {
+    if(isset($query_success1)) {
         echo "Connection and Query were both successfull.\n";
     }
     else {
         echo "The query with connection is not working!\n";
-    }*/
+    }
 
+    /*
     if($query_success1) {
         $_SESSION['status'] = "Data inserted successfully";
-        header("Location: ../app/views/pages/polymer_search.php"); // This line
+        header("Location: ../app/views/pages/polymer_search.php"); // This line 
     }
     else {
-        echo "Something went wrong";
-        header("Location: ../views/pages/polymer_entry.php");
-    }
+        $_SESSION['status'] = "Data entry failed!";
+        header("Location: ../app/views/pages/polymer_entry.php");
+    }*/
 
 

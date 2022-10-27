@@ -7,12 +7,18 @@
         header("Location: polymer_entry.php");
     }
 
+    if($_GET['CriticalHigh'] < $critLow = $_GET['CriticalLow']){
+        $_SESSION['previewStatus'] = "Error: Molar High is lower than the molar Low";
+        header("Location: polymer_entry.php");
+    }
+
     $polyName = $_GET['PolyName'];
     $critHigh = $_GET['CriticalHigh'];
     $critLow = $_GET['CriticalLow'];
     $solvents = $_GET['Solvents'];
     $composition = $_GET['Composition'];
     $type = $_GET['type'];
+
     $particleDiameter = $_GET['ParticleDiameter'];
     $poreSize = $_GET['PoreSize'];
     $columnDimension = $_GET['ColumnDimension'];
@@ -21,13 +27,15 @@
     $pressure = $_GET['Pressure'];
     $flowRate = $_GET['FlowRate'];
     $injectionVolume = $_GET['InjectionVolume'];
+
+    //Concatenating the url part to make the DIO number a url link.
     $Detector = $_GET['Detector'];
     $References = $_GET['References'];
     $document = $_GET['Document'];
 
     //Defining the sessions variables to be stored into the database.
     $_SESSION['poly'] = $polyName;
-    /*$_SESSION['critHigh'] = $critHigh;
+    $_SESSION['critHigh'] = $critHigh;
     $_SESSION['critLow'] = $critLow;
     $_SESSION['solvents'] = $solvents;
     $_SESSION['composition'] = $composition;
@@ -41,13 +49,13 @@
     $_SESSION['flowRate'] = $flowRate;
     $_SESSION['injectionVolume'] = $injectionVolume;
     $_SESSION['Detector'] = $Detector;
-    $_SESSION['References'] = $References;
-    $_SESSION['document'] = $document;*/
+    
+    $_SESSION['document'] = $document;
 
     
 ?>
       <header>
-            <h1>LCCC</h1>
+            <h1>Entry Preview</h1>
         </header>
 
         <!-- Using the article here for structuring-->
@@ -87,8 +95,8 @@
                             <div class="col-auto">
                                 <p>
                                     <?php 
-                                        if(isset($critHigh) && (trim($critHigh) != "")){
-                                            echo "$critHigh<span>kD<span>"; 
+                                        if(isset($critLow) && (trim($critLow) != "")){
+                                            echo "$critLow<span>kD<span>"; 
                                         }
                                         else {
                                             echo "N/A";
@@ -106,8 +114,8 @@
                                 <p>
                                     <?php 
                 
-                                        if(isset($critLow) && (trim($critLow) != "")){
-                                            echo "$critLow<span>kD<span>"; 
+                                        if(isset($critHigh) && (trim($critHigh) != "")){
+                                            echo "$critHigh<span>kD<span>"; 
                                         }
                                         else {
                                             echo "N/A";
@@ -149,17 +157,16 @@
                                     <?php 
 
                                         if(isset($composition) && (trim($composition) != "")) {
+                                            $composition .= " " . $type;
                                             echo "$composition";
+                                            $_SESSION['composition'] = $composition;
                                         }
                                         else {
-                                            echo "N/A";
+                                            echo "Not needed";
                                             $type = "";
                                         } 
                                     ?>
                                 <p>
-                            </div>
-                            <div class="col-auto">
-                                <p><?php echo "$type" ?><p>
                             </div>
                         </div>
                     </div>
@@ -259,7 +266,7 @@
                                  <p>
                                     <?php 
                                         if(isset($temperature) && (trim($temperature) != "")){
-                                            echo "$temperature"; 
+                                            echo "$temperature<strong>&#8451;<strong>"; 
                                         }
                                         else {
                                             echo "N/A";
@@ -367,8 +374,16 @@
                             <div class="col-auto">
                                 <p>
                                     <?php 
-                                        if(isset($Detector) && (trim($Detector) != "")){
-                                            echo "$Detector";
+                                        if(isset($References) && (trim($References) != "")){
+                                            if(strpos($References, 'https') !== false){
+                                                $_SESSION['References'] = $References;
+                                                echo "<a href='$References'> " . $References . "</a>";
+                                            }
+                                            else {
+                                                $_SESSION['References'] = $References;
+                                                $References = "https://doi.org/" . $References;
+                                                echo "<a href='$References'> " . $References . "</a>";
+                                            }
                                         }
                                         else {
                                             echo "N/A";
@@ -402,19 +417,19 @@
                 
                 <fieldset id="options">
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="submit" class="form-control" name="Complete" id="submit" value="Submit">Submit</button>
-                        <button type="submit" class="form-control" name="Complete" id="submit" value="New"  formaction="includes/polymer-insert.php">New</button>
-                        <button type="button" class="form-control" name="Complete" id="submit" value="Edit" onclick="history.go(-1)">Edit</button>
+                        <button type="submit" class="form-control mr-5" name="SubmitComplete" id="submit" value="Submit">Submit</button>
+                        <button type="submit" class="form-control mr-5" name="NewComplete" id="new" value="New">New</button>
+                        <button type="button" class="form-control" name="Complete" id="edit" value="Edit" onclick="history.go(-1)">Edit</button>
                     </div>
                 </fieldset>
             </form>
             
         </main>
         <!--Of course footer is included everywhere.-->
-        <footer>
-            <h2>This is for contact information</h2>
-        </footer>
+        <?php
+            include "footer.php";
+        ?>
 
-        <script src="../../javascript/form_display.js"></script>
+        <script src="../../javascript/form_display_comp_on_prev.js"></script>
     </body>
 </html>

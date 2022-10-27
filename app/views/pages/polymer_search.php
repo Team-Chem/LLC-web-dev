@@ -20,7 +20,7 @@
         <p id="search-description">Enter in a key word to search for such as the polymer name, or the temperature number</p>
         <form class="search-form" action="polymer_search_results.php" method="POST">
             <input type="text" name="search-bar" id="top-search"> 
-            <button type="submit" class="btn btn-primary" name="submit-search">Search</button>
+            <button type="submit" class="btn btn-secondary" name="submit-search">Search</button>
         </form>
 
         <div class="table-container" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
@@ -133,5 +133,8 @@
                 }
             ?>
         </div>
+        <?php
+            include "footer.php";
+        ?>
     </body>
 </html>
