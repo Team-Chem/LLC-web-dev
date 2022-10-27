@@ -19,7 +19,7 @@ input, label, legend, li, option, p, section, select, ul, form {
 /* This is for generalizing default font sizes on the page. Will most likely 
 be overrided. */
 html {
-    font-size: 20px;
+    font-size: 17px;
 }
 
 body {
@@ -30,6 +30,7 @@ header {
     background-color: grey;
     padding: 1%;
     opacity: 50%;
+    clear: both;
 }
 
 header h1 {
@@ -41,15 +42,21 @@ header h1 {
 
 /* site navigation styles */
 .navbar .navbar-nav .nav-link {
-    color: #000000;
-    font-size: 1.7em;
+    color: #ffff;
+    font-size: 1.4em;
     margin-left: 1.7em;
 }
 .navbar .navbar-nav .nav-link:hover{
     /*background-color: #ffff;*/
-    font-size: 1.9em;
+    /*font-size: 1.9em;*/
    /* border-radius: 45px;*/
+    font-weight: bold;
 }
+
+.navbar .navbar-nav .nav-link:visited {
+    color: grey;
+}
+
 .navbar-logo-centered .navbar-nav .nav-link{
     padding: .5em 1em;
 }
@@ -60,11 +67,14 @@ header h1 {
 
 .polymer-entry, .polymer-preview {
     padding: 10px;
-    background-color: #ffff;
+    background: #ffff;
     max-width: 800px;
     margin: 12px auto;
     border-radius: 10px;
-    border: 4px solid black;
+    border: 4px solid #0000;
+    background: no-repeat url("https://images.unsplash.com/photo-1603484477859-abe6a73f9366?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGFwZXIlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background-size: cover;
+    font-weight: bold;
 }
 
 .image-flask {
@@ -136,11 +146,26 @@ span {
 }
 
 /* Submit styles */
-#submit, #top-search, .back {
+#submit, #edit, #new, #top-search, .back {
     border: 2px solid black;
     padding: 0.4em 0.6em;
     font-size: 1.1em;
     border-radius: 10px;
+    font-weight: bold;
+}
+#submit {
+    background-color: yellow;
+}
+
+#new {
+    background-color: lime;
+}
+
+#edit {
+    background-color: lightblue;
+}
+.btn-group {
+    padding: 20px;
 }
 
 #needABack {
@@ -150,11 +175,12 @@ span {
 
 .submitbutton{
     text-align: center;
+    display: none;
 }
 
 .submitbutton legend {
     margin-bottom: 1.2em;
-    font-size: 1.3em;
+    font-size: 2.3em;
     font-weight: bold;
 }
 /* label styles */
@@ -221,10 +247,13 @@ body {
     background: url("https://www.cappex.com/sites/default/files/styles/college_hero_desktop/public/images/hero/college/220862_hero.jpg?itok=tbgwOMxg");
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 70px;
 }
 
 main {
-    background-color: #5d8799;
+    background: #5d8799;
+    background: no-repeat url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg');
+    background-size: cover;
     max-width: 1200px;
     margin: 0 auto;
     border: 6px solid #DEC3AD;
@@ -232,7 +261,8 @@ main {
 
 main h2 {
     border: 2px solid black;
-    background-color: #9bacb3;
+    background: #0000;
+    color: #ffff;
     margin-top: 0px;
     text-align: center;
 }
@@ -263,13 +293,89 @@ footer {
     position: fixed;
     margin: 0 auto;
 }
-/* button colors */
-input:focus {
-    background-color: #DEC3AD;;
+
+
+.pass-user {
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;
+    position: relative;
 }
 
 
+.sign-in-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;
+}
 
+/* sign up */
+.sign-up-div {
+    width: 800px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+#first_name {
+    position: relative;
+    left: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid;
+    display: inline-block;
+}
+
+#last_name {
+    position: relative;
+    left: 32px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;    
+}
+            
+#email {
+    position: relative;
+    left: 55px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+            
+#password {
+    position: relative;
+    left: 38px;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;         
+}
+            
+#re-password {
+    position: relative;
+    border-radius: 30px;
+    padding: 10px;
+    width: 150px;
+    margin: 10px 0;
+    border: 1px solid;     
+}
+
+.sign-up-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;     
+}
 /*  */
 .CR-container {
     display: block;
@@ -401,7 +507,6 @@ input:focus {
 }
 
 .sign-up-div label {
-    display: left;
     margin-left: -165px;
     display: left;
     margin-left: 60px;
@@ -416,15 +521,20 @@ input:focus {
 }
 
 .table-container {
-   /* max-width: 1000px;*/
+    max-width: 1000px;
     position: relative;
     height: 1000px;
     overflow-y: scroll;
+    background: grey;
+    background: url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 2px solid #0000;
 }
 .table {
-    background-color: #ffff;
     font-size: 0.7em;
     width: 900px;
+    margin: 7px auto;
 }
 
 .table thead tr {
@@ -455,7 +565,7 @@ input:focus {
 .table-container {
     position: relative;
     margin: auto;
-    background-color: white;
+    /*background-color: #000;*/
 }
 
 #search-description {
@@ -468,3 +578,45 @@ input:focus {
     text-align: center;
 }
 
+#option button {
+    padding: 10px;
+}
+
+footer {
+    background: white;
+    background: url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffff;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    bottom: 0%;
+    top: 100%;
+    margin-bottom: 0%;
+    margin-top: 25%;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer h2 {
+    color: #ffff;
+}
+
+footer a:link {
+    color: teal;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+article figure {
+    float: left;
+}
+
+article {
+    padding: 25px;
+    line-height: 1.3em;
+}
