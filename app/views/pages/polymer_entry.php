@@ -43,11 +43,12 @@
                     <legend>Polymer Data</legend>
                    <fieldset>
                         <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="polyName" class="col-form-label required">Polymer Name</label>
                             </div>
                             <div class="col-auto">
-                                <input type="text" id="polyName" name="PolyName" class="form-control" aria-describedby="Description" placeholder="Polybutadiene" required>
+                                <input type="text" id="polyName" name="PolyName" class="form-control" 
+                                px="" aria-describedby="Description" placeholder="Polybutadiene" required>
                             </div>
                             <div class="col-auto">
                                 <span id="Description" class="form-text">
@@ -97,7 +98,7 @@
                 <fieldset class="mobile-data">
                     <legend>Mobile Phase Data</legend>
                     <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="solvents" class="col-form-label required">Solvent(s)</label>
                             </div>
                             <div class="col-auto">
@@ -112,7 +113,7 @@
                      
                      <div id="hideComp">
                      <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="comp" class="col-form-label required">Composition</label>
                             </div>
                             <div class="col-auto">
@@ -137,7 +138,7 @@
                     <legend>Stationary Phase Data</legend>
                     <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                     <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="partDiam" class="col-form-label">Particle Diameter</label>
                             </div>
                             <div class="col-auto">
@@ -154,7 +155,7 @@
                      </div>
                      <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="poreSize" class="col-form-label">Pore sizes</label>
                             </div>
                             <div class="col-auto">
@@ -171,7 +172,7 @@
                      </div>
                      <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="colDim" class="col-form-label">Column Dimension</label>
                             </div>
                             <div class="col-auto">
@@ -188,7 +189,7 @@
                      </div>
                     <!-- <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="colName" class="col-form-label">Column Name</label>
                             </div>
                             <div class="col-auto">
@@ -206,7 +207,7 @@
                 <fieldset class="condition-data">
                     <legend>Chromatography Conditions</legend>
                     <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="temp" class="col-form-label required">Temperature</label>
                             </div>
                             <div class="col-auto">
@@ -225,7 +226,7 @@
                      </div>
                      <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="press" class="col-form-label">Pressure</label>
                             </div>
                             <div class="col-auto">
@@ -244,7 +245,7 @@
                      </div>
                      <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="flowRate" class="col-form-label">Flow Rate</label>
                             </div>
                             <div class="col-auto">
@@ -263,7 +264,7 @@
                      </div>
                      <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="injVol" class="col-form-label">Injection Volume</label>
                             </div>
                             <div class="col-auto">
@@ -282,7 +283,7 @@
                      </div>
                      <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                      <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="det" class="col-form-label">Detector(s)</label>
                             </div>
                             <div class="col-auto">
@@ -300,7 +301,7 @@
                 <fieldset class="reference-data">
                     <legend>References</legend>
                     <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="ref" class="col-form-label">DOI number</label>
                             </div>
                             <div class="col-auto">
@@ -318,7 +319,7 @@
                 <fieldset class="upload-data">
                     <legend>Additional Documentation</legend>
                     <div class="row g-3 align-items-center">
-                            <div class="col-auto">
+                            <div class="col-3">
                                 <label for="upload" class="col-form-label">Upload</label>
                             </div>
                             <div class="col-auto">

@@ -1,8 +1,8 @@
 <?php
-session_start();
-include_once "../../../db/connection.php";
-
+    session_start();
+    include_once "../../../db/connection.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -43,10 +43,7 @@ include_once "../../../db/connection.php";
             <div class="collapse navbar-collapse" id="myNavbarToggler7">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="index.php">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="polymer_search.php">Polymer Search</a>
@@ -55,7 +52,7 @@ include_once "../../../db/connection.php";
                         <a class="nav-link" href="polymer_entry.php">New Polymer Entry</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sign_in.html">Account</a>
+                        <a class="nav-link" href="sign_in.php">Account</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
