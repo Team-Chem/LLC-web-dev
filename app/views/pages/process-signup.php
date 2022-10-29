@@ -1,6 +1,6 @@
 <?php
 
-include_once "../../../db/db/connection.php";
+include_once "../../../db/connection.php";
 
 // If name="FirstName" is empty then it will print the message and then exit
 if (empty($_POST['FirstName'])) {
