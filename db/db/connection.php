@@ -4,7 +4,7 @@
 $dbHost = "localhost";
 $dbUser = "root";
 $dbPassword = "";
-$dbName = "lccc_db";
+$dbName = "polymer";
 
 $conn = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
 

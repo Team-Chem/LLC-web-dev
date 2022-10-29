@@ -18,20 +18,6 @@
                 unset($_SESSION['previewStatus']);
             }
         ?>
-
-        <?php
-            if(isset($_SESSION['status'])){
-                ?>
-                    <div class="alert alert-danger d-flex align-items-center" role="alert" id="color">
-                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" color="green" aria-label="Error:"><use xlink:href="#check-circle-fill"/></svg>
-                        <div>
-                            <?php echo $_SESSION['status'];?>
-                        </div>
-                    </div>
-                <?php
-                unset($_SESSION['status']);
-            }
-        ?>
         <!-- Using the article here for structuring-->
         <main id="start">
             <h2>Polymer Entry</h2>
