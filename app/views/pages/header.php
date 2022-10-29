@@ -55,7 +55,7 @@ include_once "../../../db/connection.php";
                         <a class="nav-link" href="polymer_entry.php">New Polymer Entry</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sign_in.html">Account</a>
+                        <a class="nav-link" href="sign_in.php">Account</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
