@@ -12,4 +12,4 @@
 
     mysqli_query($conn, $sql);
 
-    header("Location: sign_in.html?sign-up-insert=success");
+    header("Location: sign_in.php?sign-up-insert=success");

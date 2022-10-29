@@ -2,28 +2,6 @@
     session_start();
     include_once 'Connection.php';
     
-    /*
-        All of the variables that were assigned on the polymer-preview page.
-
-        $_SESSION['poly']
-        $_SESSION['critHigh']
-        $_SESSION['critLow']
-        $_SESSION['solvents']
-        $_SESSION['composition']
-        $_SESSION['type']
-        $_SESSION['particleDiameter']
-        $_SESSION['poreSize']
-        $_SESSION['columnDimension']
-        $_SESSION['columnName']
-        $_SESSION['temperature']
-        $_SESSION['pressure']
-        $_SESSION['flowRate']
-        $_SESSION['injectionVolume']
-        $_SESSION['Detector']
-        $_SESSION['References']
-        $_SESSION['document']
-
-    */
 
     $PolymerName = $_SESSION['poly'];
     $MolarHigh = $_SESSION['critHigh'];
