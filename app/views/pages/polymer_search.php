@@ -2,7 +2,7 @@
     include "header.php";
 ?>
         <header>
-            <h1>Search</h1>
+            <h1>Polymer Search</h1>
         </header>
         <?php
             if(isset($_SESSION['status'])){
@@ -25,7 +25,11 @@
 
         <div class="table-container" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
             <?php 
-                $sql = "SELECT* FROM polymer";
+                $sql = "SELECT* FROM user, polymer, mobile_phase, stationary_phase, chromatography_condition, reference
+                WHERE user.user_id = polymer.fk_user_polymer_id AND polymer.polymer_id = mobile_phase.mobile_phase_id 
+                AND polymer.polymer_id = stationary_phase.stationary_phase_id 
+                AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
+                AND polymer.polymer_id = reference.reference_id;";
                 $result = mysqli_query($conn, $sql);
                 $queryResults = mysqli_num_rows($result);
 
@@ -38,94 +42,50 @@
                             <th scope='col' colspan='2'>Mobile Phase</th>
                             <th scope='col' colspan='2'>Stationary Phase</th>
                             <th scope='col' colspan='2'>Chromatography Conditions</th>
-                            <th scope='col' colspan='2'>DOI Number</th>
+                            <th scope='col' colspan='2'>DOI</th>
                             <th scope='col' colspan='2'>Documentation</th>
                           </tr>
                         </thead>
                         <tbody class='table-group-divider'>
                           <tr>
                             <th scope='row'>Name</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Solvents</th>
-                            <td>". $row['Poly_Name']."</td>
+                            <td>". $row['polymer_name']. "</td>
+                            <th scope='row'>Solvent(s)</th>
+                            <td>". $row['solvent']."</td>
                             <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
+                            <td>". $row['particle_diameter']. "</td>
+                            <th scope='row'>Temperature</th>
+                            <td>". $row['temperature']. "</td>
+                            <th scope='row' rowspan = '6'>URL</th>
+                            <td>". $row['doi']. "</td>
+                            <th scope='row' rowspan = '6'>Ref</th>
+                            <td>". $row['document']. "</td>
                          </tr>
                          <tr>
-                            <th scope='row'>Molar High-Low</th>
-                            <td>". $row['Critical_Low']. "kD - ". $row['Critical_High'] ."kD</td>
-                            <th scope='row'>Composition</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
+                            <th scope='row' rowspan='5'>Molar High-Low</th>
+                            <td rowspan='5'>". $row['molar_mass_low']. "kD - ". $row['molar_mass_high'] ."kD</td>
+                            <th scope='row' rowspan='5'>Composition</th>
+                            <td rowspan='5'>". $row['composition']. "</td>
+                            <th scope='row'>Pore Size</th>
+                            <td>". $row['pore_size']. "</td>
+                            <th scope='row'>Pressure</th>
+                            <td>". $row['pressure']. "</td>
                         </tr>
                         <tr>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
+                            <th scope='row'>Column Dimension</th>
+                            <td>". $row['column_dimension']. "</td>
+                            <th scope='row'>Flow Rate</th>
+                            <td>". $row['flow_rate']. "</td>
                         </tr>
                         <tr>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
+                            <th scope='row' rowspan='3'>Column Name</th>
+                            <td rowspan='3'>". $row['column_name']. "</td>
+                            <th scope='row'>Injected Volume</th>
+                            <td>". $row['injected_volume']. "</td>
                         </tr>
                         <tr>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                        </tr>
-                        <tr>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
-                            <th scope='row'>Particle Diameter</th>
-                            <td>". $row['Poly_Name']. "</td>
+                            <th scope='row'>Detector</th>
+                            <td>". $row['detector']. "</td>
                         </tr>
                         </tbody>
                       </table>";
