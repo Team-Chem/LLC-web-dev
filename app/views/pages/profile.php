@@ -9,8 +9,8 @@
             img src="../../assets/images/unknown.png">
             <span class="font-weight-bold">User name</span>
             <span class="text-black-50">user@univerisity.edu</span><span> </span></div>
-            <div class="mt-1 text-center"><button class="btn btn-primary profile-button" type="button">Manage Other</button></div>
-            <div class="mt-1 text-center"><button class="btn btn-primary profile-button" type="button">Manage Other</button></div>
+            <div class="mt-1 text-center"><button class="btn btn-primary profile-button" type="button">Manage Data</button></div>
+            <!-- <div class="mt-1 text-center"><button class="btn btn-primary profile-button" type="button">Manage Post</button></div> -->
         </div>
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
