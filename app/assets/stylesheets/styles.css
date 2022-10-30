@@ -204,6 +204,28 @@ span {
     display: none;
 }
 
+.polymer-entry div.row {
+    border-bottom: 2px solid black;
+}
+
+.polymer-entry div label {
+    font-size: 1.2em;
+}
+
+.polymer-entry legend {
+    font-size: 1.6em;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #ffff;
+}
+
+.polymer-entry {
+    border: 4px solid #0000;
+}
+
+#no-border {
+    border: none;
+}
 /*.submitbutton {
     display: none;
 }*/

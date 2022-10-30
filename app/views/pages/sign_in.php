@@ -28,7 +28,7 @@ include "nav.php";
           <!--  <img class="image-flask" src="../../assets/images/flask.png">  -->
           <h1 style="color: black;">Sign In</h1>
           <hr>
-        <form class="sign-in-form" action="sign-in-insert.php">
+        <form class="sign-in-form" action="sign-in-insert.php" method="POST">
             <span class="material-symbols-outlined" style="font-size: 60px; color:black">person</span>
             <div class="container">
             

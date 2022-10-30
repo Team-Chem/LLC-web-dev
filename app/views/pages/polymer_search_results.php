@@ -12,7 +12,11 @@
                 //echo $_POST['search-bar'];
                 if (isset($_POST['submit-search']) && trim($_POST['search-bar']) != ""){
                     $search = mysqli_real_escape_string($conn, $_POST['search-bar']);
-                    $sql = " SELECT * FROM polymer WHERE polymer_name LIKE '%$search%';";
+                    $sql = " SELECT * FROM polymer, mobile_phase, chromatography_condition, stationary_phase,
+                    reference, user WHERE user.user_id = polymer.fk_user_polymer_id AND polymer.polymer_id = mobile_phase.mobile_phase_id 
+                    AND polymer.polymer_id = stationary_phase.stationary_phase_id 
+                    AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
+                    AND polymer.polymer_id = reference.reference_id AND polymer_name LIKE '%$search%';";
                     $results = mysqli_query($conn, $sql); 
 
                     $queryResults = mysqli_num_rows($results);
