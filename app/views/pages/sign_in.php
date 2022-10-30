@@ -1,5 +1,38 @@
 <?php 
+
 include "nav.php";
+
+?>
+
+<?php
+
+$invalid_user = false;
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $conn = require __DIR__ . "/../../../db/connection.php";
+
+    $sql = sprintf("SELECT * FROM user WHERE email = '%s'",
+                    $conn->real_escape_string($_POST['email']));
+
+                    $result = $conn->query($sql);
+                    $user = $result->fetch_assoc();
+
+        if ($user) {
+
+            if (password_verify($_POST['password'], $user['password_hash'])) {
+                session_start();
+
+                $_SESSION["user_id_num"] = $user['id'];
+
+                header("Location: user_logged_in.php");
+                exit();
+            }
+        }
+
+        $invalid_user = true;
+}
+
 ?>
 
 
@@ -7,7 +40,7 @@ include "nav.php";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <title>Sign In</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,12 +61,19 @@ include "nav.php";
           <!--  <img class="image-flask" src="../../assets/images/flask.png">  -->
           <h1 style="color: black;">Sign In</h1>
           <hr>
-        <form class="sign-in-form" action="sign-in-insert.php" method="POST">
-            <span class="material-symbols-outlined" style="font-size: 60px; color:black">person</span>
+
+          <span class="material-symbols-outlined" style="font-size: 60px; color:black">person</span>
+
+          <form class="sign-in-form" method="POST" novalidate>
+
+          <?php if ($invalid_user): ?>
+                <em class="invalid-user" style="position: relative; right: 200px;">Invalid Login</em>
+            <?php endif; ?>
+
             <div class="container">
-            
+
         <label style="position: relative; right: 225px;" for="email"><b>Email</b></label>
-        <input type="text" class="email-user" placeholder="Email" name="email" required>
+        <input type="text" class="email-user" placeholder="Email" name="email" value="<?= htmlspecialchars($_POST['email'] ?? "") ?>" required>
 
         <label style="position: relative; right: 210px;" class="label_password" for="password"><b>Password</b></label>
         <input type="password" placeholder="Password" name="password" required>

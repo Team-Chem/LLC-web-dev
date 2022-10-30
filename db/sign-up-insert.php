@@ -1,5 +1,5 @@
 <?php
-    include_once 'includes/Connection.php';
+    include_once 'connection.php';
 
     $FirstName = $_POST['FirstName'];
     $LastName = $_POST['LastName'];
@@ -12,4 +12,4 @@
 
     mysqli_query($conn, $sql);
 
-    header("Location: sign_in.html?sign-up-insert=success");
+    header("Location: sign_in.php?sign-up-insert=success");
