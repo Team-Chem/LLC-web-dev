@@ -27,14 +27,14 @@ body {
 }
 /* header styles */
 header {
-    background-color: grey;
+    background-color: white;
     padding: 1%;
     opacity: 50%;
     clear: both;
 }
 
 header h1 {
-    color: white;
+    color: black;
     font-size: 1em;
     text-align: center;
     opacity: 1;
@@ -72,7 +72,7 @@ header h1 {
     margin: 12px auto;
     border-radius: 10px;
     border: 4px solid #0000;
-    background: no-repeat url("https://images.unsplash.com/photo-1603484477859-abe6a73f9366?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGFwZXIlMjB0ZXh0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+    background: no-repeat url("data:image/jpeg;base64,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");
     background-size: cover;
     font-weight: bold;
 }
@@ -204,6 +204,28 @@ span {
     display: none;
 }
 
+.polymer-entry div.row {
+    border-bottom: 2px solid black;
+}
+
+.polymer-entry div label {
+    font-size: 1.2em;
+}
+
+.polymer-entry legend {
+    font-size: 1.6em;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #ffff;
+}
+
+.polymer-entry {
+    border: 4px solid #0000;
+}
+
+#no-border {
+    border: none;
+}
 /*.submitbutton {
     display: none;
 }*/
@@ -243,11 +265,11 @@ span {
 
 /* body and content styles */
 body {
-    background: #9bacb3;
-    background: url("https://www.cappex.com/sites/default/files/styles/college_hero_desktop/public/images/hero/college/220862_hero.jpg?itok=tbgwOMxg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgb(13, 13, 14);;
+    /*background-repeat: no-repeat;
+    background-size: cover;*/
     padding-top: 70px;
+    color: white;
 }
 
 main {
@@ -257,6 +279,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     border: 6px solid #DEC3AD;
+    color: rgb(8, 3, 3);
 }
 
 main h2 {
@@ -521,7 +544,7 @@ footer {
 }
 
 .table-container {
-    max-width: 1000px;
+    max-width: 1200px;
     position: relative;
     height: 1000px;
     overflow-y: scroll;
@@ -533,7 +556,7 @@ footer {
 }
 .table {
     font-size: 0.7em;
-    width: 900px;
+    width: 1000px;
     margin: 7px auto;
 }
 
