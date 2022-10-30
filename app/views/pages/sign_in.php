@@ -10,7 +10,7 @@ $invalid_user = false;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $conn = require __DIR__ . "/../../../db/db/connection.php";
+    $conn = require __DIR__ . "/../../../db/connection.php";
 
     $sql = sprintf("SELECT * FROM user WHERE email = '%s'",
                     $conn->real_escape_string($_POST['email']));
