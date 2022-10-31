@@ -18,11 +18,33 @@
                 unset($_SESSION['status']);
             }
         ?>
-        <p id="search-description">Enter in a key word to search for such as the polymer name, or the temperature number</p>
-        <form class="search-form" action="polymer_search_results.php" method="POST">
-            <input type="text" name="search-bar" id="top-search"> 
-            <button type="submit" class="btn btn-secondary" name="submit-search">Search</button>
-        </form>
+        <p id="search-description">Pick something to search by and then search for it!</p>
+        <div id="search-center">
+            <form class="search-form justify-content-md-center" action="polymer_search_results.php" method="POST">
+                <div class="input-group mb-3 w-50 mx-auto p-2 justify-center">
+                    <select name="SelectedTable">
+                        <option value="" disabled selected>Search By</option>
+                        <option value="polymer_name">Polymer Name</option>
+                        <option value="temperature">Temperature</option>
+                        <option value="pressure">Pressure</option>
+                        <option value="flow_rate">Flow Rate</option>
+                        <option value="injected_volume">Injected Volume</option>
+                        <option value="detector">Detector</option>
+                        <option value="solvent">Solvent</option>
+                        <option value="email">User's Email</option>
+                        <option value="doi">DOI Number/Url</option>
+                        <option value="particle_diameter">Particle Diameter</option>
+                        <option value="pore_size">Pore Size</option>
+                        <option value="column_dimension">Column Length</option>
+                        <option value="column_name">Column name</option>
+                    </select>
+                    <input type="text" class="form-control" name="search-bar" aria-label="Text input with dropdown button">
+                    <button type="submit" class="btn btn-primary" name="submit-search">Search</button>
+                </div>
+            <!--<input type="text" name="search-bar" id="top-search">
+                <button type="submit" class="btn btn-secondary" name="submit-search">Search</button>-->
+            </form>
+        </div>
 
         <div class="table-container" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
             <?php 
@@ -45,6 +67,7 @@
                             <th scope='col' colspan='2'>Chromatography Conditions</th>
                             <th scope='col' colspan='2'>DOI</th>
                             <th scope='col' colspan='2'>Documentation</th>
+                            <th scope='col' colspan='2'>User</th>
                           </tr>
                         </thead>
                         <tbody class='table-group-divider'>
@@ -58,9 +81,11 @@
                             <th scope='row'>Temperature</th>
                             <td>". $row['temperature']. "</td>
                             <th scope='row' rowspan = '6'>URL</th>
-                            <td>". $row['doi']. "</td>
+                            <td><a href=". $row['doi'] ."> ". $row['doi']. "</a></td>
                             <th scope='row' rowspan = '6'>Ref</th>
                             <td>". $row['document']. "</td>
+                            <th scope='row' rowspan = '6'>Email</th>
+                            <td>". $row['email']. "</td>
                          </tr>
                          <tr>
                             <th scope='row' rowspan='5'>Molar High-Low</th>
