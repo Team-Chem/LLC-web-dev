@@ -643,3 +643,7 @@ article {
     padding: 25px;
     line-height: 1.3em;
 }
+/* default color on white pages */
+.labels {
+    color: black;
+}

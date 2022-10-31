@@ -1,4 +1,5 @@
 <?php
+    $title = 'About';
     include "header.php";
 ?>
         <header>
