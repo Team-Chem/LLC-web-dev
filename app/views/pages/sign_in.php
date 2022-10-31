@@ -31,6 +31,7 @@ include "header.php";
 
             $invalid_user = true;
 }
+    }
 
 ?>
 
