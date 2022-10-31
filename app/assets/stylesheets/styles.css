@@ -243,11 +243,12 @@ span {
 
 /* body and content styles */
 body {
-    background: #9bacb3;
-    background: url("https://www.cappex.com/sites/default/files/styles/college_hero_desktop/public/images/hero/college/220862_hero.jpg?itok=tbgwOMxg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: rgb(64, 66, 88);
+    /* background: url("https://www.cappex.com/sites/default/files/styles/college_hero_desktop/public/images/hero/college/220862_hero.jpg?itok=tbgwOMxg"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     padding-top: 70px;
+    color:white;
 }
 
 main {
@@ -295,87 +296,6 @@ footer {
 }
 
 
-.pass-user {
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0;
-    border: 1px solid;
-    position: relative;
-}
-
-
-.sign-in-form {
-    color: rgb(13, 13, 14);
-    margin-bottom: 30px;
-}
-
-/* sign up */
-.sign-up-div {
-    width: 800px;
-    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
-    background: 25px;
-    padding: 20px;
-    margin: 8% auto 0;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    display: block;
-}
-
-#first_name {
-    position: relative;
-    left: 30px;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px;
-    border: 1px solid;
-    display: inline-block;
-}
-
-#last_name {
-    position: relative;
-    left: 32px;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0;
-    border: 1px solid;    
-}
-            
-#email {
-    position: relative;
-    left: 55px;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0;
-    border: 1px solid;     
-}
-            
-#password {
-    position: relative;
-    left: 38px;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0;
-    border: 1px solid;         
-}
-            
-#re-password {
-    position: relative;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0;
-    border: 1px solid;     
-}
-
-.sign-up-form {
-    color: rgb(13, 13, 14);
-    margin-bottom: 30px;     
-}
 /*  */
 .CR-container {
     display: block;
@@ -388,131 +308,6 @@ footer {
 #max-CR-searchbox > input {
     width: 10%;
 }
-
-.sign-up-div label {
-    display: left;
-    margin-left: 60px;
-}
-
-/* sign in */
-
-.image-flask {
-    width: 60px;
-
-}
-
-.sign-in-div {
-    width: 300px;
-    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
-    background: 25px;
-    padding: 75px;
-    margin: 8% auto 0;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    display: block;
-}
-
-.email-user {
-    position: relative;
-    left: 13px;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px;
-    border: 1px solid;
-}
-
-.pass-user {
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0;
-    border: 1px solid;
-    position: relative;
-}
-
-
-.sign-in-form {
-    color: rgb(13, 13, 14);
-    margin-bottom: 30px;
-}
-
-
-
-/* sign up*/
-.sign-up-div {
-    width: 500px;
-    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
-    background: 25px;
-    padding: 75px;
-    margin: 8% auto 0;
-    text-align: center;
-    background-color: rgb(255, 255, 255);
-    display: block;
-} 
-
-#first_name {
-    position: relative;
-    left: 30px;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px;
-    border: 1px solid;
-    display: inline-block;
-}
-
-#last_name {
-    position: relative;
-    left: 32px;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0;
-    border: 1px solid;    
-}
-            
-#email {
-    position: relative;
-    left: 55px;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0;
-    border: 1px solid;     
-}
-            
-#password {
-    position: relative;
-    left: 38px;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0;
-    border: 1px solid;         
-}
-            
-#re-password {
-    position: relative;
-    border-radius: 30px;
-    padding: 10px;
-    width: 150px;
-    margin: 10px 0;
-    border: 1px solid;     
-}
-
-.sign-up-form {
-    color: rgb(13, 13, 14);
-    margin-bottom: 30px;     
-}
-
-.sign-up-div label {
-    margin-left: -165px;
-    display: left;
-    margin-left: 60px;
-    text-align: left;
-    display: block;
-} 
     
 
 .datasearched {
@@ -620,3 +415,4 @@ article {
     padding: 25px;
     line-height: 1.3em;
 }
+

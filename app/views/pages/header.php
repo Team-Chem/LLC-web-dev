@@ -43,9 +43,6 @@ include_once "../../../db/connection.php";
             <div class="collapse navbar-collapse" id="myNavbarToggler7">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
@@ -56,6 +53,9 @@ include_once "../../../db/connection.php";
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sign_in.php">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_logged_in.php">Account</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>

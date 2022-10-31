@@ -1,6 +1,6 @@
 <?php 
 
-include "nav.php";
+include "header.php";
 
 ?>
 
@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 $_SESSION["user_id_num"] = $user['id'];
 
-                header("Location: user_logged_in.php");
+                header("Location: polymer_search.php");
                 exit();
             }
         }
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" href="../../assets/stylesheets/sign_in_out.css">
+    <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="container">
 
         <label style="position: relative; right: 225px;" for="email"><b>Email</b></label>
-        <input type="text" class="email-user" placeholder="Email" name="email" value="<?= htmlspecialchars($_POST['email'] ?? "") ?>" required>
+        <input type="text" class="email-user" placeholder="Email" id="input-email-user" name="email" value="<?= htmlspecialchars($_POST['email'] ?? "") ?>" required>
 
         <label style="position: relative; right: 210px;" class="label_password" for="password"><b>Password</b></label>
         <input type="password" placeholder="Password" name="password" required>
@@ -85,7 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="remember-user">Remember me</label>
         </p>
         
-        <input style="position: relative; left: 190px;" class="sub-button" type="submit" id="submit" value="Submit">
+        <input class="sign-in-submit" style="position: relative; left: 190px;" class="sub-button" type="submit" id="submit-sign-in" value="Submit">
         </form>
 
         <hr>
@@ -95,6 +95,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <input style="position: relative; left: 190px;"  type="button" value="Go Back" onclick="history.back()">
     </div>
     </div>
+
+    <style>
+.sign-in-div {
+    width: 675px;
+    box-shadow: 0 0 3px 0 rgb(106, 13, 212);
+    background: 25px;
+    padding: 75px;
+    text-align: center;
+    margin: 8% auto 0;
+    background-color: rgb(255, 255, 255);
+    display: block;
+}
+
+.sign-in-form {
+    color: rgb(13, 13, 14);
+    margin-bottom: 30px;
+}
+
+#input-email-user {
+    margin-left: 0px;
+    border-radius: 7px;
+    width: 215px;
+
+}
+
+#submit-sign-in{
+    background-color: black;
+}
+
+    </style>
 
 
 </body>
