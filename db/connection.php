@@ -4,7 +4,7 @@
 $dbHost = "localhost";
 $dbUser = "root";
 $dbPassword = "";
-$dbName = "testing-db";
+$dbName = "lccc_db";
 
 $conn = mysqli_connect($dbHost, $dbUser, $dbPassword, $dbName);
 
