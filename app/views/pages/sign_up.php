@@ -1,6 +1,6 @@
-
-<?php 
-include "nav.php";
+<?php
+    $title = 'Sign Up';
+    include "nav.php";
 ?>
 
 

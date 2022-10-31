@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Data entry page</title>
+        <title><?php if(isset($title)) {echo $title;} else {echo "LCCC";} ?></title>
         <!-- 
             LCCC - Data Entry
             Filename: polymer_entry.html

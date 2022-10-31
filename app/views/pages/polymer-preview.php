@@ -1,4 +1,5 @@
 <?php
+    $title = 'Preview';
     include "header.php";
 
 
