@@ -1,12 +1,12 @@
 <?php
-session_start();
-include_once "../../../db/connection.php";
-
+    session_start();
+    include_once "../../../db/connection.php";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Data entry page</title>
+        <title><?php if(isset($title)) {echo $title;} else {echo "LCCC";} ?></title>
         <!-- 
             LCCC - Data Entry
             Filename: polymer_entry.html
@@ -43,13 +43,16 @@ include_once "../../../db/connection.php";
             <div class="collapse navbar-collapse" id="myNavbarToggler7">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="index.php">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="polymer_search.php">Polymer Search</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="polymer_entry.php">New Polymer Entry</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.php">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="sign_in.php">Sign In</a>

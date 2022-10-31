@@ -1,5 +1,6 @@
 <?php
-    include "header.php"
+    $title = 'Profile';
+    include "header.php";
 ?>
 
 <div class="container rounded bg-white mt-5 mb-5">
@@ -9,13 +10,13 @@
             img src="../../assets/images/unknown.png">
             <span class="font-weight-bold">User name</span>
             <span class="text-black-50">user@univerisity.edu</span><span> </span></div>
-            <div class="mt-1 text-center"><button class="btn btn-primary profile-button" type="button">Manage Other</button></div>
-            <div class="mt-1 text-center"><button class="btn btn-primary profile-button" type="button">Manage Other</button></div>
+            <div class="mt-1 text-center"><button class="btn btn-primary profile-button" type="button">Manage Data</button></div>
+            <!-- <div class="mt-1 text-center"><button class="btn btn-primary profile-button" type="button">Manage Post</button></div> -->
         </div>
         <div class="col-md-5 border-right">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                    <h4 class="text-right">Profile Settings</h4>
+                    <h4 class="text-right"><label class='labels'>Profile Settings</label></h4>
                 </div>
                 <div class="row mt-2">
                     <div class="col-md-6"><label class="labels">First Name</label><input type="text" class="form-control" placeholder="john" value=""></div>
@@ -34,12 +35,12 @@
         </div>
         <div class="col-md-4">
             <div class="p-3 py-5">
-                <div class="d-flex justify-content-between align-items-center experience"><span>About me</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
+                <div class="d-flex justify-content-between align-items-center experience"><span class='labels'>About me</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i><label class='labels'>&nbsp;Experience</span></div><br></label>
                 <div class="col-md-12"><label class="labels">Experience in Chemistry</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
                 <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
             </div>
         </div>
     </div>
 </div>
-</div>
-</div>
+
+<?php include "footer.php"; ?>

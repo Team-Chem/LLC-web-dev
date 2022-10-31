@@ -1,4 +1,5 @@
 <?php
+    $title = 'Preview';
     include "header.php";
 
 
@@ -380,8 +381,8 @@
                                                 echo "<a href='$References'> " . $References . "</a>";
                                             }
                                             else {
-                                                $_SESSION['References'] = $References;
                                                 $References = "https://doi.org/" . $References;
+                                                $_SESSION['References'] = $References;
                                                 echo "<a href='$References'> " . $References . "</a>";
                                             }
                                         }

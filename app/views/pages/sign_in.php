@@ -6,36 +6,33 @@ include "header.php";
 
 <?php
 
-$invalid_user = false;
+    $invalid_user = false;
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $conn = require __DIR__ . "/../../../db/connection.php";
+        $conn = require __DIR__ . "/../../../db/connection.php";
 
-    $sql = sprintf("SELECT * FROM user WHERE email = '%s'",
-                    $conn->real_escape_string($_POST['email']));
+        $sql = sprintf("SELECT * FROM user WHERE email = '%s'",
+                        $conn->real_escape_string($_POST['email']));
 
-                    $result = $conn->query($sql);
-                    $user = $result->fetch_assoc();
+                        $result = $conn->query($sql);
+                        $user = $result->fetch_assoc();
 
-        if ($user) {
+            if ($user) {
 
-            if (password_verify($_POST['password'], $user['password_hash'])) {
-                session_start();
+                if (password_verify($_POST['password'], $user['password_hash'])) {
+                    session_start();
 
-                $_SESSION["user_id_num"] = $user['id'];
+                    $_SESSION["user_id_num"] = $user['id'];
 
                 header("Location: polymer_search.php");
                 exit();
             }
-        }
 
-        $invalid_user = true;
+            $invalid_user = true;
 }
 
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 
-</head>
+
 <body>
         
         <!--This is for the sign in portion of the modal sign up pop up--> 
