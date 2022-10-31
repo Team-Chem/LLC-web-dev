@@ -7,8 +7,8 @@
     $Password = $_POST['Password'];
     $Re_Password = $_POST['Re-Password'];
 
-    $sql = "INSERT INTO user (Fname, Lname, Email, Pass_word, Re_enter_pass) 
-    VALUES ('$FirstName', '$LastName', '$Email', '$Password', '$Re_Password');";
+    $sql = "INSERT INTO user (first_name, last_name, email, password) 
+    VALUES ('$FirstName', '$LastName', '$Email', '$Password');";
 
     mysqli_query($conn, $sql);
 
