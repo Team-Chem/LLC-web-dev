@@ -30,6 +30,9 @@ session_start();
 <?php if (isset($_SESSION["user_id_num"])): ?>
     
     <p>Successfully Logged On</p>
+
+    <p><a href="user_logged_out.php">Logout</a></p>
+    <p><a href="sign_in.php">Login</a></p>
     
     <?php else: ?>
 
