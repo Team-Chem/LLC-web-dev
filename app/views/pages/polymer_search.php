@@ -1,4 +1,5 @@
-<?php 
+<?php
+    $title = 'Search';
     include "header.php";
 ?>
         <header>

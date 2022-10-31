@@ -1,4 +1,5 @@
 <?php 
+    $title = 'Data Entry';
     include "header.php";
 ?>
         <header>

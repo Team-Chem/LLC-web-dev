@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>LCCC Project</title>
+        <title><?php if(isset($title)) {echo $title;} else {echo "LCCC";} ?></title>
         <!-- 
             LCCC
             Filename: header.php
@@ -55,9 +55,13 @@
                         <a class="nav-link" href="polymer_entry.php">New Polymer Entry</a>
                     </li>
                     <li class="nav-item">
-
+                        <a class="nav-link" href="profile.php">Profile</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="sign_in.php">Sign In</a>
-                        
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="user_logged_in.php">Account</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
