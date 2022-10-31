@@ -6,10 +6,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Data entry page</title>
+        <title>LCCC Project</title>
         <!-- 
-            LCCC - Data Entry
-            Filename: polymer_entry.html
+            LCCC
+            Filename: header.php
 
             Author: Nathaniel Dixon, Mathew Hosier, Hunter Jackson
             Date: 9/19/2022
@@ -33,6 +33,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+
         <!-- Image and text -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="top" style="background: #5d8799; background: no-repeat url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg'); background-size: cover;">
             <a class="navbar-brand d-lg-none" href="#"><img src="flask.png"></a>

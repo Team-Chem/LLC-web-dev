@@ -10,13 +10,55 @@
         <div class="table-container" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
             <?php
                 //echo $_POST['search-bar'];
+                $value = $_POST['SelectedTable'];
+                if ($value == "polymer_name") {
+                    $table_column = "polymer_name";
+                    echo "Got the name!";
+                }
+                else if ($value == "temperature") {
+                    $table_column = "temperature";
+                }
+                else if ($value == "pressure") {
+                    $table_column = "pressure";
+                }
+                else if ($value == "flow_rate") {
+                    $table_column = "flow_rate";
+                }
+                else if ($value == "injected_volume") {
+                    $table_column = "injected_volume";
+                }
+                else if ($value == "detector") {
+                    $table_column = "detector";
+                }
+                else if ($value == "solvent") {
+                    $table_column = "solvent";
+                }
+                else if ($value == "user") {
+                    $table_column = "email";
+                }
+                else if ($value == "particle_diameter") {
+                    $table_column = "particle_diameter";
+                }
+                else if ($value == "pore_size") {
+                    $table_column = "pore_size";
+                }
+                else if ($value == "column_dimension") {
+                    $table_column = "column_dimension";
+                }
+                else if ($value == "column_name") {
+                    $table_column = "column_name";
+                }
+                else if ($value == "doi") {
+                    $table_column = "doi";
+                }
+                
                 if (isset($_POST['submit-search']) && trim($_POST['search-bar']) != ""){
                     $search = mysqli_real_escape_string($conn, $_POST['search-bar']);
                     $sql = " SELECT * FROM polymer, mobile_phase, chromatography_condition, stationary_phase,
                     reference, user WHERE user.user_id = polymer.fk_user_polymer_id AND polymer.polymer_id = mobile_phase.mobile_phase_id 
                     AND polymer.polymer_id = stationary_phase.stationary_phase_id 
                     AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
-                    AND polymer.polymer_id = reference.reference_id AND polymer_name LIKE '%$search%';";
+                    AND polymer.polymer_id = reference.reference_id AND $table_column LIKE '%$search%';";
                     $results = mysqli_query($conn, $sql); 
 
                     $queryResults = mysqli_num_rows($results);
@@ -86,7 +128,7 @@
                         }
                     }
                     else {
-                        echo "There were no search results.";
+                        echo "There were no search results. $table_column";
                     }
                 }
                 else {
