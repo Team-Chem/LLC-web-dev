@@ -71,7 +71,7 @@ header h1 {
     max-width: 800px;
     margin: 12px auto;
     border-radius: 10px;
-    border: 4px solid #0000;
+    border: 8px solid #0000;
     background: no-repeat url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMVFhUXFRcXFxgXGBcXGBcYFRcXFxcYGBoaHSggGholHRcVITEiJSkrLi4uFx8zODMtNygtLisBCgoKDg0NFQ8PFS0dFR0tLS0tKysrKy0tLS0tKy0tLS0tLSstLS0tLS0tLS0tLS0tLS0tLS0tLSstLSs3LS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAAAAQIDBAUH/8QALBAAAgIABQMDBAIDAQAAAAAAAAECEQMSIVHwMUFhE3GBodHh8ZGxBGLBIv/EABgBAQEBAQEAAAAAAAAAAAAAAAABAgME/8QAGhEBAQEBAAMAAAAAAAAAAAAAABEBIQISUf/aAAwDAQACEQMRAD8A+l5hxYrByZ4XZdnPOOU1U+u4RRN6rCMiypf4/dCUH3Vc8EmgUSq3GogUCaGyQcgNMhKwxRxqL9dbDidGWhJCWLfQecA9JDUVt9CXLYTdgW59hqe5ll8jSFGsafQbl2MXIpPyWkXLBsaw6MszvqKT+RRpVkSijPNRE5slVrNoSmYW+WCj/toSrGzdkyJSK0roUTksWSgzfgym2yBrqUZJg8QlVtGQM51ieTSOPpRc0hSS2QE5vKAUehYkufsQyshw8a9jWOJukY2NFRq2JyvQmIpICqJaDM/cM/j/AIAmZt2aOfihIyqKGVQCBJDQDAdlJEopSRUDBITktiXJgaUTlFnfcTYUNGUkWKyCBFyjYnhbMRUUOishNAK6ByJcQSAHIXXoOgYGcoETRqRLYkVhl72D5zY0MppdjOqq2Ixfz9AM1XtRkVRnCJokdnMwoLBlQUFDQswDbJoY6+QJoYMlMg0QEIYAC+BJ+5cQFQUMLAWUUYg3QnMBytEXtqy1iDc7AhQHkG35JlIooliTJTIqiZOwbBAS0CRQSAhw2J0KZMohS0IkudBslyIM5oxmrN5Q4zOWhjWnLJAbMDMV7LVArNJRslM7uRMcWFiaABPUGxORA0NEisDQb1M7HbAdBEESmBQWJyJcgHKfNCXPYhjSIqkNkOwcgB2UpEWJMDTMCvuqM81FKdgVJEw0ByFZQSfNhuQhNgU5CbEKUgBsmTBsxnF9QpyaJoi9RZzKqcjKTKepM4X+TOqlN8YDWCMD1VM1crOCGJ3NVinTNYjoT8gYKXNByxRRWaxqRgmzZMBsCEi4hAhoQgNGyRKQATZVgT1CkkVdC6EyZAUARQOQCCxBYA2KwbBRIKExxbDUonM+fguu5KXgsuDNz7CloVIxxPgim3Yr8BWxLAJqxOKHFlEGLiPQ0dmWZX2IrTKtv6AlMCjP/Hn1+xvHn6Mox2NcN7kw1pfgiMy8yHB0aZXBVz6FIhMqyi4hIVg5bBCHYkEQGxWAkA2gUaAfNwBsE/Yl6D0AJMVDAKlMFEa6hZAnFdgL0IoB5QRNhZRoSJMhsBykRYxMBMiXsNkkUsuxfahOhTWwCk6M2r4hthmXsZVhbA1yx8ASK6JAk9zpkkRlNxioZUIgo+w3EoEvBTZNgEaBmIzCvyUahZCkEpgNyCMkTY0yC1IUiGxRewFpFPnNjNuh35ActhDSsXQKbBE5gcgNBSZm2JsISdaDRGoNkVrEGzHOCky0W5ibM5SE5gNszbY2Z+pRFXKWok76GEpWOM2+fczVi2kYYuN2SHiYvbnOhyN2zO78XHZH/IilX/r6gccrvT/oieyx7UMbnOpp655ccX9UauXl/c3nkxHX6xamc0GaxT8msGqkCkNUFlQo6lIXOaCbAbY4e5m/gaQFpiGT4AqylHwZFpgMEtgQ2EKxSBDbClFFpfwKMdykixDlJJEWKaM5yJqmtSSVId+SAkiWOQmAkl1bJkibGwqtDGUqLrQxuyaKmyE+WVJIlxrX+CKzxY8RnONK0zWTswm+l8+DOtYlRv8AYFW0BBrhxNowNMi+S1DobzGaeHHv+TeKM4o1gbxkOIJ6jbIsIpii9hZhgXQOLKjoiZMonUJJBQEE0i0CoGwGmOicxaYBKBLKzIl4aKHnDMJRoACRlNFslkVi1zULNtAlEkGSBj9MmaAlxJTW5XT8kS1CmxNewUTYCrUmdGrZmyKxmtiFG2aPqRe5mKpRAjM+P8AB6MUjRSOdYg1NGqy3zAmZxTLoqNM3kmwQqKi4lxJXKKyFFUJsVBkAdkpj9Ji9N7gNk5qGoDjl9wMs6BSst+xGYirzDzGWcuOIgi07GRmX6HZQsxDkEpk2RTmyVqx9QArxz3JnKiM/klzAJSJbFKRGdkVWYWYUn7kL3A2U9B2cspc+xSmiVYrFrX+zmb51LlimcdWZ1cLNywFN6/sRFdyZooke5pF9jeMNIrnOpcWTFFUaZNslMbJXUDSMilj120MwvsBvGbY8xhC0aLyUVKfwSpkuWwWA+o1FDCwB7GbitynMybJoa0JnibDa3M3PnQK1jJ1r9Av3JT9wYEvx0D5G2CAm6FfNTSVbk5Y/oDNyMpTZvJVyjOUtyKjUvKCCwMpOu4WOZDIFKLIlsWvchkVjPQjCxHZrNMxZnWlSl4AlPyBB6k0XCAAdGG8HoMANModseogCiTZS6ABBUZFMYGkSm+wSQAQNRkZzxQAaYjMNy7ABFS2yox7MAAVdiosAKJxJ17mccWwAgbkS5aiAAi+MiU9xgFTm/kpvsAAJwMZdQAaYlyJb2EBlpDbr+jOK73oAGVP0vD+n3AAA/9k=");
     background-size: cover;
     font-weight: bold;
@@ -265,18 +265,18 @@ span {
 
 /* body and content styles */
 body {
-    background: rgb(64, 66, 88);
-    /* background: url("https://www.cappex.com/sites/default/files/styles/college_hero_desktop/public/images/hero/college/220862_hero.jpg?itok=tbgwOMxg"); */
-    /* background-repeat: no-repeat; */
-    /* background-size: cover; */
+
+    background-color: rgb(13, 13, 14);
+    /*background-repeat: no-repeat;
+    background-size: cover;*/
     padding-top: 70px;
     color:white;
 }
 
 main {
-    background: #5d8799;
-    background: no-repeat url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg');
-    background-size: cover;
+    background: #354154;
+    /*background: no-repeat url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg');
+    background-size: cover;*/
     max-width: 1200px;
     margin: 0 auto;
     border: 6px solid #DEC3AD;
@@ -438,7 +438,14 @@ article {
     padding: 25px;
     line-height: 1.3em;
 }
-/* default color on white pages */
+/* default color on white backgrounds */
 .labels {
     color: black;
+}
+
+#box-enlarge:focus {
+    height: 300px;
+    width: 300px;
+    line-height: 0%;
+
 }

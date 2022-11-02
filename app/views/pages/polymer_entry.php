@@ -38,7 +38,7 @@
             <h2>Polymer Entry</h2>
             <!-- <img class="image-flask" src="../../assets/images/flask.png"> -->
 
-            <form class="polymer-entry" action="polymer-preview.php" method="get">
+            <form class="polymer-entry border border-dark" action="polymer-preview.php" method="get">
                 <p>Please enter the required fields *</p>
                 <fieldset class="poly-data">
                     <legend>Polymer Data</legend>
@@ -249,7 +249,7 @@
                             <div class="col-5">
                                 <label for="injVol" class="col-form-label">Injection Volume</label>
                                 <span id="Description" class="form-text">
-                                    Enter in whatever
+                                    Enter in micro liters
                                 </span>
                             </div>
                             <div class="col-auto">
