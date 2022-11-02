@@ -277,7 +277,7 @@ main {
     background: #354154;
     /*background: no-repeat url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg');
     background-size: cover;*/
-    max-width: 1200px;
+    max-width: 800px;
     margin: 0 auto;
     border: 6px solid #DEC3AD;
     color: rgb(8, 3, 3);
@@ -339,9 +339,9 @@ footer {
 }
 
 .table-container {
-    max-width: 1200px;
+    max-width: 1000px;
     position: relative;
-    height: 1000px;
+    height: 900px;
     overflow-y: scroll;
     background: grey;
     background: url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg');
@@ -351,13 +351,13 @@ footer {
 }
 .table {
     font-size: 0.7em;
-    width: 1000px;
-    margin: 7px auto;
+    max-width: 800px;
+    margin: 3px auto;
 }
 
 .table thead tr {
     background-color: #5d8799;
-}
+} 
 
 .search-form {
     text-align: center;
@@ -383,7 +383,7 @@ footer {
 .table-container {
     position: relative;
     margin: auto;
-    /*background-color: #000;*/
+    background-color: #000;
 }
 
 #search-description {
