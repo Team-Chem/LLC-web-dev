@@ -438,8 +438,14 @@ article {
     padding: 25px;
     line-height: 1.3em;
 }
-
-/* default color on white pages */
+/* default color on white backgrounds */
 .labels {
     color: black;
+}
+
+#box-enlarge:focus {
+    height: 300px;
+    width: 300px;
+    line-height: 0%;
+
 }
