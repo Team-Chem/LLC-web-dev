@@ -10,8 +10,11 @@
         </div>
         <div class="table-container" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
             <?php
+
                 //echo $_POST['search-bar'];
-                foreach ($_POST['SelectedTable'] as $value) {
+
+                //This is just for testing the array. PhP is kind of funny had to make sure it worked like other computational languages. -ND
+                /*foreach ($_POST['SelectedTable'] as $value) {
                     if ($value == "polymer_name") {
                         $table_column1 = "polymer_name";
                         echo "Got the name!";
@@ -64,30 +67,31 @@
                         $table_column13 = "doi";
                         echo "Got the doi!";
                     }
-                }
+                }*/
 
                 foreach($_POST['search-bar'] as $search_input){
                     $search_input = trim($search_input);
                 }
 
-                $val = $_POST['search-bar'][0];
-
+                //This checks for the submission button to be triggered.
                 if (isset($_POST['submit-search'])){
                     #$search = mysqli_real_escape_string($conn, $_POST['search-bar']);
                     $sql;
                     $results;
                     $found_rows = array();
-                    foreach($_POST['SelectedTable'] as $col){
-                        foreach($_POST['search-bar'] as $search){
-                            if(isset($col)){
+                    $_array1 = $_POST['SelectedTable'];
+                    $_array2 = $_POST['search-bar'];
+                    
+                    for($i = 0; $i < sizeof($_array1); $i++){
+                        for($j = 0; $j < sizeof($_array2); $j++){
+                            if(isset($_array1[$i]) && trim($_array2[$j]) != "" && $i == $j) {
                                 $sql = "SELECT* FROM polymer, mobile_phase, chromatography_condition, stationary_phase,
                                 reference, user WHERE user.user_id = polymer.fk_user_polymer_id AND polymer.polymer_id = mobile_phase.mobile_phase_id 
                                 AND polymer.polymer_id = stationary_phase.stationary_phase_id 
                                 AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
                                 AND polymer.polymer_id = reference.reference_id 
-                                AND $col 
-                                LIKE '$search';";
-                                echo "$col $search";
+                                AND $_array1[$i] 
+                                LIKE '%$_array2[$j]%';";
                                 $results = mysqli_query($conn, $sql);
                             }
                         }
@@ -98,7 +102,6 @@
                     echo "<div class='alert alert-info' role='alert'>
                             There are ".$queryResults." results!
                         </div>";
-                    //echo "Made it here";
 
                     if($queryResults > 0) {
                         echo " Results triggered";

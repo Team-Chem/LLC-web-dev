@@ -18,13 +18,27 @@
                 unset($_SESSION['status']);
             }
         ?>
+        <!--Not currently in use FIXME -->
+        <?php
+            if(isset($_SESSION['search-status'])){
+                ?>
+                    <div class="alert alert-danger d-flex align-items-center" role="alert" id="color">
+                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" color="green" aria-label="Error:"><use xlink:href="#check-circle-fill"/></svg>
+                        <div>
+                            <?php echo $_SESSION['search-status'];?>
+                        </div>
+                    </div>
+                <?php
+                unset($_SESSION['search-status']);
+            }
+        ?>
             <div class="grid">
                 <div class="g-col-1 text-left">
                     <form class="search-form w-25 float-left" action="polymer_search_results.php" method="POST">
                         <p class="text-center py-3">Add additional search options!</p>
                         <input type="number" class="w-50" name="" id="num" placeholder="#">
                         <button type="button" class="btn btn-primary" onclick="add()">Add</button>
-                        <button type="button" class="btn btn-danger" onclick="remove()">Remove</button><br><br>
+                        <button type="button" class="btn btn-danger" disabled onclick="remove()">Remove</button><br><br>
                         <div id="inputs">
                             <div class="input-group py-2 float-left">
                                 <select name="SelectedTable[]">
@@ -53,7 +67,7 @@
                 </div>
 
                 <div class="g-col-6">
-                    <div class="table-container" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
+                    <div class="table-container float-right" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
                         <?php 
                             $sql = "SELECT* FROM user, polymer, mobile_phase, stationary_phase, chromatography_condition, reference
                             WHERE user.user_id = polymer.fk_user_polymer_id AND polymer.polymer_id = mobile_phase.mobile_phase_id 
