@@ -3,7 +3,7 @@
 
 
 
-        <footer id="contact">
+        <footer class="clearfix position-relative overflow-auto" id="contact">
 
             <h1>Contact Information</h1>
             <br>

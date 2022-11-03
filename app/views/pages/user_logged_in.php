@@ -2,16 +2,6 @@
 
 session_start();
 
-if (isset($_SESSION['user_id_num'])) {
-    $conn = require __DIR__ . "/../../../db/connection.php";
-
-    $sql = "SELECT * FROM user WHERE user_id = {$_SESSION["user_id_num"]}";
-
-    $result = $conn->query($sql);
-
-    $user = $result->fetch_assoc();
-}
-
 ?>
 
 
@@ -35,12 +25,11 @@ if (isset($_SESSION['user_id_num'])) {
 
 <body>
 
-
 <h1>User Page</h1>
 
-<?php if (isset($user)): ?>
+<?php if (isset($_SESSION["user_id_num"])): ?>
     
-    <p>Welcome, <?= htmlspecialchars($user["first_name"]) ?></p>
+    <p>Successfully Logged On</p>
 
     <p><a href="user_logged_out.php">Logout</a></p>
     <p><a href="sign_in.php">Login</a></p>

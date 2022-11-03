@@ -26,7 +26,7 @@
     $Type = $_SESSION['type'];
 
     //User id. Need to get the current user
-    $id = 2;
+    $id = 8;
 
     //Checking if we got the value with the crud method.
     /*if(isset($PolymerName)){

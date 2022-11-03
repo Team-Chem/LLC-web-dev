@@ -339,8 +339,9 @@ footer {
 }
 
 .table-container {
-    max-width: 1000px;
+    max-width: 1200px;
     position: relative;
+    width: 50%;
     height: 900px;
     overflow-y: scroll;
     background: grey;
@@ -413,6 +414,7 @@ footer {
     top: 100%;
     margin-bottom: 0%;
     margin-top: 25%;
+    clear: both;
 }
 
 footer ul {
@@ -438,14 +440,8 @@ article {
     padding: 25px;
     line-height: 1.3em;
 }
-/* default color on white backgrounds */
+
+/* default color on white pages */
 .labels {
     color: black;
-}
-
-#box-enlarge:focus {
-    height: 300px;
-    width: 300px;
-    line-height: 0%;
-
 }
