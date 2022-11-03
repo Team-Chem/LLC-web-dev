@@ -1,6 +1,3 @@
-<?php
-    include "header.php";
-?>
 
 
 <!DOCTYPE html>
@@ -20,6 +17,8 @@ include "header.php";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+    <!-- <script src="../views/pages/form_validation.js" defer></script> -->
 
     <!--
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -61,37 +60,34 @@ include "header.php";
   <!--  <img class="image-flask" src="../../assets/images/flask.png"> -->
     <h1 style="color: black;">Sign Up</h1>
     <hr>
-<form class="sign_up-form" id="form" action="process-signup.php" method="POST" novalidate>
+<form class="sign_up-form" id="sign-up-form" action="process-signup.php" method="POST" novalidate>
 <span class="fa fa-solid fa-user-plus" style="font-size: 60px; color:black"></span>
     <div class="form-field success">      
         <label style="position: relative; right: 207px;" class="label_first_sign_up" generated="true" for="first_name"><b>First Name</b></label>
-        <input type="text" placeholder="First Name" id="first_name_sign_up" name="FirstName" required>
-        <small></small>
+        <input type="text" placeholder="First Name" id="first_name_sign_up" name="FirstName" >
     </div>
 
     <div class="form-field success"> 
         <label style="position: relative; right: 207px;" class="label_last_sign_up" for="last_name"><b>Last Name</b></label>
-        <input type="text" placeholder="Last Name" id="last_name_sign_up" name="LastName" required>
-        <small></small>
+        <input type="text" placeholder="Last Name" id="last_name_sign_up" name="LastName">
     </div>
     
     <div class="form-field success">
         <label style="position: relative; right: 227px;" class="label_email_sign_up" for="email"><b>Email</b></label>
-        <input type="email" placeholder="Email" id="email_sign_up" name="Email" required>
-        <small></small>
+        <input type="email" placeholder="Email" id="email_sign_up" name="Email">
 
     </div>
 
     <div class="form-field success">
         <label style="position: relative; right: 213px;" class="label_password_sign_up" for="password"><b>Password</b></label>
-        <input type="password" id="password_sign_up" placeholder="Password" name="Password" required>
+        <input type="password" id="password_sign_up" placeholder="Password" name="Password">
         <small></small>
 
     </div>
 
     <div class="form-field success">
         <label style="position: relative; right: 178px;" class="label_re-pass_sign_up" for="re-enter-password"><b>Re-enter password</b></label>
-        <input type="password" placeholder="Re-enter Password" id="re-password_sign_up" name="Re-Password" required>
+        <input type="password" placeholder="Re-enter Password" id="re-password_sign_up" name="Re-Password">
         <small></small>
 
     </div>
@@ -100,7 +96,9 @@ include "header.php";
         <div id="recaptcha-sign_up" class="g-recaptcha" data-sitekey="6LemIYAiAAAAAN7dsn6digu1hltW9LANmmBQKSoo"></div>
         <span id="captcha" style="color:red"></span>
 
-        <input style="position: relative; left: 190px;" type="submit" name="submit" id="submit-sign-up" value="Submit">
+        <!-- <input style="position: relative; left: 190px;" type="submit" name="submit" id="submit-sign-up" value="Submit"> -->
+
+        <button style="position: relative; left: 0px;" type="submit">Sign up</button>
 
 </form>
 
@@ -108,7 +106,13 @@ include "header.php";
         <p style="color:black;"><b>Already have an account?</b> <a href="sign_in.php">Sign In</a></p>
 
         <hr>
-        <input style="position: relative; left: 190px;" type="button" value="Go Back" onclick="history.back()">
+        <!-- <input style="position: relative; left: 190px;" type="button" value="Go Back" onclick="history.back()"> -->
+
+        <button style="position: relative; left: 0px;" type="submit" value="Go Back" onclick="history.back()">Go Back</button>
+
+
+        <script src="form_validation.js" defer></script>
+    
 
     <style>
 
@@ -164,11 +168,6 @@ include "header.php";
     background-color: black;
 }
     </style>
-
-<!--
-    <script src="form_validation.js"></script>
-
--->
 
 </body>
 </html>
