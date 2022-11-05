@@ -21,9 +21,12 @@ include "header.php";
             if ($user) {
 
                 if (password_verify($_POST['password'], $user['password_hash'])) {
+                    
                     session_start();
 
-                    $_SESSION["user_id_num"] = $user['id'];
+                    session_regenerate_id();
+
+                    $_SESSION["user_id_num"] = $user['user_id'];
 
                 header("Location: polymer_search.php");
                 exit();
@@ -31,6 +34,7 @@ include "header.php";
 
             $invalid_user = true;
 }
+    }
 
 ?>
 
@@ -61,7 +65,7 @@ include "header.php";
 
           <span class="material-symbols-outlined" style="font-size: 60px; color:black">person</span>
 
-          <form class="sign-in-form" method="POST" novalidate>
+          <form class="sign-in-form" method="POST">
 
           <?php if ($invalid_user): ?>
                 <em class="invalid-user" style="position: relative; right: 200px;">Invalid Login</em>
@@ -82,14 +86,19 @@ include "header.php";
             <label for="remember-user">Remember me</label>
         </p>
         
-        <input class="sign-in-submit" style="position: relative; left: 190px;" class="sub-button" type="submit" id="submit-sign-in" value="Submit">
+        <!-- <input class="sign-in-submit" style="position: relative; left: 190px;" class="sub-button" type="submit" id="submit-sign-in" value="Submit"> -->
+
+        <button style="position: relative; left: 0px;" type="submit">Sign up</button>
         </form>
 
         <hr>
         <p><b>Don't have an account?</b> <a href="sign_up.php">Sign Up</a></p>
 
         <hr>
-        <input style="position: relative; left: 190px;"  type="button" value="Go Back" onclick="history.back()">
+        <!-- <input style="position: relative; left: 190px;"  type="button" value="Go Back" onclick="history.back()"> -->
+
+        <button style="position: relative; left: 0px;" type="submit" value="Go Back" onclick="history.back()">Go Back</button>
+
     </div>
     </div>
 
@@ -125,4 +134,4 @@ include "header.php";
 
 
 </body>
-</html>
+</html> 
