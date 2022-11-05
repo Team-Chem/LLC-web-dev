@@ -8,8 +8,7 @@
     $Solvents = $_SESSION['solvents'];
 
     //Need to be changed FIXME!
-    //$Composition = $_SESSION['composition'];
-    $Composition = 4.5;
+    $Composition = $_SESSION['composition'];
 
     $ParticleDiameter = $_SESSION['particleDiameter'];
     $PoreSize = $_SESSION['poreSize'];
@@ -66,12 +65,12 @@
     $id = "LAST_INSERT_ID()";
 
     $sql = "INSERT INTO chromatography_condition(chromatography_condition_id, temperature, pressure, flow_rate, injected_volume, detector)
-    VALUES ($id, '$Temperature', '$Pressure', '$FlowRate', $InjVolume, 0);";
+    VALUES ($id, '$Temperature', '$Pressure', '$FlowRate', $InjVolume, $Detector);";
 
     mysqli_query($conn, $sql);
 
     $sql = "INSERT INTO mobile_phase (mobile_phase_id, solvent, composition)
-    VALUES ($id, '$Solvents', 4.5);";
+    VALUES ($id, '$Solvents', '$Composition');";
 
     mysqli_query($conn, $sql);
 

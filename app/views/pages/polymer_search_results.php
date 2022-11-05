@@ -10,15 +10,92 @@
         </div>
         <div class="table-container" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">
             <?php
+
                 //echo $_POST['search-bar'];
-                if (isset($_POST['submit-search']) && trim($_POST['search-bar']) != ""){
-                    $search = mysqli_real_escape_string($conn, $_POST['search-bar']);
-                    $sql = " SELECT * FROM polymer, mobile_phase, chromatography_condition, stationary_phase,
-                    reference, user WHERE user.user_id = polymer.fk_user_polymer_id AND polymer.polymer_id = mobile_phase.mobile_phase_id 
-                    AND polymer.polymer_id = stationary_phase.stationary_phase_id 
-                    AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
-                    AND polymer.polymer_id = reference.reference_id AND polymer_name LIKE '%$search%';";
-                    $results = mysqli_query($conn, $sql); 
+
+                //This is just for testing the array. PhP is kind of funny had to make sure it worked like other computational languages. -ND
+                /*foreach ($_POST['SelectedTable'] as $value) {
+                    if ($value == "polymer_name") {
+                        $table_column1 = "polymer_name";
+                        echo "Got the name!";
+                    }
+                    else if ($value == "temperature") {
+                        $table_column2 = "temperature";
+                        echo "Got the temperature!";
+                    }
+                    else if ($value == "pressure") {
+                        $table_column3 = "pressure";
+                        echo "Got the pressure!";
+                    }
+                    else if ($value == "flow_rate") {
+                        $table_column4 = "flow_rate";
+                        echo "Got the flow rate!";
+                    }
+                    else if ($value == "injected_volume") {
+                        $table_column5 = "injected_volume";
+                        echo "Got the injected volume!";
+                    }
+                    else if ($value == "detector") {
+                        $table_column6 = "detector";
+                        echo "Got the detector!";
+                    }
+                    else if ($value == "solvent") {
+                        $table_column7 = "solvent";
+                        echo "Got the solvent!";
+                    }
+                    else if ($value == "user") {
+                        $table_column8 = "email";
+                        echo "Got the email!";
+                    }
+                    else if ($value == "particle_diameter") {
+                        $table_column9 = "particle_diameter";
+                        echo "Got the particle diameter!";
+                    }
+                    else if ($value == "pore_size") {
+                        $table_column10 = "pore_size";
+                        echo "Got the pore size!";
+                    }
+                    else if ($value == "column_dimension") {
+                        $table_column11 = "column_dimension";
+                        echo "Got the column dimension!";
+                    }
+                    else if ($value == "column_name") {
+                        $table_column12 = "column_name";
+                        echo "Got the column name!";
+                    }
+                    else if ($value == "doi") {
+                        $table_column13 = "doi";
+                        echo "Got the doi!";
+                    }
+                }*/
+
+                foreach($_POST['search-bar'] as $search_input){
+                    $search_input = trim($search_input);
+                }
+
+                //This checks for the submission button to be triggered.
+                if (isset($_POST['submit-search'])){
+                    #$search = mysqli_real_escape_string($conn, $_POST['search-bar']);
+                    $sql;
+                    $results;
+                    $found_rows = array();
+                    $_array1 = $_POST['SelectedTable'];
+                    $_array2 = $_POST['search-bar'];
+                    
+                    for($i = 0; $i < sizeof($_array1); $i++){
+                        for($j = 0; $j < sizeof($_array2); $j++){
+                            if(isset($_array1[$i]) && trim($_array2[$j]) != "" && $i == $j) {
+                                $sql = "SELECT* FROM polymer, mobile_phase, chromatography_condition, stationary_phase,
+                                reference, user WHERE user.user_id = polymer.fk_user_polymer_id AND polymer.polymer_id = mobile_phase.mobile_phase_id 
+                                AND polymer.polymer_id = stationary_phase.stationary_phase_id 
+                                AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
+                                AND polymer.polymer_id = reference.reference_id 
+                                AND $_array1[$i] 
+                                LIKE '%$_array2[$j]%';";
+                                $results = mysqli_query($conn, $sql);
+                            }
+                        }
+                    }
 
                     $queryResults = mysqli_num_rows($results);
 
@@ -26,10 +103,9 @@
                             There are ".$queryResults." results!
                         </div>";
 
-                    //echo "Made it here";
-
                     if($queryResults > 0) {
-                        while($row = mysqli_fetch_assoc($results)) {
+                        echo " Results triggered";
+                        while($row = mysqli_fetch_array($results)) {
                             echo "<table class='table table-dark';>
                             <thead>
                               <tr>

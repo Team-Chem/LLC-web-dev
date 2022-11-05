@@ -157,7 +157,8 @@
                                     <?php 
 
                                         if(isset($composition) && (trim($composition) != "")) {
-                                            $composition .= " " . $type;
+                                            $composition .= " ";
+                                            $composition .= $type;
                                             echo "$composition";
                                             $_SESSION['composition'] = $composition;
                                         }
@@ -217,7 +218,7 @@
                      </div>
                      <div class="row g-3 align-items-center">
                             <div class="col-auto">
-                                <label for="colDim" class="col-form-label">Column Dimension</label>
+                                <label for="colDim" class="col-form-label">Column Length</label>
                             </div>
                             <div class="col-auto">
                                 <p>
@@ -266,7 +267,7 @@
                                  <p>
                                     <?php 
                                         if(isset($temperature) && (trim($temperature) != "")){
-                                            echo "$temperature<strong>&#8451;<strong>"; 
+                                            echo "$temperature"; 
                                         }
                                         else {
                                             echo "N/A";
