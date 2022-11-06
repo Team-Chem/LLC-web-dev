@@ -3,7 +3,7 @@
     include "header.php";
 ?>
         <header>
-            <h1>Search Results</h1>
+            <h1></h1>
         </header>
         <div id="needABack">
             <button type="button" class="back btn btn-danger" onclick="history.go(-1)">Back</button>

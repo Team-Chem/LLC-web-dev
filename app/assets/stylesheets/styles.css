@@ -27,15 +27,14 @@ body {
 }
 /* header styles */
 header {
-    background-color: white;
+    background-color: #202b38;
     padding: 1%;
-    opacity: 50%;
     clear: both;
 }
 
 header h1 {
-    color: black;
-    font-size: 1em;
+    color: white;
+    font-size: 1.25em;
     text-align: center;
     opacity: 1;
 }
@@ -266,7 +265,7 @@ span {
 /* body and content styles */
 body {
 
-    background-color: rgb(13, 13, 14);
+    background-color:#202b38;
     /*background-repeat: no-repeat;
     background-size: cover;*/
     padding-top: 70px;
@@ -403,7 +402,7 @@ footer {
 
 footer {
     background: white;
-    background: url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg');
+    background-color: #202b38;
     background-repeat: no-repeat;
     background-size: cover;
     color: #ffff;

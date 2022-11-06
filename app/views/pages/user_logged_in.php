@@ -2,6 +2,11 @@
 
 session_start();
 
+// Redirected if not signed in
+if (!isset($_SESSION['user_id_num'])) {
+    header("location: sign_in.php");
+}
+
 if (isset($_SESSION['user_id_num'])) {
     $conn = require __DIR__ . "/../../../db/connection.php";
 
@@ -11,6 +16,7 @@ if (isset($_SESSION['user_id_num'])) {
 
     $user = $result->fetch_assoc();
 }
+
 
 ?>
 

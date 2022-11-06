@@ -37,9 +37,13 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<?php
 
+
+
+?>
         <!-- Image and text -->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="top" style="background: #5d8799; background: no-repeat url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg'); background-size: cover;">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="top" style="background-color: #000000;" style="border-bottom: 1px solid #333333;">
             <a class="navbar-brand d-lg-none" href="#"><img src="flask.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbarToggler7"
                 aria-controls="myNavbarToggler7" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,18 +57,34 @@
                     <li class="nav-item">
                         <a class="nav-link" href="polymer_search.php">Polymer Search</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="polymer_entry.php">New Polymer Entry</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="profile.php">Profile</a>
-                    </li>
-                    <li class="nav-item">
+                    <?php
+
+                    if (isset($_SESSION['user_id_num'])) {
+                        echo '<li class="nav-item">
+                              <a class="nav-link" href="polymer_entry.php">New Polymer Entry</a>
+                              </li>';
+}
+
+                    if (isset($_SESSION['user_id_num'])) {
+                        echo '<li class="nav-item">
+                              <a class="nav-link" href="profile.php">Profile</a>
+                              </li>';
+                    }
+
+
+                    if (isset($_SESSION['user_id_num'])) {
+                        echo '<li class="nav-item">
+                              <a class="nav-link" href="user_logged_out.php">Sign Out</a>
+                              </li>';
+                    }
+
+                    if (!isset($_SESSION['user_id_num'])) {
+                        echo '<li class="nav-item">
                         <a class="nav-link" href="sign_in.php">Sign In</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="user_logged_in.php">Account</a>
-                    </li>
+                    </li>';
+                    }
+
+                    ?>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>

@@ -1,13 +1,13 @@
 
 
-<!DOCTYPE html>
-<html lang="en">
+<!-- <!DOCTYPE html>
+<html lang="en"> -->
 
 <?php 
 include "header.php";
 ?>
 
-<head>
+<!-- <head> -->
     <title>Sign Up</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -51,8 +51,8 @@ include "header.php";
 ?>
 
 
-</head>
-<body>
+<!-- </head>
+<body> -->
 
 
 <!--This is for the sign up portion of the modal sign up pop up-->
@@ -110,9 +110,7 @@ include "header.php";
 
         <button style="position: relative; left: 0px;" type="submit" value="Go Back" onclick="history.back()">Go Back</button>
 
-
-        <script src="form_validation.js" defer></script>
-    
+</div>
 
     <style>
 
@@ -127,6 +125,7 @@ include "header.php";
     margin: 8% auto 0;
     background-color: rgb(255, 255, 255);
     display: block;
+    margin-top: 125px;
 }
 
 .sign_up-form {
@@ -167,7 +166,15 @@ include "header.php";
 #submit-sign-up{
     background-color: black;
 }
+
     </style>
+
+<?php
+            include "footer.php";
+        ?>
+
+
+<script src="form_validation.js" defer></script>
 
 </body>
 </html>

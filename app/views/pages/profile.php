@@ -3,6 +3,62 @@
     include "header.php";
 ?>
 
+
+<?php
+if(!isset($_SESSION)) {
+    session_start();
+}
+
+// Redirected if not signed in
+if (!isset($_SESSION['user_id_num'])) {
+    header("location: sign_in.php");
+}
+
+
+if (isset($_SESSION['user_id_num'])) {
+    $conn = require __DIR__ . "/../../../db/connection.php";
+
+    $sql = "SELECT * FROM user WHERE user_id = {$_SESSION["user_id_num"]}";
+
+    $result = $conn->query($sql);
+
+    $user = $result->fetch_assoc();
+}
+
+?>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sign In</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../../assets/stylesheets/sign_in_out.css"> -->
+    
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> -->
+
+
+
+</head>
+
+<body>
+
+<?php if (isset($user)): ?>
+    
+    <h2 style="text-align: center; color: white;"><p>Welcome, <?= htmlspecialchars($user["first_name"]) ?></p></h2>
+    
+    <?php else: ?>
+
+        <p><a href="sign_in.php"></a></p>
+        <p><a href="sign_up.php"></a></p>
+
+        <?php endif; ?>
+
+
 <div class="container rounded bg-white mt-5 mb-5">
     <div class="row">
         <div class="col-md-3 border-right">
@@ -44,3 +100,7 @@
 </div>
 
 <?php include "footer.php"; ?>
+
+</body>
+
+</html>
