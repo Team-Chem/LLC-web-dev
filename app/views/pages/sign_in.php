@@ -2,6 +2,11 @@
 
 include "header.php";
 
+// Non signed in user will be redirected back to location if not signed in.
+if (isset($_SESSION['user_id_num'])) {
+    header("location: profile.php");
+}
+
 ?>
 
 <?php
@@ -38,15 +43,15 @@ include "header.php";
 
 ?>
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Sign In</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     
-    <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
+    <!-- <link rel="stylesheet" href="../../assets/stylesheets/styles.css"> -->
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -55,7 +60,7 @@ include "header.php";
 
 
 
-<body>
+<!-- <body> -->
         
         <!--This is for the sign in portion of the modal sign up pop up--> 
         <div class="sign-in-div">
@@ -112,6 +117,7 @@ include "header.php";
     margin: 8% auto 0;
     background-color: rgb(255, 255, 255);
     display: block;
+    margin-top: 125px;
 }
 
 .sign-in-form {
@@ -131,7 +137,9 @@ include "header.php";
 }
 
     </style>
-
+<?php
+            include "footer.php";
+        ?>
 
 </body>
 </html> 

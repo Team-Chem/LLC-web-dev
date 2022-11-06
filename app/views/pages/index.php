@@ -3,14 +3,14 @@
     include "header.php";
 ?>
         <header>
-            <h1>About LCCC</h1>
+            <h1></h1>
         </header>
 
         <div id="article-box">
             <article>
                 <h1>Welcome to Dr. Yongmei Wang's Website for Research into Liquid Chromatography at the Critical Condition.</h1>
                 <figure>
-                    <img src="http://ywangcomp.org/pictures/wang_w.jpg" width="100" height="100">
+                    <img src="http://ywangcomp.org/pictures/wang_w.jpg" width="2000" height="2000">
                     <figcaption>Yongmei Wang</figcaption>
                 </figure>
                 <p>Welcome to Dr. Yongmei Wang's Computational Macromolecular Nanomedicine Research Group at The University of Memphis. 

@@ -1,9 +1,14 @@
 <?php 
     $title = 'Data Entry';
     include "header.php";
+
+    // Redirected if not signed in
+    if (!isset($_SESSION['user_id_num'])) {
+        header("location: sign_in.php");
+    }
 ?>
         <header>
-            <h1>Entry</h1>
+            <h1></h1>
         </header>
 
         <?php
