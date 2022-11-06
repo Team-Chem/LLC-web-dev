@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-3 border-right">
             <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" 
-            img src="../../assets/images/avatardefault.webp">
+            img src="../../assets/images/unknown.png">
             <span class="font-weight-bold">User name</span>
             <span class="text-black-50">user@univerisity.edu</span><span> </span></div>
             <div class="mt-1 text-center"><button class="btn btn-primary profile-button" type="button">Manage Data</button></div>
@@ -24,8 +24,7 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="johndoe@outlook.com" value=""></div>
-                    <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="Ph.D - " value=""></div>
-                    <div class="col-md-12"><label class="labels">Occupation</label><input type="text" class="form-control" placeholder="Polymer Chemical Engineer" value=""></div>
+                    <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="Bachelor in Chemistry" value=""></div>
                 </div>
                 <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
             </div>
@@ -33,8 +32,8 @@
         <div class="col-md-4">
             <div class="p-3 py-5">
                 <div class="d-flex justify-content-between align-items-center experience"><span class='labels'>About me</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i><label class='labels'>&nbsp;Experience</span></div><br></label>
-                <div class="col-md-12"><label class="labels">My Personal Website</label><input type="text" class="form-control" placeholder="https://my-url.com/" value=""></div> <br>
-                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" id='box-enlarge' class="form-control" placeholder="additional details" value=""></div>
+                <div class="col-md-12"><label class="labels">Experience in Chemistry</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
+                <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
             </div>
         </div>
     </div>

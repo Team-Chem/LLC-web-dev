@@ -62,7 +62,6 @@
         <!-- Using the article here for structuring-->
         <main id="start">
             <h2>Polymer Entry</h2>
-            <img class="image-flask" src="../../assets/images/flask.png">
 
             <form class="polymer-preview" action="../../../db/polymer-insert.php" method="get">
                 <fieldset class="poly-data">
