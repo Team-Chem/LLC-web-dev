@@ -53,6 +53,7 @@
                 AND polymer.polymer_id = stationary_phase.stationary_phase_id 
                 AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
                 AND polymer.polymer_id = reference.reference_id;";
+                // AND user.id=session variable id
                 $result = mysqli_query($conn, $sql);
                 $queryResults = mysqli_num_rows($result);
 
