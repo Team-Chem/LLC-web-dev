@@ -10,7 +10,7 @@
             <article>
                 <h1>Welcome to Dr. Yongmei Wang's Website for Research into Liquid Chromatography at the Critical Condition.</h1>
                 <figure>
-                    <img src="http://ywangcomp.org/pictures/wang_w.jpg" width="2000" height="2000">
+                    <img src="http://ywangcomp.org/pictures/wang_w.jpg" width="20" height="20">
                     <figcaption>Yongmei Wang</figcaption>
                 </figure>
                 <p>Welcome to Dr. Yongmei Wang's Computational Macromolecular Nanomedicine Research Group at The University of Memphis. 
