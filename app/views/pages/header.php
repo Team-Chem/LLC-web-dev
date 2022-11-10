@@ -66,21 +66,31 @@
                         echo '<li class="nav-item">
                               <a class="nav-link" href="polymer_entry.php">New Polymer Entry</a>
                               </li>';
-}
+                    }
+                    ?>
 
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                    <?php
                     if (isset($_SESSION['user_id_num'])) {
                         echo '<li class="nav-item">
                               <a class="nav-link" href="profile.php">Profile</a>
                               </li>';
                     }
+                    ?>
 
-
+                    <?php
                     if (isset($_SESSION['user_id_num'])) {
                         echo '<li class="nav-item">
                               <a class="nav-link" href="user_logged_out.php">Sign Out</a>
                               </li>';
                     }
 
+                    ?>
+
+                    <?php
                     if (!isset($_SESSION['user_id_num'])) {
                         echo '<li class="nav-item">
                         <a class="nav-link" href="sign_in.php">Sign In</a>
@@ -88,9 +98,6 @@
                     }
 
                     ?>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
                 </ul>
             </div>
         </nav>
