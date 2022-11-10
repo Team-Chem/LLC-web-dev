@@ -61,34 +61,57 @@
     VALUES ('$PolymerName', '$MolarHigh', '$MolarLow', $id);";
 
     $query_success1 = mysqli_query($conn, $sql);
+    echo "success on query 1";
 
     $id = "LAST_INSERT_ID()";
 
+    echo "$Temperature, $Pressure";
+    /*if(isset($Pressure) && trim($Pressure) == ''){
+        $Pressure = NULL;
+        echo " $Pressure";
+    }
+    if(isset($FlowRate) && trim($FlowRate) == ''){
+        $FlowRate = NULL;
+        echo " $FlowRate";
+    }
+    if(isset($InjVolume) && trim($InjVolume) == ''){
+        $InjVolume = NULL;
+        echo " $InjVolume";
+    }
+    if(isset($Detector) && trim($Detector) == ''){
+        $Detector = NULL;
+        echo " $Detector";
+    }*/
+
     $sql = "INSERT INTO chromatography_condition(chromatography_condition_id, temperature, pressure, flow_rate, injected_volume, detector)
-    VALUES ($id, '$Temperature', '$Pressure', '$FlowRate', $InjVolume, $Detector);";
+    VALUES ($id, '$Temperature', NULLIF('$Pressure', ''), NULLIF('$FlowRate', ''), NULLIF('$InjVolume', ''), NULLIF('$Detector', ''));";
 
     mysqli_query($conn, $sql);
+    echo " success on query 2";
+
+    //echo " $id, $Solvents, $Composition";
 
     $sql = "INSERT INTO mobile_phase (mobile_phase_id, solvent, composition)
-    VALUES ($id, '$Solvents', '$Composition');";
+    VALUES ($id, '$Solvents', NULLIF('$Composition', ''));";
 
     mysqli_query($conn, $sql);
+
+    echo " success on query 3";
 
 
     $sql = "INSERT INTO stationary_phase (stationary_phase_id, particle_diameter, pore_size, column_dimension, column_name)
-    VALUES ($id, '$ParticleDiameter', '$PoreSize', '$ColumnDimension', '$ColumnName');";
+    VALUES ($id, NULLIF('$ParticleDiameter', ''), NULLIF('$PoreSize', ''), NULLIF('$ColumnDimension', ''), NULLIF('$ColumnName', ''));";
 
     mysqli_query($conn, $sql);
+
+    echo " success on query 4";
 
     $sql = "INSERT INTO reference (reference_id, document, doi)
     VALUES ($id, 'blob', '$DOI');";
 
     mysqli_query($conn, $sql);
 
-
-
-    //echo "Made it here";
-
+    echo " success on query 5";
 
     //The following items are for if you are having problems with entering the data into the db.
     //Checking if the insert errored or not.

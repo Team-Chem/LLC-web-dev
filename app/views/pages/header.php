@@ -23,6 +23,9 @@
         <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="path_to/jquery.js"></script>
+        <script type="text/javascript" src="path_to/jquery.simplePagination.js"></script>
+        <link type="text/css" rel="stylesheet" href="path_to/simplePagination.css"/>
         <link rel="shortcut icon" href="images/favicon.ico">
         <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
         <link rel="icon" sizes="192x192" href="images/android.png">
@@ -55,7 +58,7 @@
                         <a class="nav-link" href="index.php">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="polymer_search.php">Polymer Search</a>
+                        <a class="nav-link" href="polymer_search.php">Polymers</a>
                     </li>
                     <?php
 
