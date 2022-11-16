@@ -59,12 +59,17 @@ header h1 {
 .navbar-logo-centered .navbar-nav .nav-link{
     padding: .5em 1em;
 }
+
 .navbar {
     background-color: black;
 }
 
 .nav-item:hover {
     background-color: #202b38;
+    margin-bottom: 0%;
+}
+
+.nav-item {
     margin-bottom: 0%;
 }
 

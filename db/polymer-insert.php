@@ -168,11 +168,13 @@ echo "condition 1 failed";
 if(isset($_POST['NewComplete'])){
     if($query_success1) {
         $_SESSION['status'] = "Data inserted successfully";
-        header("Location: ../app/views/pages/polymer_entry.php"); // This line 
+        #header("Location: ../app/views/pages/polymer_entry.php"); // This line
+        ?> <script>history.go(-2)</script> <?php 
     }
     else {
         $_SESSION['status'] = "Data entry failed!";
-        header("Location: ../app/views/pages/polymer_entry.php");
+        #header("Location: ../app/views/pages/polymer_entry.php");
+        ?> <script>history.go(-2)</script> <?php
     }
 }
 
