@@ -152,6 +152,7 @@
         echo "The query with connection is not working!\n";
     }*/
 
+if(isset($_POST['SubmitComplete'])){
     if($query_success1) {
         $_SESSION['status'] = "Data inserted successfully";
         header("Location: ../app/views/pages/polymer_search.php"); // This line 
@@ -160,5 +161,20 @@
         $_SESSION['status'] = "Data entry failed!";
         header("Location: ../app/views/pages/polymer_entry.php");
     }
+}
 
+echo "condition 1 failed";
+
+if(isset($_POST['NewComplete'])){
+    if($query_success1) {
+        $_SESSION['status'] = "Data inserted successfully";
+        header("Location: ../app/views/pages/polymer_entry.php"); // This line 
+    }
+    else {
+        $_SESSION['status'] = "Data entry failed!";
+        header("Location: ../app/views/pages/polymer_entry.php");
+    }
+}
+
+echo "condition 2 failed";
 

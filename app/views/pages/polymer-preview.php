@@ -10,7 +10,7 @@
 
     if($_GET['CriticalHigh'] < $critLow = $_GET['CriticalLow']){
         $_SESSION['previewStatus'] = "Error: Molar High is lower than the molar Low";
-        header("Location: polymer_entry.php");
+        ?><script type="text/javascript">history.back()</script><?php
     }
 
     $polyName = $_GET['PolyName'];
@@ -63,7 +63,7 @@
         <main id="start">
             <h2>Polymer Entry</h2>
 
-            <form class="polymer-preview" action="../../../db/polymer-insert.php" method="get">
+            <form class="polymer-preview" action="../../../db/polymer-insert.php" method="POST">
                 <fieldset class="poly-data">
                     <legend>Polymer Data</legend>
                    <fieldset>
@@ -415,13 +415,26 @@
                             </div>
                      </div>
                 </fieldset>
+
+                <?php
+                    $page_num = -1;
+                ?>
                 
                 <fieldset id="options">
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="submit" class="form-control mr-5" name="SubmitComplete" id="submit" value="Submit">Submit</button>
-                        <button type="submit" class="form-control mr-5" name="NewComplete" id="new" value="New">New</button>
-                        <button type="button" class="form-control" name="Complete" id="edit" value="Edit" onclick="history.go(-1)">Edit</button>
-                    </div>
+                        <div class="box">
+                            <button><a class="button" href="#popup1">Submit</a></button>
+                        </div>
+                        <div id="popup1" class="overlay">
+                            <div class="popup text-center">
+                                <h2>Submission Options</h2>
+                                <a class="close" href="#">&times;</a>
+                                    <button type="submit" class="form-control w-25" style="margin: 10px auto;" name="SubmitComplete" id="submit" value="Submit">Submit</button>
+                                    <button type="submit" class="form-control w-25" style="margin: 10px auto;" name="NewComplete" id="new" value="New">New</button>
+                                    <button type="button" class="form-control w-25" style="margin: 10px auto;" name="Complete" id="edit" value="Edit" onclick="history.back()">Edit</button>
+                                </div>
+                            </div>
+                        </div>
                 </fieldset>
             </form>
             

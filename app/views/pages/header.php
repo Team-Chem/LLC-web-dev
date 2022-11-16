@@ -73,13 +73,13 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
 
-                    <?php
+                    <!--<?php
                     if (isset($_SESSION['user_id_num'])) {
                         echo '<li class="nav-item">
                               <a class="nav-link" href="profile.php">Profile</a>
                               </li>';
                     }
-                    ?>
+                    ?>-->
 
                     <?php
                     if (isset($_SESSION['user_id_num'])) {
