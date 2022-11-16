@@ -76,14 +76,6 @@
                     <?php
                     if (isset($_SESSION['user_id_num'])) {
                         echo '<li class="nav-item">
-                              <a class="nav-link" href="profile.php">Profile</a>
-                              </li>';
-                    }
-                    ?>
-
-                    <?php
-                    if (isset($_SESSION['user_id_num'])) {
-                        echo '<li class="nav-item">
                               <a class="nav-link" href="user_logged_out.php">Sign Out</a>
                               </li>';
                     }

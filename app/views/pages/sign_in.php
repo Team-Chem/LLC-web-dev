@@ -93,7 +93,7 @@ if (isset($_SESSION['user_id_num'])) {
         
         <!-- <input class="sign-in-submit" style="position: relative; left: 190px;" class="sub-button" type="submit" id="submit-sign-in" value="Submit"> -->
 
-        <button style="position: relative; left: 0px;" type="submit">Sign up</button>
+        <button style="position: relative; left: 0px;" type="submit">Sign In</button>
         </form>
 
         <hr>
