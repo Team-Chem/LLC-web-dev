@@ -28,7 +28,7 @@
         <?php
             if(isset($_SESSION['status'])){
                 ?>
-                    <div class="alert alert-danger d-flex align-items-center" role="alert" id="color">
+                    <div class="alert alert-info d-flex align-items-center" role="alert" id="color">
                         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" color="green" aria-label="Error:"><use xlink:href="#check-circle-fill"/></svg>
                         <div>
                             <?php echo $_SESSION['status'];?>
@@ -65,6 +65,9 @@
                     <fieldset>
                         <div>
                             <label>Molar Mass Range</label>
+                        </div>
+                        <div>
+                            <span>Make sure the high is higher than the low</span>
                         </div>
                         <div class="row g-3 align-items-center" id="no-border">
                             <div class="col-auto">
@@ -297,7 +300,7 @@
                     <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                 </fieldset>
 
-                <fieldset class="upload-data">
+                <!--<fieldset class="upload-data">
                     <legend>Additional Documentation</legend>
                     <div class="row g-3 align-items-center">
                             <div class="col-5">
@@ -311,10 +314,10 @@
                             </div>
                      </div>
                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
-                </fieldset>
+                </fieldset>-->
                 <div class="text-center">
                     <fieldset class="submitbutton">
-                        <legend class="py-2" style="font-size:1.2em">Complete Entry</legend>
+                        <legend class="py-2" style="font-size: 1.2em;">Complete Entry</legend>
                         <label for="submit">
                             <button type="submit" name="Entry" id="submit">Continue</button>
                         </label>

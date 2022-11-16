@@ -10,7 +10,7 @@
 
     if($_GET['CriticalHigh'] < $critLow = $_GET['CriticalLow']){
         $_SESSION['previewStatus'] = "Error: Molar High is lower than the molar Low";
-        header("Location: polymer_entry.php");
+        ?><script type="text/javascript">history.back()</script><?php
     }
 
     $polyName = $_GET['PolyName'];
@@ -63,7 +63,7 @@
         <main id="start">
             <h2>Polymer Entry</h2>
 
-            <form class="polymer-preview" action="../../../db/polymer-insert.php" method="get">
+            <form class="polymer-preview" action="../../../db/polymer-insert.php" method="POST">
                 <fieldset class="poly-data">
                     <legend>Polymer Data</legend>
                    <fieldset>
@@ -415,12 +415,14 @@
                             </div>
                      </div>
                 </fieldset>
+
                 
                 <fieldset id="options">
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="submit" class="form-control mr-5" name="SubmitComplete" id="submit" value="Submit">Submit</button>
-                        <button type="submit" class="form-control mr-5" name="NewComplete" id="new" value="New">New</button>
-                        <button type="button" class="form-control" name="Complete" id="edit" value="Edit" onclick="history.go(-1)">Edit</button>
+                        <button type="button" class="form-control w-50" style="margin: 10px 10px;" name="SubmitComplete" id="submit" value="Submit" onclick="submissionFunction()">Submit</button>
+                        <p id="invalid"></p>
+                        <!--<button type="submit" class="form-control w-50" style="margin: 10px 10px;" name="NewComplete" id="new" value="New">New</button>-->
+                        <button type="button" class="form-control w-50" style="margin: 10px 10px;" name="Complete" id="edit" value="Edit" onclick="history.back()">Edit</button>
                     </div>
                 </fieldset>
             </form>
@@ -432,5 +434,25 @@
         ?>
 
         <script src="../../javascript/form_display_comp_on_prev.js"></script>
+        <script>
+            function submissionFunction() {
+                let decision = document.getElementById("submit");
+                let text;
+                let new_entry = prompt("Would you like to enter another entry form? yes or no", "no");
+                switch(new_entry){
+                    case "yes":
+                        decision.setAttribute("name", "NewComplete");
+                        decision.setAttribute("type", "submit");
+                        break;
+                    case "no":
+                        decision.setAttribute("name", "SubmitComplete");
+                        decision.setAttribute("type", "submit");
+                        break;
+                    default:
+                        text = "Invalid please try again.";
+                        docuemnt.getElementById("invalid").innerHtml = text;
+                }
+            }
+        </script>
     </body>
 </html>
