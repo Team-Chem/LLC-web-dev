@@ -43,7 +43,7 @@ header h1 {
 .navbar .navbar-nav .nav-link {
     color: #ffff;
     font-size: 1.4em;
-    margin: 0em 1.7em;
+    margin-left: 1.7em;
 }
 /*.navbar .navbar-nav .nav-link:hover{
     /*background-color: #ffff;*/
@@ -59,20 +59,9 @@ header h1 {
 .navbar-logo-centered .navbar-nav .nav-link{
     padding: .5em 1em;
 }
-
 .navbar {
     background-color: black;
 }
-
-.nav-item:hover {
-    background-color: #202b38;
-    margin-bottom: 0%;
-}
-
-.nav-item {
-    margin-bottom: 0%;
-}
-
 /* form styles */
 
 .polymer-entry, .polymer-preview {
@@ -84,7 +73,9 @@ header h1 {
     border: 8px solid #0000;
     font-weight: bold;
 }
-
+.polymer-entry input {
+    background-color: #0000;
+}
 .image-flask {
     float: right;
 }
@@ -162,9 +153,16 @@ span {
     border-radius: 10px;
     font-weight: bold;
 }
-#submit, #new, #edit {
-    background-color: #202b38;
-    color: #ffff;
+#submit {
+    background-color: yellow;
+}
+
+#new {
+    background-color: lime;
+}
+
+#edit {
+    background-color: lightblue;
 }
 .btn-group {
     padding: 20px;
@@ -177,6 +175,7 @@ span {
 
 .submitbutton{
     text-align: center;
+    display: none;
 }
 
 .submitbutton legend {
@@ -231,7 +230,9 @@ span {
 #no-border {
     border: none;
 }
-
+/*.submitbutton {
+    display: none;
+}*/
 .show {
     display: inline-block;
 }
@@ -561,7 +562,7 @@ div.scrollmenu {
     width: 70%;
     /*height: 90%;*/
     position: relative;
-    /*transition: all 5s ease-in-out;*/
+    transition: all 5s ease-in-out;
     max-height: 600px;
     overflow-y: scroll;
   }
@@ -577,7 +578,7 @@ div.scrollmenu {
     position: absolute;
     top: 10px;
     right: 30px;
-    /*transition: all 200ms;*/
+    transition: all 200ms;
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
@@ -592,18 +593,10 @@ div.scrollmenu {
     left: 30%;*/
     overflow: auto;
   }
-  
+
   #article-box {
     margin: 0 auto;
     max-width: 1000px;
-  }
-  .polymer-entry input {
-    background-color: #202b38;
-    color: white;
-  }
-  .polymer-entry input:focus {
-    background-color: #202b38;
-    color: white;
   }
 
   @media screen and (max-width: 700px){
