@@ -29,6 +29,7 @@
               DESC LIMIT $start_from, $num_per_page;";
 
     $result = mysqli_query($conn,$query);
+    $total = mysqli_num_rows($result);
     $table_id = array();
     $ind_table_id = 0;
 
@@ -79,6 +80,7 @@
 
 <div class="box">
     <p>Use this feature to create more advanced searches. <a class="button" href="#popup1">Advanced</a></p>
+    <p>Search total <?php $total; ?></p>
 </div>
 <div id="popup1" class="overlay">
     <div class="popup text-center">

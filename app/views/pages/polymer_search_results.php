@@ -3,8 +3,10 @@
 
     include ("header.php");
 
+    //$_SESSION['submit-search'] = $_POST['submit-search'];
 
-    if(isset($_GET['page']))
+
+    /*if(isset($_GET['page']))
     {
         $page = $_GET['page'];
     }
@@ -14,7 +16,7 @@
     }
 
     $num_per_page = 10;
-    $start_from = ($page-1)*10;
+    $start_from = ($page-1)*10; */
     
     ?>
         <!--<div class="table-container" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">-->
@@ -32,6 +34,7 @@
                     #$found_rows = array();
                     $search = $_POST['search-bar'];
 
+                    //echo "Showing before the query";
                     $sql = "SELECT*
                     FROM polymer, mobile_phase, chromatography_condition, stationary_phase, reference, user 
                     WHERE user.user_id = polymer.fk_user_polymer_id 
@@ -149,9 +152,12 @@
                     AND polymer.polymer_id = reference.reference_id 
                     AND composition LIKE '%$search%'
                     ORDER BY polymer_name 
-                    DESC LIMIT $start_from, $num_per_page;";
+                    /*DESC LIMIT $start_from, $num_per_page*/;";
+
 
                     $results = mysqli_query($conn, $sql);
+
+                    //echo "massive query worked!";
 
                     $queryResults = mysqli_num_rows($results);
 
@@ -160,7 +166,7 @@
                         </div>";
 
                     if($queryResults > 0) {
-                        echo " Results triggered";
+                        //echo "Results triggered";
                         while($row = mysqli_fetch_array($results)) {
                             echo " 
                             <div id='tid$ind_table_id'>
@@ -280,7 +286,7 @@
                         </div>";
 
                     if($queryResults > 0) {
-                        echo " Results triggered";
+                        //echo " Results triggered";
                         while($row = mysqli_fetch_array($results)) {
                             echo " 
                             <div id='tid$ind_table_id'>
@@ -360,20 +366,24 @@
                 else {
                     echo "Something went wrong!";
                 }
+                //echo "made it here";
             ?>
-        </div>
-        <div class="prev_next">
+        <!--</div>-->
+       <!-- <div class="prev_next">
             <?php 
-                    $pr_query = "SELECT*
-                    FROM polymer, mobile_phase, chromatography_condition, stationary_phase, reference, user 
+                echo "before the pre query";
+                    $pr_query = "SELECT* 
+                    FROM user, polymer, mobile_phase, stationary_phase, chromatography_condition, reference
                     WHERE user.user_id = polymer.fk_user_polymer_id 
                     AND polymer.polymer_id = mobile_phase.mobile_phase_id 
                     AND polymer.polymer_id = stationary_phase.stationary_phase_id 
                     AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
-                    AND polymer.polymer_id = reference.reference_id';";
+                    AND polymer.polymer_id = reference.reference_id;";
 
-                    $pr_result = mysqli_query($conn,$pr_query);
+                    $pr_result = mysqli_query($conn, $pr_query);
+                    //echo "after pre query";
                     $total_record = mysqli_num_rows($pr_result);
+                    //echo "$total_record";
                     
                     $total_page = ceil($total_record/$num_per_page);
 
@@ -399,7 +409,7 @@
                     }
             
             ?>
-            </div>
+        </div>-->
         <?php
             include "footer.php";
         ?>
