@@ -1,5 +1,4 @@
 <?php
-// session_start();
     include_once 'connection.php';
 
     $FirstName = $_POST['FirstName'];
@@ -13,11 +12,4 @@
 
     mysqli_query($conn, $sql);
 
-    // if ($run_query) {
-    //     $_SESSION['flash_text'] = "Succasdasafafasfasfafasfasfasfasfasf";
-    //     header("Location: sign_in.php?sign-up-insert=success");
-    // } else {
-    //     echo "There was a problem";
-    // }
-
-    // header("Location: sign_in.php?sign-up-insert=success");
+    header("Location: sign_in.php?sign-up-insert=success");

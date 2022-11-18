@@ -50,7 +50,7 @@ if ($stmt->execute()) {
     $_SESSION['flash_text'] = "Account has been successfully created!";
     header("Location: sign_in.php");
     echo "success";
-    // exit();
+    exit();
 } else {
     if ($conn->errno === 1062) {
         die("This email has already been taken. Choose another email.");
@@ -59,7 +59,7 @@ if ($stmt->execute()) {
     }
 }
 
-echo "Success";
+
 
 #print_r($_POST);
 #var_dump($hashed_password);
