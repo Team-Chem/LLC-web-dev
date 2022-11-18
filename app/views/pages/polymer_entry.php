@@ -66,6 +66,9 @@
                         <div>
                             <label>Molar Mass Range</label>
                         </div>
+                        <div>
+                            <span>Make sure the high is higher than the low</span>
+                        </div>
                         <div class="row g-3 align-items-center" id="no-border">
                             <div class="col-auto">
                                 <label for="critLow" class="col-form-label required">Low</label>
@@ -314,7 +317,7 @@
                 </fieldset>-->
                 <div class="text-center">
                     <fieldset class="submitbutton">
-                        <legend class="py-2" style="font-size:1.2em">Complete Entry</legend>
+                        <legend class="py-2" style="font-size: 1.2em;">Complete Entry</legend>
                         <label for="submit">
                             <button type="submit" name="Entry" id="submit">Continue</button>
                         </label>

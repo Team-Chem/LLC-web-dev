@@ -415,6 +415,7 @@
                             </div>
                      </div>
                 </fieldset>
+
                 
                 <fieldset id="options">
                     <div class="btn-group" role="group" aria-label="Basic example">
@@ -422,9 +423,6 @@
                         <p id="invalid"></p>
                         <!--<button type="submit" class="form-control w-50" style="margin: 10px 10px;" name="NewComplete" id="new" value="New">New</button>-->
                         <button type="button" class="form-control w-50" style="margin: 10px 10px;" name="Complete" id="edit" value="Edit" onclick="history.back()">Edit</button>
-                       <!-- <button type="submit" class="form-control mr-5" name="SubmitComplete" id="submit" value="Submit">Submit</button>
-                        <button type="submit" class="form-control mr-5" name="NewComplete" id="new" value="New">New</button> -->
-                        <!--<button type="button" class="form-control" name="Complete" id="edit" value="Edit" onclick="history.go(-1)">Edit</button>-->
                     </div>
                 </fieldset>
             </form>

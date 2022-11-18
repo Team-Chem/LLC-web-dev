@@ -34,7 +34,6 @@
                     #$found_rows = array();
                     $search = $_POST['search-bar'];
 
-                    //echo "Showing before the query";
                     $sql = "SELECT*
                     FROM polymer, mobile_phase, chromatography_condition, stationary_phase, reference, user 
                     WHERE user.user_id = polymer.fk_user_polymer_id 
@@ -152,12 +151,9 @@
                     AND polymer.polymer_id = reference.reference_id 
                     AND composition LIKE '%$search%'
                     ORDER BY polymer_name 
-                    /*DESC LIMIT $start_from, $num_per_page*/;";
-
+                    DESC LIMIT $start_from, $num_per_page;";
 
                     $results = mysqli_query($conn, $sql);
-
-                    //echo "massive query worked!";
 
                     $queryResults = mysqli_num_rows($results);
 
@@ -250,7 +246,6 @@
                     $sql;
                     $results;
                     $found_rows = array();
-                    //echo "made it to the multi search!";
                     /* This is for debugging purposes.
                     echo "Made it before the query ";
                     echo "$_array1[0] ";

@@ -1,5 +1,5 @@
 <?php 
-// session_start();
+session_start();
 include "header.php";
 
 // Non signed in user will be redirected back to location if not signed in.
@@ -62,6 +62,7 @@ if (isset($_SESSION['user_id_num'])) {
 
 <!-- <body> -->
         
+
         <!--This is for the sign in portion of the modal sign up pop up--> 
         <div class="sign-in-div">
 
