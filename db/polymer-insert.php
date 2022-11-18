@@ -152,31 +152,31 @@
         echo "The query with connection is not working!\n";
     }*/
 
-if(isset($_POST['SubmitComplete'])){
-    if($query_success1) {
-        $_SESSION['status'] = "Data inserted successfully";
-        header("Location: ../app/views/pages/polymer_search.php"); // This line 
+    if(isset($_POST['SubmitComplete'])){
+        if($query_success1) {
+            $_SESSION['status'] = "Data inserted successfully";
+            header("Location: ../app/views/pages/polymer_search.php"); // This line 
+        }
+        else {
+            $_SESSION['status'] = "Data entry failed!";
+            header("Location: ../app/views/pages/polymer_entry.php");
+        }
     }
-    else {
-        $_SESSION['status'] = "Data entry failed!";
-        header("Location: ../app/views/pages/polymer_entry.php");
+    
+    echo "condition 1 failed";
+    
+    if(isset($_POST['NewComplete'])){
+        if($query_success1) {
+            $_SESSION['status'] = "Data inserted successfully";
+            #header("Location: ../app/views/pages/polymer_entry.php"); // This line
+            ?> <script>history.go(-2)</script> <?php 
+        }
+        else {
+            $_SESSION['status'] = "Data entry failed!";
+            #header("Location: ../app/views/pages/polymer_entry.php");
+            ?> <script>history.go(-2)</script> <?php
+        }
     }
-}
-
-echo "condition 1 failed";
-
-if(isset($_POST['NewComplete'])){
-    if($query_success1) {
-        $_SESSION['status'] = "Data inserted successfully";
-        #header("Location: ../app/views/pages/polymer_entry.php"); // This line
-        ?> <script>history.go(-2)</script> <?php 
-    }
-    else {
-        $_SESSION['status'] = "Data entry failed!";
-        #header("Location: ../app/views/pages/polymer_entry.php");
-        ?> <script>history.go(-2)</script> <?php
-    }
-}
-
-echo "condition 2 failed";
+    
+    echo "condition 2 failed";
 

@@ -426,13 +426,6 @@
                     </div>
                 </fieldset>
             </form>
-            
-        </main>
-        <!--Of course footer is included everywhere.-->
-        <?php
-            include "footer.php";
-        ?>
-
         <script src="../../javascript/form_display_comp_on_prev.js"></script>
         <script>
             function submissionFunction() {
@@ -450,7 +443,7 @@
                         break;
                     default:
                         text = "Invalid please try again.";
-                        docuemnt.getElementById("invalid").innerHtml = text;
+                        docuemnt.getElementById("invalid").innerhtml = text;
                 }
             }
         </script>

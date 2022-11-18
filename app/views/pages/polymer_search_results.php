@@ -3,8 +3,10 @@
 
     include ("header.php");
 
+    //$_SESSION['submit-search'] = $_POST['submit-search'];
 
-    if(isset($_GET['page']))
+
+    /*if(isset($_GET['page']))
     {
         $page = $_GET['page'];
     }
@@ -14,7 +16,7 @@
     }
 
     $num_per_page = 10;
-    $start_from = ($page-1)*10;
+    $start_from = ($page-1)*10; */
     
     ?>
         <!--<div class="table-container" data-bs-spy="scroll" data-bs-offset="0" tabindex="0">-->
@@ -155,12 +157,12 @@
 
                     $queryResults = mysqli_num_rows($results);
 
-                    echo "<div class='alert alert-info' role='alert'>
-                            There are ".$queryResults." results!
-                        </div>";
+                    echo "<p class='text-center'>
+                            There are ".$queryResults." result(s).
+                        </p>";
 
                     if($queryResults > 0) {
-                        echo " Results triggered";
+                        //echo "Results triggered";
                         while($row = mysqli_fetch_array($results)) {
                             echo " 
                             <div id='tid$ind_table_id'>
@@ -244,7 +246,6 @@
                     $sql;
                     $results;
                     $found_rows = array();
-
                     /* This is for debugging purposes.
                     echo "Made it before the query ";
                     echo "$_array1[0] ";
@@ -267,7 +268,7 @@
                                 AND polymer.polymer_id = reference.reference_id
                                 AND $_array1[$i] LIKE '%$_array2[$j]%'
                                 ORDER BY polymer_name
-                                DESC LIMIT $start_from, $num_per_page;";
+                                /*DESC LIMIT $start_from, $num_per_page*/;";
                                 $results = mysqli_query($conn, $sql);
                             }
                         }
@@ -280,7 +281,7 @@
                         </div>";
 
                     if($queryResults > 0) {
-                        echo " Results triggered";
+                        //echo " Results triggered";
                         while($row = mysqli_fetch_array($results)) {
                             echo " 
                             <div id='tid$ind_table_id'>
@@ -360,46 +361,13 @@
                 else {
                     echo "Something went wrong!";
                 }
+                //echo "made it here";
             ?>
-        </div>
-        <div class="prev_next">
-            <?php 
-                    $pr_query = "SELECT*
-                    FROM polymer, mobile_phase, chromatography_condition, stationary_phase, reference, user 
-                    WHERE user.user_id = polymer.fk_user_polymer_id 
-                    AND polymer.polymer_id = mobile_phase.mobile_phase_id 
-                    AND polymer.polymer_id = stationary_phase.stationary_phase_id 
-                    AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
-                    AND polymer.polymer_id = reference.reference_id';";
-
-                    $pr_result = mysqli_query($conn,$pr_query);
-                    $total_record = mysqli_num_rows($pr_result);
-                    
-                    $total_page = ceil($total_record/$num_per_page);
-
-                    if($page>1)
-                    {
-                        echo "<a href='polymer_search_results.php?page=".($page-1)."' class='btn btn-danger'>Previous</a>";
-                    }
-
-                    /*$j = 0;
-                    $k = 1;
-                    for($i=1;$i<$total_page;$i++)
-                    {*/
-                    echo "<a href='polymer_search_results.php?page=1' class='btn btn-primary mx-80'>First</a>";
-                        /*}
-                        $j = $j + 1;
-                        $k = $k + 1;
-                    }*/
-                    echo "<a href='polymer_search_results.php?page=".$total_page."' class='btn btn-primary'>Last</a>";
-
-                    if($page != $total_page)
-                    {
-                        echo "<a href='polymer_search_results.php?page=".($page+1)."' class='btn btn-danger'>Next</a>";
-                    }
+            <button class="back" style="position: relative; left: 45%; background-color: black; color: white;" type="submit" value="Go Back" onclick="history.back()">Go Back</button>
+        <!--</div>-->
+       <!-- <div class="prev_next">
             
-            ?>
-            </div>
+        </div>-->
         <?php
             include "footer.php";
         ?>

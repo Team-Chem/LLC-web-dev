@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 include "header.php";
 
 // Non signed in user will be redirected back to location if not signed in.
@@ -62,11 +62,34 @@ if (isset($_SESSION['user_id_num'])) {
 
 <!-- <body> -->
         
+
         <!--This is for the sign in portion of the modal sign up pop up--> 
         <div class="sign-in-div">
+
+
+        <?php
+
+        if (isset($_SESSION['flash_text'])) {
+
+        ?>
+
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong></strong> <?php echo $_SESSION['flash_text']; ?>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+
+        <?php
+
+        unset($_SESSION['flash_text']);
+    }
+        ?>
+
           <!--  <img class="image-flask" src="../../assets/images/flask.png">  -->
           <h1 style="color: black;">Sign In</h1>
           <hr>
+
 
           <span class="material-symbols-outlined" style="font-size: 60px; color:black">person</span>
 
