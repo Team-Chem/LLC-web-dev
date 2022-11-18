@@ -28,11 +28,11 @@ function DisplayComposition() {
         CompRequired.removeAttribute("required");
     }
 }
-
+/*
 form.addEventListener("change", Submit, false);
 
 function Submit() {
     if(form.checkValidity() === true){
         Submission.className = ".submitbutton show";
     }
-}
+}*/

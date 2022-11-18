@@ -4,5 +4,5 @@ session_start();
 
 session_destroy();
 
-header("Location: polymer_search.php");
+header("Location: sign_in.php");
 exit();

@@ -2,6 +2,22 @@
 
 session_start();
 
+// Redirected if not signed in
+if (!isset($_SESSION['user_id_num'])) {
+    header("location: sign_in.php");
+}
+
+if (isset($_SESSION['user_id_num'])) {
+    $conn = require __DIR__ . "/../../../db/connection.php";
+
+    $sql = "SELECT * FROM user WHERE user_id = {$_SESSION["user_id_num"]}";
+
+    $result = $conn->query($sql);
+
+    $user = $result->fetch_assoc();
+}
+
+
 ?>
 
 
@@ -25,11 +41,12 @@ session_start();
 
 <body>
 
+
 <h1>User Page</h1>
 
-<?php if (isset($_SESSION["user_id_num"])): ?>
+<?php if (isset($user)): ?>
     
-    <p>Successfully Logged On</p>
+    <p>Welcome, <?= htmlspecialchars($user["first_name"]) ?></p>
 
     <p><a href="user_logged_out.php">Logout</a></p>
     <p><a href="sign_in.php">Login</a></p>

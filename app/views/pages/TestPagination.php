@@ -28,18 +28,7 @@
               ORDER BY polymer_name 
               DESC LIMIT $start_from, $num_per_page;";
 
-    #This second query is just so that I can the total amount of rows from the db.
-    $query2 = "SELECT* 
-        FROM user, polymer, mobile_phase, stationary_phase, chromatography_condition, reference
-        WHERE user.user_id = polymer.fk_user_polymer_id 
-        AND polymer.polymer_id = mobile_phase.mobile_phase_id 
-        AND polymer.polymer_id = stationary_phase.stationary_phase_id 
-        AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
-        AND polymer.polymer_id = reference.reference_id;";
-
-    $result = mysqli_query($conn, $query);
-    $result2 = mysqli_query($conn, $query2);
-    $total = mysqli_num_rows($result2);
+    $result = mysqli_query($conn,$query);
     $table_id = array();
     $ind_table_id = 0;
 
@@ -89,18 +78,17 @@
 </form>
 
 <div class="box">
-    <p class="float-right" style="margin-right: 25%;">Use this feature to create more advanced searches. <a class="button" href="#popup1">Advanced</a></p>
-    <p class="float-left" style="margin-left: 15%;" >Search total <?php echo "$total"; ?></p>
+    <p>Use this feature to create more advanced searches. <a class="button" href="#popup1">Advanced</a></p>
 </div>
 <div id="popup1" class="overlay">
     <div class="popup text-center">
         <h2>Advanced Search Inputs</h2>
         <a class="close" href="#">&times;</a>
         <div class="content text-center">
-            <form class="search-form text-center" action="polymer_search_results.php" method="POST">
-                <p class="text-center" style="color: #202b38;">Add additional search fields!</p>
-                    <div id="inputs" class="text-center">
-                        <div class="input-group w-50" style="margin: 12px auto;">
+            <form class="search-form" action="polymer_search_results.php" method="POST">
+                <p class="text-center">Add additional search fields!</p>
+                    <div id="inputs">
+                        <div class="input-group w-50 m-3 text-center">
                             <select class="" name="multi-SelectedTable[]" style="background-color: #161f27; color: white;" required>
                                 <option value="" disabled selected>Field</option>
                                 <option value="polymer_name">Polymer Name</option>
@@ -117,7 +105,7 @@
                                 <option value="column_dimension">Column Length</option>
                                 <option value="column_name">Column name</option>
                             </select>
-                                <input type="text" class="form-control m-input" name="multi-search-bar[]" style="background-color: #161f27; color: white;" required> 
+                                <input type="text" class="form-control m-input" style="background-color: #161f27; color: white;" required> 
                                 <!--<button class="btn btn-danger" id="DeleteRow" type="button">-->
                                 <!--<i class="bi bi-trash"></i> Delete</button>-->
                         </div>
@@ -137,6 +125,7 @@
 
 <div class="search-page-container">
     <div class="entries">
+        <h2 class="text-center" style="font-size: 1.4em; color: white;">Ten Entries per Page</h2>
         <?php  while($row = mysqli_fetch_assoc($result)) {
                     echo " 
                     <div id='tid$ind_table_id'>
@@ -147,7 +136,6 @@
                         <th scope='col' colspan='2'>Mobile Phase</th>
                         <th scope='col' colspan='2'>Stationary Phase</th>
                         <th scope='col' colspan='2'>Chromatography Conditions</th>
-                        <th scope='col' colspan='2'>DOI</th>
                     </tr>
                     </thead>
                     <tbody class='table-group-divider'>
@@ -160,8 +148,6 @@
                         <td>". $row['particle_diameter']. "</td>
                         <th scope='row'>Temperature</th>
                         <td>". $row['temperature']. "</td>
-                        <th scope='row'>URL</th>
-                        <td><a href=". $row['doi'] ."> ". $row['doi']. "</a></td>
                     </tr>
                     <tr>
                         <th scope='row' rowspan='5'>Molar High-Low</th>
@@ -192,12 +178,19 @@
                     </tbody>
                     <thead>
                         </tr>
-                            
+                            <th scope='col' colspan='2'>DOI</th>
+                            <th scope='col' colspan='2'>Documentation</th>
+                            <th scope='col' colspan='2'>User</th>
                         <tr>
                     </thead>
                     <tbody>
                         <tr>
-                            
+                            <th scope='row' rowspan = '6'>URL</th>
+                            <td><a href=". $row['doi'] ."> ". $row['doi']. "</a></td>
+                            <th scope='row' rowspan = '6'>Ref</th>
+                            <td>". $row['document']. "</td>
+                            <th scope='row' rowspan = '6'>Email</th>
+                            <td>". $row['email']. "</td>
                         </tr>
                     </tbody>
                 </table></div>";
@@ -226,38 +219,32 @@
 
                     if($page>1)
                     {
-                        echo "<a href='polymer_search.php?page=".($page-1)."' class='btn btn-secondary mx-1'>Previous</a>";
+                        echo "<a href='TestPagination.php?page=".($page-1)."' class='btn btn-danger'>Previous</a>";
                     }
 
                     /*$j = 0;
                     $k = 1;
                     for($i=1;$i<$total_page;$i++)
                     {*/
-                    echo "<a href='polymer_search.php?page=1' class='btn btn-secondary mx-1'>First</a>";
+                    echo "<a href='TestPagination.php?page=1' class='btn btn-primary mx-80'>First</a>";
                         /*}
                         $j = $j + 1;
                         $k = $k + 1;
                     }*/
-                    echo "<a href='polymer_search.php?page=".$total_page."' class='btn btn-secondary mx-1'>Last</a>";
+                    echo "<a href='TestPagination.php?page=".$total_page."' class='btn btn-primary'>Last</a>";
 
                     if($page != $total_page)
                     {
-                        echo "<a href='polymer_search.php?page=".($page+1)."' class='btn btn-secondary mx-1'>Next</a>";
+                        echo "<a href='TestPagination.php?page=".($page+1)."' class='btn btn-danger'>Next</a>";
                     }
             
             ?>
             </div>
-            <?php 
-                include "footer.php";
-            ?>
         </div>
         <script>
-            let iteration = 0;
-            let num = document.querySelectorAll("#inputs").length;
             $("#rowAdder").click(function () {
-                if(iteration < 11){
             newRowAdd =
-            " <div id='row' class='input-group w-50' style='margin: 12px auto;'>" +
+            "<div id='row' class='input-group m-3 w-50 bg-dark'>" +
                             "<select class='' name='multi-SelectedTable[]' style='background-color: #161f27; color: white;'>" +
                                 "<option value='' disabled selected>Field</option>" +
                                 "<option value='polymer_name'>Polymer Name</option>" +
@@ -274,18 +261,16 @@
                                 "<option value='column_dimension'>Column Length</option>" +
                                 "<option value='column_name'>Column name</option>" +
                             "</select>" +
-                                "<input type='text' class='form-control m-input' name='multi-search-bar[]' style='background-color: #161f27; color: white;'>" +
+                                "<input type='text' class='form-control m-input' style='background-color: #161f27; color: white;'>" +
                                 "<button class='btn btn-danger' id='DeleteRow' type='button'>" +
                                 "<!--<i class='bi bi-trash'></i>--> Delete</button>";
+ 
             $('#newinput').append(newRowAdd);
-            iteration = iteration + 1;
-                }
         });
+ 
         $("body").on("click", "#DeleteRow", function () {
             $(this).parents("#row").remove();
-            iteration = iteration - 1;
         })
-        
         </script>
     </body>
 </html>

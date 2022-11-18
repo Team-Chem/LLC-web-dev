@@ -1,9 +1,14 @@
 <?php 
     $title = 'Data Entry';
     include "header.php";
+
+    // Redirected if not signed in
+    if (!isset($_SESSION['user_id_num'])) {
+        header("location: sign_in.php");
+    }
 ?>
         <header>
-            <h1>Entry</h1>
+            <h1></h1>
         </header>
 
         <?php
@@ -23,7 +28,7 @@
         <?php
             if(isset($_SESSION['status'])){
                 ?>
-                    <div class="alert alert-danger d-flex align-items-center" role="alert" id="color">
+                    <div class="alert alert-info d-flex align-items-center" role="alert" id="color">
                         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" color="green" aria-label="Error:"><use xlink:href="#check-circle-fill"/></svg>
                         <div>
                             <?php echo $_SESSION['status'];?>
@@ -36,7 +41,7 @@
         <!-- Using the article here for structuring-->
         <main id="start">
             <h2>Polymer Entry</h2>
-            <!--<img class="image-flask" src="../../assets/images/flask.png">-->
+            <!-- <img class="image-flask" src="../../assets/images/flask.png"> -->
 
             <form class="polymer-entry border border-dark" action="polymer-preview.php" method="get">
                 <p>Please enter the required fields *</p>
@@ -292,7 +297,7 @@
                     <!--<div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>-->
                 </fieldset>
 
-                <fieldset class="upload-data">
+                <!--<fieldset class="upload-data">
                     <legend>Additional Documentation</legend>
                     <div class="row g-3 align-items-center">
                             <div class="col-5">
@@ -306,7 +311,7 @@
                             </div>
                      </div>
                     <div class="helptip" data-bs-toggle="tooltip" data-bs-placement="top" title="This is in units kilograms per mole">?</div>
-                </fieldset>
+                </fieldset>-->
                 <div class="text-center">
                     <fieldset class="submitbutton">
                         <legend class="py-2" style="font-size:1.2em">Complete Entry</legend>
