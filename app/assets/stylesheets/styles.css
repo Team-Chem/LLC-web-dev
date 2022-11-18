@@ -613,3 +613,9 @@ div.scrollmenu {
       width: 70%;
     }
   }
+
+  .delbutton {
+    text-align: center;
+    color: solid red;
+    margin-left: 100px;
+  }

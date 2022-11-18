@@ -73,7 +73,7 @@
                 <input type="text" class="form-control" name="search-bar" placeholder="Enter keyword" required>
                 <button type="submit" class="button-x btn btn-primary" name="submit-search">Search</button>
             </div>
-        </div>
+            </div>
     </div>
 </form>
 
@@ -198,7 +198,7 @@
             }
             ?>
         </div>
-
+        
             </div>
             <div class="prev_next">
             <?php 
