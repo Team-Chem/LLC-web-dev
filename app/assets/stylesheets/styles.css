@@ -84,7 +84,9 @@ header h1 {
     border: 8px solid #0000;
     font-weight: bold;
 }
-
+.polymer-entry input {
+    background-color: #0000;
+}
 .image-flask {
     float: right;
 }
@@ -124,6 +126,7 @@ legend{
 .polymer-preview p{
     width: 34%;
 }
+
 span {
     border: none;
     font-weight: normal;
@@ -604,7 +607,6 @@ div.scrollmenu {
     background-color: #202b38;
     color: white;
   }
-
   @media screen and (max-width: 700px){
     .box{
       width: 70%;

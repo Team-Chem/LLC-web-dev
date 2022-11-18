@@ -28,7 +28,18 @@
               ORDER BY polymer_name 
               DESC LIMIT $start_from, $num_per_page;";
 
-    $result = mysqli_query($conn,$query);
+    #This second query is just so that I can the total amount of rows from the db.
+    $query2 = "SELECT* 
+        FROM user, polymer, mobile_phase, stationary_phase, chromatography_condition, reference
+        WHERE user.user_id = polymer.fk_user_polymer_id 
+        AND polymer.polymer_id = mobile_phase.mobile_phase_id 
+        AND polymer.polymer_id = stationary_phase.stationary_phase_id 
+        AND polymer.polymer_id = chromatography_condition.chromatography_condition_id
+        AND polymer.polymer_id = reference.reference_id;";
+
+    $result = mysqli_query($conn, $query);
+    $result2 = mysqli_query($conn, $query2);
+    $total = mysqli_num_rows($result2);
     $table_id = array();
     $ind_table_id = 0;
 
@@ -78,7 +89,8 @@
 </form>
 
 <div class="box">
-    <p>Use this feature to create more advanced searches. <a class="button" href="#popup1">Advanced</a></p>
+    <p class="float-right" style="margin-right: 25%;">Use this feature to create more advanced searches. <a class="button" href="#popup1">Advanced</a></p>
+    <p class="float-left" style="margin-left: 15%;" >Search total <?php echo "$total"; ?></p>
 </div>
 <div id="popup1" class="overlay">
     <div class="popup text-center">
@@ -135,6 +147,7 @@
                         <th scope='col' colspan='2'>Mobile Phase</th>
                         <th scope='col' colspan='2'>Stationary Phase</th>
                         <th scope='col' colspan='2'>Chromatography Conditions</th>
+                        <th scope='col' colspan='2'>DOI</th>
                     </tr>
                     </thead>
                     <tbody class='table-group-divider'>
@@ -147,6 +160,8 @@
                         <td>". $row['particle_diameter']. "</td>
                         <th scope='row'>Temperature</th>
                         <td>". $row['temperature']. "</td>
+                        <th scope='row'>URL</th>
+                        <td><a href=". $row['doi'] ."> ". $row['doi']. "</a></td>
                     </tr>
                     <tr>
                         <th scope='row' rowspan='5'>Molar High-Low</th>
@@ -177,19 +192,12 @@
                     </tbody>
                     <thead>
                         </tr>
-                            <th scope='col' colspan='2'>DOI</th>
-                            <th scope='col' colspan='2'>Documentation</th>
-                            <th scope='col' colspan='2'>User</th>
+                            
                         <tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope='row' rowspan = '6'>URL</th>
-                            <td><a href=". $row['doi'] ."> ". $row['doi']. "</a></td>
-                            <th scope='row' rowspan = '6'>Ref</th>
-                            <td>". $row['document']. "</td>
-                            <th scope='row' rowspan = '6'>Email</th>
-                            <td>". $row['email']. "</td>
+                            
                         </tr>
                     </tbody>
                 </table></div>";
@@ -218,23 +226,23 @@
 
                     if($page>1)
                     {
-                        echo "<a href='polymer_search.php?page=".($page-1)."' class='btn btn-danger'>Previous</a>";
+                        echo "<a href='polymer_search.php?page=".($page-1)."' class='btn btn-secondary mx-1'>Previous</a>";
                     }
 
                     /*$j = 0;
                     $k = 1;
                     for($i=1;$i<$total_page;$i++)
                     {*/
-                    echo "<a href='polymer_search.php?page=1' class='btn btn-primary mx-80'>First</a>";
+                    echo "<a href='polymer_search.php?page=1' class='btn btn-secondary mx-1'>First</a>";
                         /*}
                         $j = $j + 1;
                         $k = $k + 1;
                     }*/
-                    echo "<a href='polymer_search.php?page=".$total_page."' class='btn btn-primary'>Last</a>";
+                    echo "<a href='polymer_search.php?page=".$total_page."' class='btn btn-secondary mx-1'>Last</a>";
 
                     if($page != $total_page)
                     {
-                        echo "<a href='polymer_search.php?page=".($page+1)."' class='btn btn-danger'>Next</a>";
+                        echo "<a href='polymer_search.php?page=".($page+1)."' class='btn btn-secondary mx-1'>Next</a>";
                     }
             
             ?>
