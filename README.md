@@ -1,6 +1,8 @@
 # LLC-web-dev
 Development and production for LLC capstone group project.
 
+This project was created for the Department of Chemistry at the University of Memphis. This service allows Polymer chemistry researchers to upload and share their published data amongst other researchers from various countries across the planet. This data could then be used by other researchers to perform more Polymer research.
+
 1.	Software used to run localhost and phpMyAdmin.
 *	XAMPP - https://www.apachefriends.org/download.html
 *	This software has built in Apache and phpMyAdmin to run the localhost on your machine and allows the user to easily create and maintain a database.
