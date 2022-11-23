@@ -3,11 +3,15 @@ Development and production for LLC capstone group project.
 
 This project was created for the Department of Chemistry at the University of Memphis. This service allows Polymer chemistry researchers to upload and share their published data amongst other researchers from various countries across the planet. This data could then be used by other researchers to perform more Polymer research.
 
-1.	Software used to run localhost and phpMyAdmin.
+1. Download the zip folder that contains the files necessary to run this site.
+* ![Screenshot 2022-11-22 203841](https://user-images.githubusercontent.com/98065056/203459531-e5b00f41-8f0b-4908-ac67-4502a232f532.png)
+* There will be two folders within this zip file "app" and "db".
+
+2.	Software used to run localhost and phpMyAdmin.
 *	XAMPP - https://www.apachefriends.org/download.html
 *	This software has built in Apache and phpMyAdmin to run the localhost on your machine and allows the user to easily create and maintain a database.
 
-2.	How to get XAMPP up in running.
+3.	How to get XAMPP up in running.
 *	Go to the link above and download and install XAMPP for your machine.
 *	All the files for the project will need to be stored inside the “htdocs” folder within XAMPP so that the pages will render.
 *	![Screenshot 2022-11-22 201953](https://user-images.githubusercontent.com/98065056/203457692-dff99bbb-1bd4-48bd-ba08-a554c5f58ce9.png)
