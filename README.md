@@ -1,4 +1,4 @@
-# Polymer Chemistry Research
+# Polymer Chemistry Research Capstone
 Development and production for LLC capstone group project.
 
 This project was created for the Department of Chemistry at the University of Memphis. This service allows Polymer chemistry researchers to upload and share their published data amongst other researchers from various countries across the planet. This data could then be used by other researchers to perform more Polymer research.
