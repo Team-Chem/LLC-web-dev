@@ -10,13 +10,16 @@
 4. Visit the phpMyAdmin URL to access the database management interface.
 
 ## Using the Software
-1. Open VS code and create a new file.
-2. Write your code in the file and save it in the desired location on your computer.
-3. Use XAMPP to run the Apache server and access your code by going to http://localhost/[file-location] in a web browser.
-4. Use phpMyAdmin to manage and manipulate the databases for your project.
-
-
-## 
+1. Open XAMPP and start the Apache server.
+2. In the XAMPP control panel, click the "Explorer" button next to the "HTdocs" folder to open it in your operating system's file explorer.
+3. Copy the source code directory into the HTdocs folder.
+4. Open VS code and navigate to the source code directory in the HTdocs folder.
+5. Use VS code to edit and manage the source code.
+6. In a web browser, go to http://localhost/phpmyadmin to access the database management system.
+7. In phpMyAdmin, create a new database named "lccc_db".
+8. Import the "lccc_db" file into the newly created database.
+9. In a web browser, go to http://localhost/[file-location] to access the source code and interact with the database.
+ 
 ### VS Code
 * Integrated debugging support to help you find and fix errors in your code.
 * IntelliSense, which provides smart completions based on variable types, function definitions, and imported modules.
