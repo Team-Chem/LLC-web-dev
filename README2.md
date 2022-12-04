@@ -12,7 +12,7 @@
 ## Using the Software
 1. Open VS code and create a new file.
 2. Write your code in the file and save it in the desired location on your computer.
-3. Use XAMPP to run the Apache server and access your code by going to http://localhost/[file location] in a web browser.
+3. Use XAMPP to run the Apache server and access your code by going to http://localhost/[file-location] in a web browser.
 4. Use phpMyAdmin to manage and manipulate the databases for your project.
 
 ## Conclusion
