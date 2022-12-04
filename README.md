@@ -20,7 +20,7 @@
 8. In a web browser, go to http://localhost/[page-name] to access LCCC web application on your browser.
 9. Navigate (http://localhost/[newly-created-file-name]/LLC/web-dev/app/views/[page-name].php) to render the files in the **views** folder.
  
-Note: replace "[page-name]" with the actual name of the folder you created in the HTdocs directory, and replace "[rendered-page]" with the name of the page you want to access.
+Note: replace "[newly-created-file-name]" with the actual name of the folder you created in the HTdocs directory, and replace "[page-name]" with the name of the page you want to access.
  
 ### VS Code
 * Integrated debugging support to help you find and fix errors in your code.
