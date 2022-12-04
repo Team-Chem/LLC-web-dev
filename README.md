@@ -4,7 +4,7 @@
 The LCCC (Liquid Chromatography under Critical Conditions) project was developed by the Chemistry department at the University of Memphis. The project involves hosting research experiments from use of LCCC techniques to analyze complex mixtures and provide detailed information about their components. This document provides instructions on how to install and use the necessary software to run the LCCC project on your local machine.
 
 ## Setting up a Local Development Enviroment with VS Code, XAMPP, and phpMyAdmin
-+ This guide provides instructions on how to install and use these tools to create a complete local development environment on your computer. It includes steps for installing the software, running the Apache and MySQL servers, and accessing the database management interface. With these tools, you can easily develop and test your projects on your local machine before deploying them to a live server.
+This guide provides instructions on how to install and use these tools to create a complete local development environment on your computer. It includes steps for installing the software, running the Apache and MySQL servers, and accessing the database management interface. With these tools, you can easily develop and test this web application on your local machine.
 
 ## Installing Software
 1. Download and install [VS Code](https://code.visualstudio.com/)
@@ -41,4 +41,4 @@ Note: replace "[newly-created-file-name]" with the actual name of the folder you
 + In terms of using XAMPP on a Mac with an M1 chip, you may need to use the Docker version of XAMPP to run it on your system. The regular version of XAMPP may not be compatible with the M1 chip.
 
 ## Conclusion
-+ By following the steps in this guide, you can set up a complete local development environment on your computer using VS code, XAMPP, and phpMyAdmin. These tools will provide you with everything you need to write, test, and manage your code and databases. With a local development environment, you can easily develop and test your projects without the need for a live server, saving time and resources. Additionally, you can use XAMPP to host your website on a local server for testing and development purposes before deploying it to a live server.
+By following the steps in this guide, you can set up a complete local development environment on your computer using VS code, XAMPP, and phpMyAdmin. These tools will provide you with everything you need to write, test, and manage your code and databases. With a local development environment, you can easily develop and test your projects without the need for a live server, saving time and resources. Additionally, you can use XAMPP to host your website on a local server for testing and development purposes before deploying it to a live server.
