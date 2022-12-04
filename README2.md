@@ -15,6 +15,20 @@
 3. Use XAMPP to run the Apache server and access your code by going to http://localhost/[file-location] in a web browser.
 4. Use phpMyAdmin to manage and manipulate the databases for your project.
 
-## Conclusion
+## VS Code
+* Integrated debugging support to help you find and fix errors in your code.
+* IntelliSense, which provides smart completions based on variable types, function definitions, and imported modules.
+* Git integration, allowing you to easily manage your code repositories and collaborate with others.
 
+## XAMPP
+* XAMPP comes with additional tools such as FileZilla (FTP server), Mercury Mail (email server), and Tomcat (Java servlet engine), allowing you to create a complete web development environment.
+* You can use XAMPP to host your website on a local server, making it easy to test and develop your website before deploying it to a live server.
+
+## phpMyAdmin
+* phpMyAdmin allows you to easily manage and maintain your databases, including creating, modifying, and deleting tables and columns, importing and exporting data, and running SQL queries.
+* It provides a user-friendly interface, making it easy to use even for beginners.
+
++ In terms of using XAMPP on a Mac with an M1 chip, you may need to use the Docker version of XAMPP to run it on your system. The regular version of XAMPP may not be compatible with the M1 chip.
+
+## Conclusion
 + With these tools installed and set up, you can develop or interact with this project on your local machine before deplying them to a live server.
