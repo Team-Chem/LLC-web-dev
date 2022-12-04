@@ -1,0 +1,617 @@
+/* This file is for styling the html page content. */
+
+/* 
+    LCCC
+    Filename: styles.css
+
+    Author: Nathaniel Dixon, Mathew Hosier, Hunter Jackson
+    Date: 9/19/2022
+    References: HTML5 and CSS3 Illustrated, W3Schools
+*/
+
+a, article, aside, nav, div, fieldset, figcaption, figure, footer, header, h1, h2,
+input, label, legend, li, option, p, section, select, ul, form {
+    border: 0;
+    padding: 0;
+    margin: 0;
+} 
+
+/* This is for generalizing default font sizes on the page. Will most likely 
+be overrided. */
+html {
+    font-size: 17px;
+}
+
+body {
+    font-family: "Cinzel", "Times New Roman", Times, serif serif;
+}
+/* header styles */
+header {
+    background-color: #202b38;
+    padding: 1%;
+    clear: both;
+}
+
+header h1 {
+    color: white;
+    font-size: 1.25em;
+    text-align: center;
+    opacity: 1;
+}
+
+/* site navigation styles */
+.navbar .navbar-nav .nav-link {
+    color: #ffff;
+    font-size: 1.4em;
+    margin: 0em 1.7em;
+}
+/*.navbar .navbar-nav .nav-link:hover{
+    /*background-color: #ffff;*/
+    /*font-size: 1.9em;*/
+   /* border-radius: 45px;*/
+    /*font-weight: bold;*/
+/*}*/
+
+.navbar .navbar-nav .nav-link:visited {
+    color: grey;
+}
+
+.navbar-logo-centered .navbar-nav .nav-link{
+    padding: .5em 1em;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.nav-item:hover {
+    background-color: #202b38;
+    margin-bottom: 0%;
+}
+
+.nav-item {
+    margin-bottom: 0%;
+}
+
+/* form styles */
+
+.polymer-entry, .polymer-preview {
+    padding: 10px;
+    background-color: #ffff;
+    max-width: 800px;
+    margin: 12px auto;
+    border-radius: 10px;
+    border: 8px solid #0000;
+    font-weight: bold;
+}
+.polymer-entry input {
+    background-color: #0000;
+}
+.image-flask {
+    float: right;
+}
+/*fieldset styles */
+
+fieldset{
+    margin-bottom: 0.4em;
+}
+
+fieldset fieldset {
+    margin-top: 1em;
+    padding: 0.8em;
+    border: none;
+}
+
+legend{
+    font-size: 1em;
+}
+
+.poly-data > legend, .mobile-data, .stationary-data,
+.condition-data, .reference-data, .upload-data {
+    margin-left: -0.1em;
+    /*font-weight: bold;*/
+}
+
+/* field styles */
+
+.poly-data input, .mobile-data input, 
+.stationary-data input, .condition-data input,
+.reference-data input, span{
+    border: 1px solid #ccc;
+    font-size: 1em;
+    position: relative;
+    border-radius: 10px;
+}
+
+.polymer-preview p{
+    width: 34%;
+}
+
+span {
+    border: none;
+    font-weight: normal;
+}
+
+.upload-data input {
+    border: none;
+}
+
+#polyName {
+    width: 12em;
+}
+
+#critHigh, #critLow {
+    width: 4em;
+}
+
+#solvents {
+    width: 12em;
+}
+
+#comp {
+    width: 12em;
+}
+
+#ref {
+    width: 12em;
+}
+
+/* Submit styles */
+#submit, #edit, #new, #top-search, .back {
+    border: 2px solid black;
+    padding: 0.4em 0.6em;
+    font-size: 1.1em;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#submit, #new, #edit {
+    background-color: #202b38;
+    color: #ffff;
+}
+.btn-group {
+    padding: 20px;
+}
+
+#needABack {
+    text-align: center;
+    padding: 10px;
+}
+
+.submitbutton{
+    text-align: center;
+}
+
+.submitbutton legend {
+    margin-bottom: 1.2em;
+    font-size: 2.3em;
+    font-weight: bold;
+}
+/* label styles */
+.polymer-entry label, .polymer-preview label{
+    font-size: 1em;
+    line-height: 1.6em;
+}
+.poly-data #polyName label, .stationary-data label, .mobile-data label, .condition-data label, 
+.reference-data label, .polymer-preview p{
+    display: inline-block;
+    position: relative;
+    margin: 0.8em 0;
+    clear: right;
+}
+
+.poly-data fieldset fieldset {
+    display: inline-block;
+}
+
+.possible-composition {
+    display: none;
+}
+
+.polymer-entry div.row {
+    border-bottom: 2px solid black;
+}
+
+.polymer-entry div label {
+    font-size: 1.2em;
+}
+
+.polymer-entry legend {
+    font-size: 1.6em;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #ffff;
+}
+
+.polymer-entry {
+    border: 4px solid #0000;
+}
+
+.polymer-entry input {
+    background-color: #0000;
+}
+
+#no-border {
+    border: none;
+}
+
+.show {
+    display: inline-block;
+}
+
+.required:before {
+    content: " *";
+    color: red;
+}
+
+.polymer-entry p{
+    text-align: right;
+    color: red;
+    font-weight: bold;
+}
+/* help tips style */
+
+.helptip {
+    /*border: 1px solid black;*/
+    /*display: inline-block;*/
+    position: relative;
+    border-radius: 999px;
+    margin-left: 1.5em;
+    width: 30px;
+    text-align: center;
+    float: right;
+    color: black;
+    font-weight: bold;
+    background-color: lightgrey;
+}
+
+.helptip:hover {
+    cursor: pointer;
+}
+
+/* body and content styles */
+body {
+    background-color:#202b38;
+    /*background-repeat: no-repeat;
+    background-size: cover;*/
+    padding-top: 70px;
+    color:white;
+}
+
+main {
+    background: #354154;
+    /*background: no-repeat url('https://t3.ftcdn.net/jpg/04/81/43/96/360_F_481439650_NjipC9RA8X4B6okmTqnZa6JUQxuBll4K.jpg');
+    background-size: cover;*/
+    max-width: 800px;
+    margin: 0 auto;
+    border: 6px solid #DEC3AD;
+    color: rgb(8, 3, 3);
+}
+
+main h2 {
+    border: 2px solid black;
+    background: #0000;
+    color: #ffff;
+    margin-top: 0px;
+    text-align: center;
+}
+
+h2 {
+    color: black;
+    font-size: 2em;
+}
+
+/* caption above db cell table on search page*/
+caption {
+    display: table-caption;
+    padding: 1%;
+    margin: 1em;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: bold;
+
+    border-bottom: 2px solid black;
+}
+
+/* content at bottom of page */
+footer {
+    text-align: center;
+}
+
+#success {
+    position: fixed;
+    margin: 0 auto;
+}
+
+
+/*  */
+.CR-container {
+    display: block;
+}
+/*  */
+#min-CR-searchbox > input {
+    width: 10%;
+}
+/*  */
+#max-CR-searchbox > input {
+    width: 10%;
+}
+    
+
+.datasearched {
+    background-color: white;
+    margin: 0 auto;
+}
+
+/*.search-form {
+    text-align: center;
+    padding: 10px;
+}*/
+
+/*.search-form input {
+    width: 400px;
+    height: 40px;
+    padding: 0 20px;
+    line-height: 1.2em;
+}*/
+
+/*.search-form button {
+    width: 100px;
+    padding: 0 10px;
+}*/
+
+#hideComp {
+    display: none;
+}
+
+
+#search-description {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+#options {
+    text-align: center;
+}
+
+#option button {
+    padding: 10px;
+}
+
+footer {
+    background-color: #202b38;
+    color: #ffff;
+    /*position: relative;*/
+    width: 100%;
+    text-align: center;
+    bottom: 0%;
+    top: 100%;
+    margin-bottom: 0%;
+    margin-top: 25%;
+    clear: both;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer h2 {
+    color: #ffff;
+}
+
+footer a:link {
+    color: teal;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+article figure {
+    float: left;
+}
+
+article {
+    padding: 25px;
+    line-height: 1.3em;
+}
+
+/* default color on white pages */
+.labels {
+    color: black;
+}
+
+/* The heart of the matter */
+div.scrollmenu {
+    background-color: rgb(223, 113, 113);
+    overflow-x: auto;
+    white-space: nowrap;
+    max-height: 400px;
+    width: 1200px;
+    margin: 0 auto;
+  }
+  
+  div.scrollmenu .inside {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .search-inputs {
+    overflow-y: auto;
+    margin: 0 auto;
+    max-height: 100px;
+  }
+  
+  thead, tbody {
+    text-align: center;
+  }
+  table {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .prev_next {
+    text-align: center;
+    clear: both;
+  }
+
+  .search-page-container {
+    margin: 20px auto;
+  }
+
+  .entries {
+    margin: 0 auto;
+  }
+
+  /*.height{
+    height: 100vh;
+   }*/
+   
+
+   .search{
+   position: relative;
+   box-shadow: 0 0 40px rgba(51, 51, 51, .1);
+     
+   }
+
+   .search input{
+    height: 60px;
+    text-indent: 25px;
+    /*border: 2px solid #d6d4d4;*/
+   }
+
+
+   .search input:focus{
+
+    background-color: black;
+    color: white;
+    box-shadow: none;
+    border: 2px solid #ffff;
+
+
+   }
+
+   .search input {
+    background-color: black;
+    color: white;
+   }
+
+   .search .fa-search{
+
+    position: absolute;
+    top: 20px;
+    left: 16px;
+
+   }
+
+   .search .button-x{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    height: 50px;
+    width: 110px;
+    background: blue;
+    color: #ffff;
+   }
+
+   .box {
+    width: 100%;
+    padding: 10px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+ /*.button {
+    font-size: 1em;
+    padding: 10px;
+    color: #fff;
+    border: 2px solid #ffff;
+    background: blue;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    clear: both;
+  }
+  .button:hover {
+    text-decoration: none;
+    color: white;
+  }*/
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    background: #ffff;
+    border-radius: 5px;
+    width: 70%;
+    /*height: 90%;*/
+    position: relative;
+    /*transition: all 5s ease-in-out;*/
+    max-height: 600px;
+    overflow-y: scroll;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #202b38;
+    font-family: Tahoma, Arial, sans-serif;
+    font-weight: bold;
+  }
+
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    /*transition: all 200ms;*/
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: red;
+  }
+  .popup .close:hover {
+    font-weight: bold;
+  }
+  .popup .content {
+    max-height: 30%;
+    /*position: relative;
+    left: 30%;*/
+    overflow: auto;
+  }
+  
+  #article-box {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+  .polymer-entry input {
+    background-color: #202b38;
+    color: white;
+  }
+  .polymer-entry input:focus {
+    background-color: #202b38;
+    color: white;
+  }
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
