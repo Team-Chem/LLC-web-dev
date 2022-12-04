@@ -7,7 +7,7 @@ The LCCC (Liquid Chromatography under Critical Conditions) web project was devel
 This guide provides instructions on how to install and use these tools to create a complete local development environment on your computer. It includes steps for installing the software, running the Apache and MySQL servers, and accessing the database management interface. With these tools, you can easily develop and test this web application on your local machine.
 
 ## Installing Software
-1. Download and install [VS Code](https://code.visualstudio.com/)
+1. Download and install [VS Code](https://code.visualstudio.com/) (*optional*)
 2. Download and install [XAMPP](https://www.apachefriends.org/download.html)
 3. Start XAMPP and ensure that the Apache and MySQL modules are running by going to the "Manage Servers" tab and starting both modules.
 4. Visit the phpMyAdmin URL to access the database management interface.
