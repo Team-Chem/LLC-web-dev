@@ -25,7 +25,7 @@ This guide provides instructions on how to install and use these tools to create
  
 Note: replace ```newly-created-file-name``` with the actual name of the folder you created in the HTdocs directory, and replace ```page-name``` with the name of the page you want to access.
  
-## 
+## Software Details and Useful Features
 ### VS Code (*optional*)
 * Integrated debugging support to help you find and fix errors in your code.
 * IntelliSense, which provides smart completions based on variable types, function definitions, and imported modules.
