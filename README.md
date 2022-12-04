@@ -38,8 +38,8 @@ Note: replace ```newly-created-file-name``` with the actual name of the folder y
 * phpMyAdmin allows you to easily manage and maintain your databases, including creating, modifying, and deleting tables and columns, importing and exporting data, and running SQL queries.
 * It provides a user-friendly interface, making it easy to use even for beginners.
 
-## Troubleshooting
-+ In terms of using XAMPP on a Mac with an M1 chip, you may need to use the Docker version of XAMPP to run it on your system. The regular version of XAMPP may not be compatible with the M1 chip.
-
 ## Conclusion
 By following the steps in this guide, you can set up a complete local development environment on your computer using VS code, XAMPP, and phpMyAdmin. These tools will provide you with everything you need to write, test, and manage your code and databases. With a local development environment, you can easily develop and test your projects without the need for a live server, saving time and resources. Additionally, you can use XAMPP to host your website on a local server for testing and development purposes before deploying it to a live server.
+
+## Troubleshooting
++ In terms of using XAMPP on a Mac with an M1 chip, you may need to use the Docker version of XAMPP to run it on your system. The regular version of XAMPP may not be compatible with the M1 chip.
