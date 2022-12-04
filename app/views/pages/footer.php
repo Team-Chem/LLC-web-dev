@@ -2,8 +2,12 @@
 
 
 
+<<<<<<< HEAD
 <!--This just contains the clients contact information. This could later be swapped to its own page
 if prefered-->
+=======
+
+>>>>>>> refs/remotes/origin/main
         <footer class="clearfix position-relative overflow-auto" id="contact">
 
             <h1>Contact Information</h1>
