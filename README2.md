@@ -3,6 +3,9 @@
 ## Introduction
 + This guide will provide instructions on how to install and use the necessary software to run a local development environment, including VS code, XAMPP, and phpMyAdmin.
 
+## Setting up a Local Development Enviroment with VS Code, XAMPP, and phpMyAdmin
++ This guide provides instructions on how to install and use these tools to create a complete local development environment on your computer. It includes steps for installing the software, running the Apache and MySQL servers, and accessing the database management interface. With these tools, you can easily develop and test your projects on your local machine before deploying them to a live server.
+
 ## Installing Software
 1. Download and install [VS Code](https://code.visualstudio.com/)
 2. Download and install [XAMPP](https://www.apachefriends.org/download.html)
