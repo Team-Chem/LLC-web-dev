@@ -18,8 +18,8 @@ This guide provides instructions on how to install and use these tools to create
 3. Copy the GitHub source code directory into the HTdocs newly created folder.
 4. Open VS code and navigate to the source code directory in the HTdocs folder.
 5. In a web browser, go to ```http://localhost/phpmyadmin``` to access the database management system.
-6. In phpMyAdmin, create a new database named "lccc_db".
-7. Import the "lccc_db" file into the newly created database.
+6. In phpMyAdmin, create a new database named ```lccc_db```.
+7. Import the ```lccc_db``` file into the newly created database.
 8. In a web browser, go to ```http://localhost/[page-name]``` to access LCCC web application on your browser.
 9. Navigate through ```http://localhost/[newly-created-file-name]/LLC/web-dev/app/views/[page-name].php``` to render the files in the ``app/views`` path.
  
