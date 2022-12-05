@@ -12,12 +12,18 @@ include "header.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../assets/stylesheets/styles.css">
-    <script src='https://www.google.com/recaptcha/api.js' async defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
+  
+<link rel="stylesheet" href="../../assets/stylesheets/styles.css">
+  <!-- Used to connect to the google reCAPTCHA V2 -->  
+<script src='https://www.google.com/recaptcha/api.js' async defer></script>
+    <!-- Stylesheet imported from jsdeliver.net. No CSS stylesheet for the form page -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+    <!-- Imported to allow the use of symbols for the form -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Imported to allow the use of symbols for the form -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- JustValidate is used to validate the page. Faster to use then using regular JavaScript -->
+<script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js" defer></script>
     <!-- <script src="../views/pages/form_validation.js" defer></script> -->
 
     <!--
@@ -34,13 +40,26 @@ include "header.php";
     <?php
 
     if (isset($_POST['submit'])) {
+        
+ // $secret_key variable, which contains the secret key for the website's reCAPTCHA account.
         $secret_key = "6LemIYAiAAAAALOdrYe-rZOw49Osieqmh8Z6C4It";
+        
+// Gets the g-recaptcha-response value from the $_POST array, which contains the response from the reCAPTCHA challenge that the user completed.        
         $response = $_POST['g-recaptcha-response'];
+        
+ // Get the user's IP address       
         $remote_addr = $_SERVER['REMOTE ADDR'];
+        
+ // Build the URL for the reCAPTCHA API       
         $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secret_key&response=$response&remoteip=$remote_addr";
+        
+  // Send the request to the API      
         $data = file_get_contents($url);
+        
+  // Decode the JSON response      
         $row = json_decode($data, true);
 
+// Check if the user passed the challenge        
         if ($row['success'] == "true") {
             echo "Success!";
         } else {
@@ -112,6 +131,7 @@ include "header.php";
 
 </div>
 
+<!-- Adds the following CSS to the fields to make it look more organized -->
     <style>
 
     /* Sign up*/
@@ -173,7 +193,7 @@ include "header.php";
             include "footer.php";
         ?>
 
-
+<!-- Uses the javascript file to pass form validation on the fields -->
 <script src="form_validation.js" defer></script>
 
 </body>
