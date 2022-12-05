@@ -15,23 +15,33 @@ if (isset($_SESSION['user_id_num'])) {
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
+        // Retireved the data from the connection.php file which is used to establish a connection to the database.
+       
         $conn = require __DIR__ . "/../../../db/connection.php";
 
+        // Selects all of the attributes from the user table which is where all of the registration is stored at.
+        
         $sql = sprintf("SELECT * FROM user WHERE email = '%s'",
                         $conn->real_escape_string($_POST['email']));
 
                         $result = $conn->query($sql);
                         $user = $result->fetch_assoc();
 
-            if ($user) {
+            // Checks to see if the login credentials are successful. If they are successful then redirect back to the polymer_search page.
+        
+        if ($user) {
 
-                if (password_verify($_POST['password'], $user['password_hash'])) {
+                // If the passowrd has been verified then start a session for the unique user
+            
+            if (password_verify($_POST['password'], $user['password_hash'])) {
                     
                     session_start();
 
                     session_regenerate_id();
-
-                    $_SESSION["user_id_num"] = $user['user_id'];
+                    
+                // Creates a unique id number for the user
+                    
+                $_SESSION["user_id_num"] = $user['user_id'];
 
                 header("Location: polymer_search.php");
                 exit();
@@ -129,6 +139,8 @@ if (isset($_SESSION['user_id_num'])) {
 
     </div>
     </div>
+
+<!-- Adding CSS for the the following classes and IDs -->
 
     <style>
 .sign-in-div {
