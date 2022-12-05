@@ -31,6 +31,7 @@ include_once "../../../db/connection.php";
 //     die("Passwords must match each other");
 // }
 
+// Uses the built in password_hash funtion in Php to take the Password attribute in the database and provide the default hash for it.
 $hashed_password = password_hash($_POST['Password'], PASSWORD_DEFAULT);
 
 #$conn = require __DIR__ . "../../../db/db//connection.php";
@@ -40,17 +41,21 @@ $sql = "INSERT INTO user (first_name, last_name, email, password_hash)
 
 $stmt = $conn->stmt_init();
 
+// Check to see if there was an error
 if (!$stmt->prepare($sql)) {
     die("There was an SQL error: " . $conn->error);
 }
 
+// Binds the paramaters to the variable names from the sign-up-insert.php file.
 $stmt->bind_param("ssss", $_POST['FirstName'], $_POST['LastName'], $_POST['Email'], $hashed_password);
 
+// If the sign up is successful, then the user will be redirected back to the login page and a green success box will flash.
 if ($stmt->execute()) {
     $_SESSION['flash_text'] = "Account has been successfully created!";
     header("Location: sign_in.php");
     echo "success";
     exit();
+// Checks to see if there is an 1062 error. Which means an email already exists and cannot be used again.
 } else {
     if ($conn->errno === 1062) {
         die("This email has already been taken. Choose another email.");
