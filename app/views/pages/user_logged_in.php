@@ -7,6 +7,7 @@ if (!isset($_SESSION['user_id_num'])) {
     header("location: sign_in.php");
 }
 
+// Grabs the unique user value from the database for the session while the user is signed in.
 if (isset($_SESSION['user_id_num'])) {
     $conn = require __DIR__ . "/../../../db/connection.php";
 
@@ -44,7 +45,9 @@ if (isset($_SESSION['user_id_num'])) {
 
 <h1>User Page</h1>
 
-<?php if (isset($user)): ?>
+<?php 
+    // If user has been signed in then display the users first name 
+    if (isset($user)): ?>
     
     <p>Welcome, <?= htmlspecialchars($user["first_name"]) ?></p>
 
